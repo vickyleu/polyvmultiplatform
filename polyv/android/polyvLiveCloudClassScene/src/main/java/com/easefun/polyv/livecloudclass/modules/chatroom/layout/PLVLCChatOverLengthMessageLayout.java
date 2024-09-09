@@ -7,12 +7,12 @@ import static com.plv.foundationsdk.utils.PLVSugarUtil.mapOf;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.pair;
 
 import android.app.Activity;
-import android.arch.lifecycle.LifecycleOwner;
+import androidx.lifecycle.LifecycleOwner;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Color;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.text.style.ForegroundColorSpan;
 import android.util.AttributeSet;

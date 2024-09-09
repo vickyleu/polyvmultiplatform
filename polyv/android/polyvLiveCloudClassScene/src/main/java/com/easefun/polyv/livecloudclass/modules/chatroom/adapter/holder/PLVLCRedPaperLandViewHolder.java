@@ -1,7 +1,7 @@
 package com.easefun.polyv.livecloudclass.modules.chatroom.adapter.holder;
 
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
@@ -58,8 +58,8 @@ public class PLVLCRedPaperLandViewHolder extends PLVChatMessageBaseViewHolder<PL
                         return drawable;
                     }
                 })
-                .append(PLVAppUtils.formatString(R.string.plv_red_paper_send_msg, redPaperEvent.getUser().getNick(), PLVRedPaperType.matchOrDefault(redPaperEvent.getType(), PLVRedPaperType.DEFAULT_RED_PAPER).getTypeName()))
-                .appendExclude(PLVAppUtils.formatString(R.string.plv_red_paper_get), new ClickableSpan() {
+                .append(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_red_paper_send_msg, redPaperEvent.getUser().getNick(), PLVRedPaperType.matchOrDefault(redPaperEvent.getType(), PLVRedPaperType.DEFAULT_RED_PAPER).getTypeName()))
+                .appendExclude(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_red_paper_get), new ClickableSpan() {
                     @Override
                     public void onClick(@NonNull View widget) {
                         adapter.callOnReceiveRedPaper(redPaperEvent);

@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecloudclass.modules.chatroom.adapter;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -109,13 +109,13 @@ public class PLVLCMessageAdapter extends PLVBaseAdapter<PLVBaseViewData, PLVBase
                     );
                 } else {
                     viewHolder = new PLVChatMessageBaseViewHolder<>(
-                            LayoutInflater.from(parent.getContext()).inflate(R.layout.plv_horizontal_linear_layout, parent, false), this);
+                            LayoutInflater.from(parent.getContext()).inflate(com.easefun.polyv.livecommon.R.layout.plv_horizontal_linear_layout, parent, false), this);
                 }
                 break;
             default:
                 PLVCommonLog.exception(new RuntimeException("itemType error"));
                 viewHolder = new PLVChatMessageBaseViewHolder<>(
-                        LayoutInflater.from(parent.getContext()).inflate(R.layout.plv_horizontal_linear_layout, parent, false), this);
+                        LayoutInflater.from(parent.getContext()).inflate(com.easefun.polyv.livecommon.R.layout.plv_horizontal_linear_layout, parent, false), this);
                 break;
         }
         viewHolder.setMsgIndex(msgIndex);

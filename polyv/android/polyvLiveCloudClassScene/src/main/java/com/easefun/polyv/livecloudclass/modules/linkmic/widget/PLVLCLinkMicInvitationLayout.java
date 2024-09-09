@@ -8,17 +8,17 @@ import static com.plv.foundationsdk.utils.PLVTimeUnit.seconds;
 
 import android.Manifest;
 import android.app.Activity;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Observer;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.media.SoundPool;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -130,7 +130,7 @@ public class PLVLCLinkMicInvitationLayout extends FrameLayout {
     }
 
     private void prepareBgm() {
-        bgmSoundId = bgmSoundPool.load(getContext(), R.raw.plv_linkmic_invitation_bgm, 1);
+        bgmSoundId = bgmSoundPool.load(getContext(), com.easefun.polyv.livecommon.R.raw.plv_linkmic_invitation_bgm, 1);
     }
 
     private void observeOpenStateChanged() {
@@ -203,7 +203,8 @@ public class PLVLCLinkMicInvitationLayout extends FrameLayout {
             portLayout.onlyAudioHintView().setVisibility(View.GONE);
             landLayout.onlyAudioHintView().setVisibility(View.GONE);
         }
-        String format = PLVAppUtils.formatStringWithId(R.string.plv_linkmic_invitation, isOnlyAudio ? R.string.plv_linkmic_type_audio : R.string.plv_linkmic_type_video);
+        String format = PLVAppUtils.formatStringWithId(com.easefun.polyv.livecommon.R.string.plv_linkmic_invitation, isOnlyAudio ?
+                com.easefun.polyv.livecommon.R.string.plv_linkmic_type_audio : com.easefun.polyv.livecommon.R.string.plv_linkmic_type_video);
         portLayout.titleTextView().setText(format);
         landLayout.titleTextView().setText(format);
     }
@@ -326,7 +327,7 @@ public class PLVLCLinkMicInvitationLayout extends FrameLayout {
                             cancelInvitation(CANCEL_BY_TIMEOUT);
                             return;
                         }
-                        String format = PLVAppUtils.formatString(R.string.plv_linkmic_not_yet, timeLeftInSecond + "");
+                        String format = PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_linkmic_not_yet, timeLeftInSecond + "");
                         portLayout.cancelInvitationTextView().setText(format);
                         landLayout.cancelInvitationTextView().setText(format);
                     }
@@ -390,7 +391,7 @@ public class PLVLCLinkMicInvitationLayout extends FrameLayout {
                         public void onCallback() {
                             hide();
                             cancelInvitation(CANCEL_BY_PERMISSION);
-                            showPermissionDialog(PLVAppUtils.getString(R.string.plv_linkmic_camera_permission_apply_tips));
+                            showPermissionDialog(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_camera_permission_apply_tips));
                         }
                     }
             );
@@ -435,7 +436,8 @@ public class PLVLCLinkMicInvitationLayout extends FrameLayout {
                     public void onCallback() {
                         hide();
                         cancelInvitation(CANCEL_BY_PERMISSION);
-                        showPermissionDialog(PLVAppUtils.formatStringWithId(R.string.plv_linkmic_permission_apply_tips, onlyAudio ? R.string.plv_linkmic_permission_microphone : R.string.plv_linkmic_permission_camera_and_microphone));
+                        showPermissionDialog(PLVAppUtils.formatStringWithId(com.easefun.polyv.livecommon.R.string.plv_linkmic_permission_apply_tips, onlyAudio ?
+                                com.easefun.polyv.livecommon.R.string.plv_linkmic_permission_microphone : com.easefun.polyv.livecommon.R.string.plv_linkmic_permission_camera_and_microphone));
                     }
                 }
         );
@@ -462,17 +464,17 @@ public class PLVLCLinkMicInvitationLayout extends FrameLayout {
 
     private void showPermissionDialog(String content) {
         new PLVConfirmDialog(getContext())
-                .setTitle(R.string.plv_common_dialog_tip)
+                .setTitle(com.easefun.polyv.livecommon.R.string.plv_common_dialog_tip)
                 .setContent(content)
                 .setCancelable(true)
-                .setLeftButtonText(R.string.plv_common_dialog_cancel)
+                .setLeftButtonText(com.easefun.polyv.livecommon.R.string.plv_common_dialog_cancel)
                 .setLeftBtnListener(new PLVConfirmDialog.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, View v) {
                         dialog.dismiss();
                     }
                 })
-                .setRightButtonText(R.string.plv_common_dialog_go_to_setting)
+                .setRightButtonText(com.easefun.polyv.livecommon.R.string.plv_common_dialog_go_to_setting)
                 .setRightBtnListener(new PLVConfirmDialog.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, View v) {

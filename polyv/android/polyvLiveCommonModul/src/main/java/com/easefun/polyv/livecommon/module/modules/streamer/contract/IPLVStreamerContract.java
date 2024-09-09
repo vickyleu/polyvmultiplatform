@@ -2,8 +2,8 @@ package com.easefun.polyv.livecommon.module.modules.streamer.contract;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.view.SurfaceView;
 import android.view.TextureView;
 import android.view.View;
@@ -160,6 +160,7 @@ public interface IPLVStreamerContract {
          * @see #onUpdateMemberListData(List)
          * @param pos 成员列表中的位置
          */
+        @Deprecated
         void onUpdateSocketUserData(int pos);
 
         /**
@@ -169,6 +170,7 @@ public interface IPLVStreamerContract {
          * @see #onUpdateMemberListData(List)
          * @param pos 成员列表中的位置
          */
+        @Deprecated
         void onAddMemberListData(int pos);
 
         /**
@@ -178,6 +180,7 @@ public interface IPLVStreamerContract {
          * @see #onUpdateMemberListData(List)
          * @param pos 成员列表中的位置
          */
+        @Deprecated
         void onRemoveMemberListData(int pos);
 
         /**

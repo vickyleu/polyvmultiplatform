@@ -6,16 +6,17 @@ import static com.plv.foundationsdk.utils.PLVSugarUtil.pair;
 import static com.plv.foundationsdk.utils.PLVTimeUnit.seconds;
 
 import android.app.Activity;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;

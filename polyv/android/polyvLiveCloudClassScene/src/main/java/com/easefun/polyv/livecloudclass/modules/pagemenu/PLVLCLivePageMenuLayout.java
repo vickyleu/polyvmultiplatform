@@ -4,19 +4,21 @@ import static com.plv.foundationsdk.utils.PLVSugarUtil.getNullableOrDefault;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.graphics.Color;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Pair;
@@ -756,7 +758,7 @@ public class PLVLCLivePageMenuLayout extends FrameLayout implements IPLVLCLivePa
                 && !liveRoomDataManager.getConfig().isLive()
                 && liveRoomDataManager.getConfig().getVid().isEmpty()) {
             PLVLiveClassDetailVO.DataBean.ChannelMenusBean channelMenusBean = new PLVLiveClassDetailVO.DataBean.ChannelMenusBean();
-            channelMenusBean.setName(PLVAppUtils.getString(R.string.plv_previous_title));
+            channelMenusBean.setName(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_previous_title));
             addPreviousTab(channelMenusBean);
         }
     }
@@ -810,7 +812,7 @@ public class PLVLCLivePageMenuLayout extends FrameLayout implements IPLVLCLivePa
         if (chapterFragment != null && pageMenuTabFragmentList.contains(chapterFragment)) {
             return;
         }
-        pageMenuTabTitleList.add(getResources().getString(R.string.tab_chapter));
+        pageMenuTabTitleList.add(getResources().getString(com.easefun.polyv.livecommon.R.string.tab_chapter));
         if (chapterFragment == null) {
             chapterFragment = new PLVLCPlaybackChapterFragment();
         }
@@ -827,7 +829,7 @@ public class PLVLCLivePageMenuLayout extends FrameLayout implements IPLVLCLivePa
         if (liveDescOfflineFragment == null) {
             liveDescOfflineFragment = new PLVLCLiveDescOfflineFragment();
         }
-        pageMenuTabTitleList.add(PLVAppUtils.getString(R.string.plv_live_intro_2));
+        pageMenuTabTitleList.add(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_live_intro_2));
         pageMenuTabFragmentList.add(liveDescOfflineFragment);
         refreshPageMenuTabAdapter();
     }
@@ -923,9 +925,9 @@ public class PLVLCLivePageMenuLayout extends FrameLayout implements IPLVLCLivePa
         public void handleLoginIng(boolean isReconnect) {
             super.handleLoginIng(isReconnect);
             if (isReconnect) {
-                ToastUtils.showShort(R.string.plv_chat_toast_reconnecting);
+                ToastUtils.showShort(com.easefun.polyv.livecommon.R.string.plv_chat_toast_reconnecting);
             } else {
-                ToastUtils.showShort(R.string.plv_chat_toast_logging);
+                ToastUtils.showShort(com.easefun.polyv.livecommon.R.string.plv_chat_toast_logging);
             }
         }
 
@@ -933,16 +935,16 @@ public class PLVLCLivePageMenuLayout extends FrameLayout implements IPLVLCLivePa
         public void handleLoginSuccess(boolean isReconnect) {
             super.handleLoginSuccess(isReconnect);
             if (isReconnect) {
-                ToastUtils.showShort(R.string.plv_chat_toast_reconnect_success);
+                ToastUtils.showShort(com.easefun.polyv.livecommon.R.string.plv_chat_toast_reconnect_success);
             } else {
-                ToastUtils.showShort(R.string.plv_chat_toast_login_success);
+                ToastUtils.showShort(com.easefun.polyv.livecommon.R.string.plv_chat_toast_login_success);
             }
         }
 
         @Override
         public void handleLoginFailed(@NonNull Throwable throwable) {
             super.handleLoginFailed(throwable);
-            ToastUtils.showShort(getResources().getString(R.string.plv_chat_toast_login_failed) + ":" + throwable.getMessage());
+            ToastUtils.showShort(getResources().getString(com.easefun.polyv.livecommon.R.string.plv_chat_toast_login_failed) + ":" + throwable.getMessage());
         }
 
         @Override
@@ -951,7 +953,7 @@ public class PLVLCLivePageMenuLayout extends FrameLayout implements IPLVLCLivePa
             if (isOwn) {
                 PLVToast.Builder.context(Utils.getApp())
                         .shortDuration()
-                        .setText(R.string.plv_chat_toast_been_kicked)
+                        .setText(com.easefun.polyv.livecommon.R.string.plv_chat_toast_been_kicked)
                         .build()
                         .show();
                 ((Activity) getContext()).finish();
@@ -961,7 +963,7 @@ public class PLVLCLivePageMenuLayout extends FrameLayout implements IPLVLCLivePa
         @Override
         public void onLoginRefuseEvent(@NonNull PLVLoginRefuseEvent loginRefuseEvent) {
             super.onLoginRefuseEvent(loginRefuseEvent);
-            showExitDialog(R.string.plv_chat_toast_been_kicked);
+            showExitDialog(com.easefun.polyv.livecommon.R.string.plv_chat_toast_been_kicked);
         }
 
         @Override
@@ -969,7 +971,7 @@ public class PLVLCLivePageMenuLayout extends FrameLayout implements IPLVLCLivePa
             super.onReloginEvent(reloginEvent);
             PLVToast.Builder.context(Utils.getApp())
                     .shortDuration()
-                    .setText(R.string.plv_chat_toast_account_login_elsewhere)
+                    .setText(com.easefun.polyv.livecommon.R.string.plv_chat_toast_account_login_elsewhere)
                     .build()
                     .show();
             postDelayed(new Runnable() {
@@ -985,9 +987,9 @@ public class PLVLCLivePageMenuLayout extends FrameLayout implements IPLVLCLivePa
 
     private void showExitDialog(int messageId) {
         new AlertDialog.Builder(getContext())
-                .setTitle(R.string.plv_common_dialog_tip_warm)
+                .setTitle(com.easefun.polyv.livecommon.R.string.plv_common_dialog_tip_warm)
                 .setMessage(messageId)
-                .setPositiveButton(R.string.plv_common_dialog_confirm_2, new DialogInterface.OnClickListener() {
+                .setPositiveButton(com.easefun.polyv.livecommon.R.string.plv_common_dialog_confirm_2, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         ((Activity) getContext()).finish();

@@ -8,8 +8,12 @@ import static com.plv.foundationsdk.utils.PLVTimeUnit.seconds;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
+
+import androidx.core.content.FileProvider;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+
+import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -21,12 +25,11 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Looper;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.content.FileProvider;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Pair;
@@ -335,7 +338,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
             chatCommonMessageList.addOnUnreadCountChangeListener(new PLVMessageRecyclerView.OnUnreadCountChangeListener() {
                 @Override
                 public void onChange(int currentUnreadCount) {
-                    unreadMsgTv.setText(PLVAppUtils.formatString(R.string.plv_chat_view_new_msg_2, currentUnreadCount + ""));
+                    unreadMsgTv.setText(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_chat_view_new_msg_2, currentUnreadCount + ""));
                 }
             });
             chatCommonMessageList.setOnViewActionListener(new PLVLCChatCommonMessageList.OnViewActionListener() {
@@ -369,7 +372,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
         inputEt = findViewById(R.id.input_et);
         inputEt.addTextChangedListener(inputTextWatcher);
         if (isChatPlaybackLayout || !isLiveType) {
-            inputEt.setHint(PLVAppUtils.getString(R.string.plv_chat_input_tips_chatroom_close));
+            inputEt.setHint(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_chatroom_close));
             inputEt.setEnabled(false);
         }
 
@@ -479,7 +482,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
         if (isChatPlaybackLayout) {
             chatTipsLayout.show(
                     new PLVLCChatTipsLayout.ShowTipsConfiguration()
-                            .setContent(PLVAppUtils.getString(R.string.plv_chat_playback_tips))
+                            .setContent(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_playback_tips))
                             .setContentGravity(Gravity.CENTER)
                             .setClosable(false)
                             .setAutoHideMillis(seconds(5).toMillis())
@@ -548,14 +551,15 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                 switch (type) {
                     case PLVLCChatMoreLayout.CHAT_FUNCTION_TYPE_ONLY_TEACHER:
                         if (isFocusModeStatus) {
-                            ToastUtils.showShort(PLVAppUtils.getString(R.string.plv_chat_toast_focus));
+                            ToastUtils.showShort(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_toast_focus));
                             return;
                         }
                         isSelectOnlyTeacher = !isSelectOnlyTeacher;
                         PLVChatFunctionVO onlyTeacherFunction = chatMoreLayout.getFunctionByType(PLVLCChatMoreLayout.CHAT_FUNCTION_TYPE_ONLY_TEACHER);
                         if (onlyTeacherFunction != null) {
                             onlyTeacherFunction.setSelected(isSelectOnlyTeacher);
-                            onlyTeacherFunction.setName(isSelectOnlyTeacher ? getString(R.string.plv_chat_view_all_message) : getString(R.string.plv_chat_view_special_message));
+                            onlyTeacherFunction.setName(isSelectOnlyTeacher ? getString(com.easefun.polyv.livecommon.R.string.plv_chat_view_all_message)
+                                    : getString(com.easefun.polyv.livecommon.R.string.plv_chat_view_special_message));
                             chatMoreLayout.updateFunctionStatus(onlyTeacherFunction);
                         }
                         if (chatCommonMessageList != null) {
@@ -592,7 +596,8 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                         PLVChatFunctionVO effectFunction = chatMoreLayout.getFunctionByType(PLVLCChatMoreLayout.CHAT_FUNCTION_TYPE_EFFECT);
                         if (effectFunction != null) {
                             effectFunction.setSelected(isSelectCloseEffect);
-                            effectFunction.setName(isSelectCloseEffect ? getString(R.string.plv_chat_view_show_effect) : getString(R.string.plv_chat_view_close_effect));
+                            effectFunction.setName(isSelectCloseEffect ? getString(com.easefun.polyv.livecommon.R.string.plv_chat_view_show_effect)
+                                    : getString(com.easefun.polyv.livecommon.R.string.plv_chat_view_close_effect));
                             chatMoreLayout.updateFunctionStatus(effectFunction);
                         }
                         if (isSelectCloseEffect) {
@@ -632,12 +637,12 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                                     if (chatTipsLayout != null) {
                                         chatTipsLayout.show(
                                                 watchMainRoomTipsConfiguration = new PLVLCChatTipsLayout.ShowTipsConfiguration()
-                                                        .setContent(PLVAppUtils.getString(R.string.plv_chat_linked_to_other_rooms))
+                                                        .setContent(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_linked_to_other_rooms))
                                                         .setClosable(true)
                                         );
                                     }
                                     PLVToast.Builder.context(getContext())
-                                            .setText(PLVAppUtils.getString(R.string.plv_chat_switched_to_large_room))
+                                            .setText(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_switched_to_large_room))
                                             .show();
                                 } else {
                                     if (chatTipsLayout != null) {
@@ -646,7 +651,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                                         }
                                     }
                                     PLVToast.Builder.context(getContext())
-                                            .setText(PLVAppUtils.getString(R.string.plv_chat_switched_to_small_room))
+                                            .setText(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_switched_to_small_room))
                                             .show();
                                 }
                             }
@@ -702,7 +707,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                 swipeLoadView.setEnabled(enabled);
             }
             if (!enabled && !isByClearData) {
-                ToastUtils.showShort(R.string.plv_chat_toast_history_all_loaded);
+                ToastUtils.showShort(com.easefun.polyv.livecommon.R.string.plv_chat_toast_history_all_loaded);
             }
         }
 
@@ -710,7 +715,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
         public void onHasNotAddedData() {
             if (unreadMsgTv != null) {
                 if (unreadMsgTv.getVisibility() != View.VISIBLE) {
-                    unreadMsgTv.setText(PLVAppUtils.getString(R.string.plv_chat_view_new_msg_3));
+                    unreadMsgTv.setText(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_view_new_msg_3));
                     unreadMsgTv.setVisibility(View.VISIBLE);
                 }
             }
@@ -783,7 +788,8 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                 if (chatCommonMessageList != null && chatCommonMessageList.isLandscapeLayout()) {
                     return;
                 }
-                ToastUtils.showLong(isFocusModeStatus ? R.string.plv_chat_toast_focus_mode_open : R.string.plv_chat_toast_focus_mode_close);
+                ToastUtils.showLong(isFocusModeStatus ? com.easefun.polyv.livecommon.R.string.plv_chat_toast_focus_mode_open :
+                        com.easefun.polyv.livecommon.R.string.plv_chat_toast_focus_mode_close);
             }
         });
     }
@@ -799,7 +805,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                 if (chatCommonMessageList != null && chatCommonMessageList.isLandscapeLayout()) {
                     return;
                 }
-                ToastUtils.showLong(isCloseRoomStatus ? R.string.plv_chat_toast_chatroom_close : R.string.plv_chat_toast_chatroom_open);
+                ToastUtils.showLong(isCloseRoomStatus ? com.easefun.polyv.livecommon.R.string.plv_chat_toast_chatroom_close : com.easefun.polyv.livecommon.R.string.plv_chat_toast_chatroom_open);
             }
         });
     }
@@ -818,7 +824,8 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                 recordInputMessage = null;
             }
         }
-        String hint = PLVAppUtils.getString(isCloseRoomStatus ? R.string.plv_chat_input_tips_chatroom_close_2 : (isFocusModeStatus ? R.string.plv_chat_input_tips_focus : R.string.plv_chat_input_tips_chat_2));
+        String hint = PLVAppUtils.getString(isCloseRoomStatus ? com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_chatroom_close_2 :
+                (isFocusModeStatus ? com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_focus : com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_chat_2));
         inputEt.setHint(hint);
         inputEt.setEnabled(isEnabled);
         toggleEmojiIv.setEnabled(isEnabled);
@@ -996,7 +1003,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                 addChatHistoryToList(chatMessageDataList, requestSuccessTime == 1);
             }
             if (isNoMoreHistory) {
-                ToastUtils.showShort(R.string.plv_chat_toast_history_all_loaded);
+                ToastUtils.showShort(com.easefun.polyv.livecommon.R.string.plv_chat_toast_history_all_loaded);
                 if (swipeLoadView != null) {
                     swipeLoadView.setEnabled(false);
                 }
@@ -1014,7 +1021,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                 swipeLoadView.setEnabled(true);
             }
             if (chatroomPresenter != null && viewIndex == chatroomPresenter.getViewIndex(chatroomView)) {
-                ToastUtils.showShort(getString(R.string.plv_chat_toast_history_load_failed) + ": " + errorMsg);
+                ToastUtils.showShort(getString(com.easefun.polyv.livecommon.R.string.plv_chat_toast_history_load_failed) + ": " + errorMsg);
             }
         }
 
@@ -1176,7 +1183,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
 
     private boolean sendChatMessage(String message) {
         if (message.trim().length() == 0) {
-            ToastUtils.showLong(R.string.plv_chat_toast_send_text_empty);
+            ToastUtils.showLong(com.easefun.polyv.livecommon.R.string.plv_chat_toast_send_text_empty);
             return false;
         } else {
             PolyvLocalMessage localMessage = new PolyvLocalMessage(message);
@@ -1201,7 +1208,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                 return true;
             } else {
                 //发送失败
-                ToastUtils.showShort(getString(R.string.plv_chat_toast_send_msg_failed) + ": " + sendResult.second);
+                ToastUtils.showShort(getString(com.easefun.polyv.livecommon.R.string.plv_chat_toast_send_msg_failed) + ": " + sendResult.second);
                 return false;
             }
         }
@@ -1211,10 +1218,10 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
     // <editor-fold defaultstate="collapsed" desc="聊天室 - 打开相机、选择图片及发送">
     private boolean checkCanSendImg() {
         if (isCloseRoomStatus) {
-            ToastUtils.showShort(PLVAppUtils.getString(R.string.plv_chat_toast_chatroom_close_2));
+            ToastUtils.showShort(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_toast_chatroom_close_2));
             return false;
         } else if (isFocusModeStatus) {
-            ToastUtils.showShort(PLVAppUtils.getString(R.string.plv_chat_toast_focus));
+            ToastUtils.showShort(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_toast_focus));
             return false;
         }
         return true;
@@ -1236,9 +1243,9 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                     @Override
                     public void onPartialGranted(ArrayList<String> grantedPermissions, ArrayList<String> deniedPermissions, ArrayList<String> deniedForeverP) {
                         if (!deniedForeverP.isEmpty()) {
-                            showRequestPermissionDialog(PLVAppUtils.getString(R.string.plv_chat_send_img_error_tip_permission_denied));
+                            showRequestPermissionDialog(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_send_img_error_tip_permission_denied));
                         } else {
-                            ToastUtils.showShort(R.string.plv_chat_send_img_error_tip_permission_cancel);
+                            ToastUtils.showShort(com.easefun.polyv.livecommon.R.string.plv_chat_send_img_error_tip_permission_cancel);
                         }
                     }
                 });
@@ -1249,7 +1256,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
-        startActivityForResult(Intent.createChooser(intent, PLVAppUtils.getString(R.string.plv_chat_chooser_sel_img)), REQUEST_SELECT_IMG);
+        startActivityForResult(Intent.createChooser(intent, PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_chooser_sel_img)), REQUEST_SELECT_IMG);
     }
 
     private void requestOpenCamera() {
@@ -1269,9 +1276,9 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
                     @Override
                     public void onPartialGranted(ArrayList<String> grantedPermissions, ArrayList<String> deniedPermissions, ArrayList<String> deniedForeverP) {
                         if (!deniedForeverP.isEmpty()) {
-                            showRequestPermissionDialog(PLVAppUtils.getString(R.string.plv_chat_open_camera_error_tip_permission_denied));
+                            showRequestPermissionDialog(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_open_camera_error_tip_permission_denied));
                         } else {
-                            ToastUtils.showShort(PLVAppUtils.getString(R.string.plv_chat_open_camera_error_tip_permission_cancel));
+                            ToastUtils.showShort(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_open_camera_error_tip_permission_cancel));
                         }
                     }
                 });
@@ -1304,15 +1311,15 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
     }
 
     private void showRequestPermissionDialog(String message) {
-        new AlertDialog.Builder(getContext()).setTitle(PLVAppUtils.getString(R.string.plv_common_dialog_tip))
+        new AlertDialog.Builder(getContext()).setTitle(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_common_dialog_tip))
                 .setMessage(message)
-                .setPositiveButton(PLVAppUtils.getString(R.string.plv_common_dialog_confirm_2), new DialogInterface.OnClickListener() {
+                .setPositiveButton(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_common_dialog_confirm_2), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         PLVFastPermission.getInstance().jump2Settings(getContext());
                     }
                 })
-                .setNegativeButton(R.string.plv_common_dialog_cancel, new DialogInterface.OnClickListener() {
+                .setNegativeButton(com.easefun.polyv.livecommon.R.string.plv_common_dialog_cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                     }
@@ -1409,7 +1416,7 @@ public class PLVLCChatFragment extends PLVInputFragment implements View.OnClickL
 
                         if (!sendResult.first) {
                             //发送失败
-                            ToastUtils.showShort(getString(R.string.plv_chat_toast_send_msg_failed) + ": " + sendResult.second);
+                            ToastUtils.showShort(getString(com.easefun.polyv.livecommon.R.string.plv_chat_toast_send_msg_failed) + ": " + sendResult.second);
                         } else {
                             //发送成功
                             hideSoftInputAndPopupLayout();

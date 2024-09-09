@@ -43,7 +43,6 @@ pluginManagement {
                     excludeGroupByRegex("com.github.(?!johnrengelman|oshi).*")
                 }
             }
-//            includeBuild("rust_plugin")
             maven(url = "https://androidx.dev/storage/compose-compiler/repository") {
                 content {
                     excludeGroupByRegex("org.jogamp.*")
@@ -58,6 +57,7 @@ pluginManagement {
                     excludeGroupByRegex("com.github.*")
                 }
             }
+
 
             maven(url = "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
         }
@@ -75,28 +75,37 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
 
     repositories {
-
-        mavenCentral {
-            content {
-            }
+        mavenCentral()
+        google()
+        maven(url = "https://jitpack.io")
+        maven{
+            setUrl("http://maven.aliyun.com/nexus/content/repositories/releases/")
+            isAllowInsecureProtocol = true
         }
-        google {
-            content {
-                excludeGroupByRegex("com.finogeeks.*")
-                excludeGroupByRegex("media.kamel.*")
-                excludeGroupByRegex("org.jogamp.*")
-                includeGroupByRegex(".*google.*")
-                includeGroupByRegex(".*android.*")
-                excludeGroupByRegex("com.vickyleu.*")
-                excludeGroupByRegex("com.github.(?!johnrengelman|oshi|bumptech).*")
+        maven(url = "https://maven.aliyun.com/repository/public")
+        // 保利威阿里云效
+        // 保利威阿里云效
+        maven {
+            credentials {
+                username = "609cc5623a10edbf36da9615"
+                password = "EbkbzTNHRJ=P"
             }
+            setUrl("https://packages.aliyun.com/maven/repository/2102846-release-8EVsoM/")
         }
-
         // workaround for https://youtrack.jetbrains.com/issue/KT-51379
         maven {
             setUrl("https://repo.maven.apache.org/maven2")
-            content {
-            }
+        }
+        maven {
+            setUrl("https://repo1.maven.org/maven2/")
+        }
+
+        maven {
+            setUrl("https://maven.aliyun.com/nexus/content/repositories/releases/")
+        }
+        maven(url = "https://artifact.bytedance.com/repository/Volcengine/")
+        maven {
+            setUrl("https://maven.pkg.jetbrains.space/public/p/compose/dev")
         }
         ivy {
             name = "Node.js"
@@ -114,80 +123,18 @@ dependencyResolutionManagement {
             }
             isAllowInsecureProtocol = false
         }
-        maven {
-            setUrl("https://jitpack.io")
-            content {
-                excludeGroupByRegex("com.finogeeks.*")
-                excludeGroupByRegex("org.jogamp.*")
-                includeGroupByRegex("com.github.*")
-                excludeGroupByRegex("org.jetbrains.compose.*")
-            }
-        }
-        // 保利威阿里云效
-        maven {
-            credentials {
-                username = "609cc5623a10edbf36da9615"
-                password = "EbkbzTNHRJ=P"
-            }
-            setUrl("https://packages.aliyun.com/maven/repository/2102846-release-8EVsoM/")
-            content {
-                excludeGroupByRegex("com.finogeeks.*")
-                excludeGroupByRegex("org.jogamp.*")
-                excludeGroupByRegex("org.jetbrains.compose.*")
-                excludeGroupByRegex("com.vickyleu.*")
-                excludeGroupByRegex("io.github.*")
-                excludeGroupByRegex("com.github.(?!johnrengelman|oshi|bumptech|mzule|pwittchen|filippudak|asyl|florent37).*")
-            }
-        }
-        maven {
-            setUrl("https://repo1.maven.org/maven2/")
-            content {
-                excludeGroupByRegex("com.finogeeks.*")
-                excludeGroupByRegex("org.jetbrains.compose.*")
-                includeGroupByRegex("org.jogamp.gluegen.*")
-            }
-        }
 
-        maven {
-            setUrl("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-            content {
-                excludeGroupByRegex("com.finogeeks.*")
-                excludeGroupByRegex("org.jogamp.*")
-                excludeGroupByRegex("com.vickyleu.*")
-                excludeGroupByRegex("com.github.*")
-                excludeGroupByRegex("io.github.*")
-            }
-        }
+
+
 
         maven {
             setUrl("https://dl.bintray.com/kotlin/kotlin-dev")
-            content {
-                excludeGroupByRegex("com.finogeeks.*")
-                excludeGroupByRegex("org.jogamp.*")
-                excludeGroupByRegex("com.vickyleu.*")
-                excludeGroupByRegex("com.github.*")
-                excludeGroupByRegex("io.github.*")
-            }
         }
         maven {
             setUrl("https://dl.bintray.com/kotlin/kotlin-eap")
-            content {
-                excludeGroupByRegex("com.finogeeks.*")
-                excludeGroupByRegex("org.jogamp.*")
-                excludeGroupByRegex("com.vickyleu.*")
-                excludeGroupByRegex("com.github.*")
-                excludeGroupByRegex("io.github.*")
-            }
         }
 
         maven("https://maven.pkg.jetbrains.space/kotlin/p/wasm/experimental") {
-            content {
-                excludeGroupByRegex("com.finogeeks.*")
-                excludeGroupByRegex("org.jogamp.*")
-                excludeGroupByRegex("com.vickyleu.*")
-                excludeGroupByRegex("com.github.*")
-                excludeGroupByRegex("io.github.*")
-            }
         }
 
         maven(url = "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
@@ -222,3 +169,10 @@ dependencyResolutionManagement {
 
 
 include(":live")
+
+include(":polyvLiveCloudClassScene").apply {
+    project(":polyvLiveCloudClassScene").projectDir = file("./polyv/android/polyvLiveCloudClassScene")
+}
+include(":polyvLiveCommonModul").apply {
+    project(":polyvLiveCommonModul").projectDir = file("./polyv/android/polyvLiveCommonModul")
+}

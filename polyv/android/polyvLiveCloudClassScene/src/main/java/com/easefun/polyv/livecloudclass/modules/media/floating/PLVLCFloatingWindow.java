@@ -1,11 +1,11 @@
 package com.easefun.polyv.livecloudclass.modules.media.floating;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -264,8 +264,8 @@ public class PLVLCFloatingWindow implements IPLVFloatingWindow {
         } else {
             final Activity topActivity = ActivityUtils.getTopActivity();
             new AlertDialog.Builder(topActivity == null ? context : topActivity)
-                    .setMessage(PLVAppUtils.getString(R.string.plv_player_floating_permission_apply_tips))
-                    .setPositiveButton(PLVAppUtils.getString(R.string.plv_common_dialog_confirm_3), new DialogInterface.OnClickListener() {
+                    .setMessage(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_player_floating_permission_apply_tips))
+                    .setPositiveButton(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_common_dialog_confirm_3), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             PLVFloatPermissionUtils.requestPermission((Activity) context, new PLVFloatPermissionUtils.IPLVOverlayPermissionListener() {
@@ -278,7 +278,7 @@ public class PLVLCFloatingWindow implements IPLVFloatingWindow {
                             });
                         }
                     })
-                    .setNegativeButton(PLVAppUtils.getString(R.string.plv_common_dialog_cancel_2), null)
+                    .setNegativeButton(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_common_dialog_cancel_2), null)
                     .show();
 
         }

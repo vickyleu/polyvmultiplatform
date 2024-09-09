@@ -2,8 +2,8 @@ package com.easefun.polyv.livecommon.module.modules.streamer.presenter;
 
 import static com.plv.foundationsdk.utils.PLVSugarUtil.nullable;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.easefun.polyv.livecommon.module.modules.streamer.model.PLVSipLinkMicRepo;
 import com.easefun.polyv.livecommon.module.modules.streamer.model.vo.PLVSipLinkMicViewerVO;

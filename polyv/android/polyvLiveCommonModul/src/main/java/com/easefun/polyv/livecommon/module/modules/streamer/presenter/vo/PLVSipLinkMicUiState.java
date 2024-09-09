@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecommon.module.modules.streamer.presenter.vo;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * @author Hoshiiro

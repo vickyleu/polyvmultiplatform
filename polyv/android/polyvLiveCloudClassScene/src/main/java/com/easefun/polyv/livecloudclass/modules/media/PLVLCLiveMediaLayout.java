@@ -4,17 +4,18 @@ import static com.plv.foundationsdk.utils.PLVAppUtils.postToMainThread;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
+
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.os.CountDownTimer;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -305,8 +306,8 @@ public class PLVLCLiveMediaLayout extends FrameLayout implements IPLVLCMediaLayo
 
     private void initVideoView() {
         //设置noStreamView
-        noStreamView.setPlaceHolderImg(R.drawable.plvlc_bg_player_no_stream);
-        noStreamView.setPlaceHolderText(getResources().getString(R.string.plv_player_video_live_no_stream));
+        noStreamView.setPlaceHolderImg(com.easefun.polyv.livecommon.R.drawable.plvlc_bg_player_no_stream);
+        noStreamView.setPlaceHolderText(getResources().getString(com.easefun.polyv.livecommon.R.string.plv_player_video_live_no_stream));
 
         videoView.setSubVideoView(subVideoView);
         videoView.setAudioModeView(audioModeView);
@@ -319,7 +320,7 @@ public class PLVLCLiveMediaLayout extends FrameLayout implements IPLVLCMediaLayo
     }
 
     private void initPlayErrorView() {
-        playErrorView.setPlaceHolderImg(R.drawable.plv_bg_player_error_ic);
+        playErrorView.setPlaceHolderImg(com.easefun.polyv.livecommon.R.drawable.plv_bg_player_error_ic);
         playErrorView.setOnChangeLinesViewClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -350,7 +351,7 @@ public class PLVLCLiveMediaLayout extends FrameLayout implements IPLVLCMediaLayo
                     //发送信息到聊天室
                     Pair<Boolean, Integer> result = onViewActionListener.onSendChatMessageAction(message, chatQuoteVO);
                     if (!result.first) {
-                        ToastUtils.showShort(getResources().getString(R.string.plv_chat_toast_send_msg_failed) + ": " + result.second);
+                        ToastUtils.showShort(getResources().getString(com.easefun.polyv.livecommon.R.string.plv_chat_toast_send_msg_failed) + ": " + result.second);
                     }
                 }
             }
@@ -1251,7 +1252,7 @@ public class PLVLCLiveMediaLayout extends FrameLayout implements IPLVLCMediaLayo
         public void onSubVideoViewCountDown(boolean isOpenAdHead, int totalTime, int remainTime, int adStage) {
             if (isOpenAdHead) {
                 llAuxiliaryCountDown.setVisibility(VISIBLE);
-                tvCountDown.setText(PLVAppUtils.formatString(R.string.plv_player_advertising_count_down, remainTime + ""));
+                tvCountDown.setText(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_player_advertising_count_down, remainTime + ""));
             }
         }
 
@@ -1282,7 +1283,7 @@ public class PLVLCLiveMediaLayout extends FrameLayout implements IPLVLCMediaLayo
         @Override
         public void onNoLiveAtPresent() {
             super.onNoLiveAtPresent();
-            ToastUtils.showShort(R.string.plv_player_toast_no_live);
+            ToastUtils.showShort(com.easefun.polyv.livecommon.R.string.plv_player_toast_no_live);
             if (toTopView != null) {
                 toTopView.setShowEnabled(false);
             }
@@ -1424,7 +1425,7 @@ public class PLVLCLiveMediaLayout extends FrameLayout implements IPLVLCMediaLayo
         startTimeCountDown = new CountDownTimer(timeSpanMillis, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                String timeText = PLVAppUtils.formatString(R.string.plv_player_start_live_count_down, TimeUtils.toCountDownTime(millisUntilFinished));
+                String timeText = PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_player_start_live_count_down, TimeUtils.toCountDownTime(millisUntilFinished));
                 timeCountDownTv.setText(timeText);
                 timeCountDownTv.setVisibility(View.VISIBLE);
             }

@@ -7,10 +7,10 @@ import static com.plv.foundationsdk.utils.PLVSugarUtil.getOrDefault;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.nullable;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.transformList;
 
-import android.arch.lifecycle.Observer;
+import androidx.lifecycle.Observer;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;

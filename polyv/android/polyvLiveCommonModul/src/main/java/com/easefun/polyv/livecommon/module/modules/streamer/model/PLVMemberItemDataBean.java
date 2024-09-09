@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecommon.module.modules.streamer.model;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.easefun.polyv.livecommon.module.modules.linkmic.model.PLVLinkMicItemDataBean;
 import com.plv.socket.user.PLVClassStatusBean;

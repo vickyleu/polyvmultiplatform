@@ -1,8 +1,8 @@
 package com.easefun.polyv.livecloudclass.modules.media.danmu;
 
 import android.graphics.Rect;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -217,7 +217,7 @@ public class PLVLCLandscapeMessageSendPanel implements IPLVLCLandscapeMessageSen
     private void sendMessage() {
         String msg = etSendMessage.getText().toString();
         if (msg.trim().length() == 0) {
-            ToastUtils.showLong(R.string.plv_chat_toast_send_text_empty);
+            ToastUtils.showLong(com.easefun.polyv.livecommon.R.string.plv_chat_toast_send_text_empty);
             return;
         }
         etSendMessage.setText("");

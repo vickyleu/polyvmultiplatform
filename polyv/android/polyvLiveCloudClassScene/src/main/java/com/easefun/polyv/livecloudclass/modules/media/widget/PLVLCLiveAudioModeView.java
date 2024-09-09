@@ -2,9 +2,9 @@ package com.easefun.polyv.livecloudclass.modules.media.widget;
 
 import android.content.Context;
 import android.content.res.Configuration;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -78,7 +78,7 @@ public class PLVLCLiveAudioModeView extends ConstraintLayout implements IPolyvLi
 
     // <editor-fold defaultstate="collapsed" desc="初始化View">
     private void initView() {
-        setBackgroundColor(getResources().getColor(R.color.colorEbonyClay));
+        setBackgroundColor(getResources().getColor(com.easefun.polyv.livecommon.R.color.colorEbonyClay));
         LayoutInflater.from(getContext()).inflate(R.layout.plvlc_player_audio_mode_view, this);
         ivAudioModeImg = findViewById(R.id.plvlc_iv_audio_mode_img);
         tvPlaceholderAudioModePlayVideo = findViewById(R.id.plvlc_tv_placeholder_audio_mode_play_video);

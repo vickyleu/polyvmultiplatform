@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecommon.module.modules.linkmic.model;
 
-import android.support.annotation.IntRange;
+import androidx.annotation.IntRange;
 import android.text.TextUtils;
 
 import com.plv.linkmic.PLVLinkMicConstant;

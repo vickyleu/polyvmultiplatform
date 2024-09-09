@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecloudclass.modules.linkmic;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.ViewGroup;
 
 import com.easefun.polyv.livecommon.module.data.IPLVLiveRoomDataManager;

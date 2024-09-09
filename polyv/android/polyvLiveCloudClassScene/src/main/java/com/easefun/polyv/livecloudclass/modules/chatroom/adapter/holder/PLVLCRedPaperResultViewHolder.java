@@ -49,10 +49,10 @@ public class PLVLCRedPaperResultViewHolder extends PLVChatMessageBaseViewHolder<
                         return drawable;
                     }
                 })
-                .append(PLVAppUtils.formatString(R.string.plv_red_paper_receive_msg, redPaperResultEvent.getNick(), PLVRedPaperType.matchOrDefault(redPaperResultEvent.getType(), PLVRedPaperType.DEFAULT_RED_PAPER).getTypeName()))
-                .appendExclude(PLVAppUtils.getString(R.string.plv_red_paper_name), new ForegroundColorSpan(PLVFormatUtils.parseColor("#FF5353")));
+                .append(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_red_paper_receive_msg, redPaperResultEvent.getNick(), PLVRedPaperType.matchOrDefault(redPaperResultEvent.getType(), PLVRedPaperType.DEFAULT_RED_PAPER).getTypeName()))
+                .appendExclude(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_red_paper_name), new ForegroundColorSpan(PLVFormatUtils.parseColor("#FF5353")));
         if (redPaperResultEvent.isRedPaperRunOut()) {
-            spannableStringBuilder.append(PLVAppUtils.getString(R.string.plv_red_paper_run_out_2));
+            spannableStringBuilder.append(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_red_paper_run_out_2));
         }
         chatroomRedPaperResultTv.setText(spannableStringBuilder);
     }

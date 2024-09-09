@@ -1,12 +1,12 @@
 package com.easefun.polyv.livecloudclass.modules.media.controller;
 
 import android.app.Activity;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 import android.content.Context;
 import android.content.res.Configuration;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -430,10 +430,10 @@ public class PLVLCPlaybackMediaController extends FrameLayout implements IPLVLCP
     public void setChatPlaybackEnabled(boolean isChatPlaybackEnabled, boolean isLiveType) {
         if (tvStartSendMessageLand != null) {
             if (isChatPlaybackEnabled || !isLiveType) {
-                tvStartSendMessageLand.setText(PLVAppUtils.getString(R.string.plv_chat_input_tips_chatroom_close));
+                tvStartSendMessageLand.setText(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_chatroom_close));
                 tvStartSendMessageLand.setEnabled(false);
             } else {
-                tvStartSendMessageLand.setText(PLVAppUtils.getString(R.string.plv_chat_input_tips_chat));
+                tvStartSendMessageLand.setText(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_chat));
                 tvStartSendMessageLand.setEnabled(true);
             }
         }
@@ -453,7 +453,8 @@ public class PLVLCPlaybackMediaController extends FrameLayout implements IPLVLCP
     @Override
     public void notifyChatroomStatusChanged(boolean isCloseRoomStatus, boolean isFocusModeStatus) {
         if (tvStartSendMessageLand != null) {
-            String text = PLVAppUtils.getString(isCloseRoomStatus ? R.string.plv_chat_input_tips_chatroom_close_2 : (isFocusModeStatus ? R.string.plv_chat_input_tips_focus : R.string.plv_chat_input_tips_chat));
+            String text = PLVAppUtils.getString(isCloseRoomStatus ? com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_chatroom_close_2 :
+                    (isFocusModeStatus ? com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_focus : com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_chat));
             tvStartSendMessageLand.setText(text);
             tvStartSendMessageLand.setOnClickListener((!isCloseRoomStatus && !isFocusModeStatus) ? this : null);
         }
@@ -464,7 +465,7 @@ public class PLVLCPlaybackMediaController extends FrameLayout implements IPLVLCP
         videoViewerCountLandTv.setVisibility(View.VISIBLE);
 
         String viewerCountText = StringUtils.toWString(viewerCount);
-        String text = PLVAppUtils.formatString(R.string.plv_player_viewer_count, viewerCountText);
+        String text = PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_player_viewer_count, viewerCountText);
 
         videoViewerCountPortTv.setText(text);
         videoViewerCountLandTv.setText(text);
@@ -476,7 +477,7 @@ public class PLVLCPlaybackMediaController extends FrameLayout implements IPLVLCP
         videoViewerCountLandTv.setVisibility(View.VISIBLE);
 
         String viewerCountText = StringUtils.toWString(onlineCount);
-        String text = PLVAppUtils.formatString(R.string.plv_player_viewer_online_count, viewerCountText);
+        String text = PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_player_viewer_online_count, viewerCountText);
 
         videoViewerCountPortTv.setText(text);
         videoViewerCountLandTv.setText(text);

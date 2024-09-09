@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecommon.module.modules.multiroom.transmit.model.enums;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 /**
  * 转播频道拉流模式

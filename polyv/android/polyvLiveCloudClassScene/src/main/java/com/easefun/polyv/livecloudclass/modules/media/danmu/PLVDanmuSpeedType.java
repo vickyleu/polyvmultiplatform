@@ -10,31 +10,31 @@ public enum PLVDanmuSpeedType {
     DANMU_SLOWER("",340,0) {
         @Override
         public String getSpeedType() {
-            return PLVAppUtils.getString(R.string.plv_danmu_speed_slower);
+            return PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_danmu_speed_slower);
         }
     },
     DANMU_SLOW("",270,1) {
         @Override
         public String getSpeedType() {
-            return PLVAppUtils.getString(R.string.plv_danmu_speed_slow);
+            return PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_danmu_speed_slow);
         }
     },
     DANMU_NORMAL("",200,2) {
         @Override
         public String getSpeedType() {
-            return PLVAppUtils.getString(R.string.plv_danmu_speed_normal);
+            return PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_danmu_speed_normal);
         }
     },
     DANMU_QUICK("",140,3) {
         @Override
         public String getSpeedType() {
-            return PLVAppUtils.getString(R.string.plv_danmu_speed_quick);
+            return PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_danmu_speed_quick);
         }
     },
     DANMU_FAST("",60,4) {
         @Override
         public String getSpeedType() {
-            return PLVAppUtils.getString(R.string.plv_danmu_speed_fast);
+            return PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_danmu_speed_fast);
         }
     };
 

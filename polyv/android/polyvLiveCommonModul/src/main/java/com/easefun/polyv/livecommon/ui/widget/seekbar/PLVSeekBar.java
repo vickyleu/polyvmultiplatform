@@ -16,10 +16,11 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.IntDef;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.IntDef;
+import androidx.core.content.ContextCompat;
+//import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 
@@ -109,7 +110,8 @@ public class PLVSeekBar {
         indicatorWidth = t.getLayoutDimension(R.styleable.PLVRangeSeekBar_rsb_indicator_width, WRAP_CONTENT);
         indicatorTextSize = (int) t.getDimension(R.styleable.PLVRangeSeekBar_rsb_indicator_text_size, PLVSeekbarUtils.dp2px(14));
         indicatorTextColor = t.getColor(R.styleable.PLVRangeSeekBar_rsb_indicator_text_color, Color.WHITE);
-        indicatorBackgroundColor = t.getColor(R.styleable.PLVRangeSeekBar_rsb_indicator_background_color, ContextCompat.getColor(getContext(), R.color.colorAccent));
+        indicatorBackgroundColor = t.getColor(R.styleable.PLVRangeSeekBar_rsb_indicator_background_color, ContextCompat.getColor(getContext(),
+                com.easefun.polyv.livescenes.R.color.colorAccent));
         indicatorPaddingLeft = (int) t.getDimension(R.styleable.PLVRangeSeekBar_rsb_indicator_padding_left, 0);
         indicatorPaddingRight = (int) t.getDimension(R.styleable.PLVRangeSeekBar_rsb_indicator_padding_right, 0);
         indicatorPaddingTop = (int) t.getDimension(R.styleable.PLVRangeSeekBar_rsb_indicator_padding_top, 0);

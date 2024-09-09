@@ -3,7 +3,7 @@ package com.easefun.polyv.livecommon.module.modules.streamer.model;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.collectionMinus;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.transformList;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.easefun.polyv.livecommon.module.modules.streamer.model.enums.PLVSipLinkMicState;
 import com.easefun.polyv.livecommon.module.modules.streamer.model.vo.PLVSipLinkMicViewerVO;

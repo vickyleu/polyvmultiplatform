@@ -6,8 +6,8 @@ import static com.plv.foundationsdk.utils.PLVSugarUtil.nullable;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
@@ -224,7 +224,7 @@ public class PLVLCMessageViewHolder extends PLVChatMessageBaseViewHolder<PLVBase
                     if (imgLoadingView != null) {
                         imgLoadingView.setVisibility(View.GONE);
                     }
-                    ToastUtils.showLong(PLVAppUtils.formatString(R.string.plv_chat_send_img_fail, t.getMessage()));
+                    ToastUtils.showLong(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_chat_send_img_fail, t.getMessage()));
                 }
             }
 
@@ -236,7 +236,7 @@ public class PLVLCMessageViewHolder extends PLVChatMessageBaseViewHolder<PLVBase
                     if (imgLoadingView != null) {
                         imgLoadingView.setVisibility(View.GONE);
                     }
-                    ToastUtils.showLong(PLVAppUtils.formatString(R.string.plv_chat_send_img_fail, sendValue + ""));
+                    ToastUtils.showLong(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_chat_send_img_fail, sendValue + ""));
                 }
             }
 
@@ -273,7 +273,7 @@ public class PLVLCMessageViewHolder extends PLVChatMessageBaseViewHolder<PLVBase
                     if (imgLoadingView != null) {
                         imgLoadingView.setVisibility(View.GONE);
                     }
-                    ToastUtils.showLong(PLVAppUtils.formatString(R.string.plv_chat_send_img_fail, t.getMessage()));
+                    ToastUtils.showLong(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_chat_send_img_fail, t.getMessage()));
                 }
             }
         });
@@ -380,7 +380,7 @@ public class PLVLCMessageViewHolder extends PLVChatMessageBaseViewHolder<PLVBase
         if (nickName != null) {
             String showName = nickName;
             if (loginUserId != null && loginUserId.equals(userId)) {
-                showName = showName + PLVAppUtils.getString(R.string.plv_chat_me_2);
+                showName = showName + PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_me_2);
             }
             if (actor != null) {
                 showName = actor + "-" + showName;
@@ -482,7 +482,7 @@ public class PLVLCMessageViewHolder extends PLVChatMessageBaseViewHolder<PLVBase
         if (chatQuoteVO != null) {
             String nickName = chatQuoteVO.getNick();
             if (loginUserId != null && loginUserId.equals(chatQuoteVO.getUserId())) {
-                nickName = nickName + PLVAppUtils.getString(R.string.plv_chat_me_2);
+                nickName = nickName + PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_me_2);
             }
             if (quoteSplitView != null) {
                 quoteSplitView.setVisibility(View.VISIBLE);
@@ -603,7 +603,7 @@ public class PLVLCMessageViewHolder extends PLVChatMessageBaseViewHolder<PLVBase
         if (chatMsgOverLengthSplitLine != null) {
             chatMsgOverLengthSplitLine.setVisibility(View.VISIBLE);
         }
-        chatMsgOverLengthMoreBtn.setText(isOverLengthContentFolding ? R.string.plv_chat_msg_over_length_more : R.string.plv_chat_msg_over_length_fold);
+        chatMsgOverLengthMoreBtn.setText(isOverLengthContentFolding ? com.easefun.polyv.livecommon.R.string.plv_chat_msg_over_length_more : com.easefun.polyv.livecommon.R.string.plv_chat_msg_over_length_fold);
         if (textMessageTv != null) {
             textMessageTv.setMaxLines(isOverLengthContentFolding ? 6 : Integer.MAX_VALUE);
         }

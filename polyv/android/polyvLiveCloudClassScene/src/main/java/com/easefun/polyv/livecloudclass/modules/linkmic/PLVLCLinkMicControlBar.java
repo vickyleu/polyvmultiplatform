@@ -3,9 +3,11 @@ package com.easefun.polyv.livecloudclass.modules.linkmic;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
-import android.arch.lifecycle.GenericLifecycleObserver;
-import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleOwner;
+import androidx.lifecycle.GenericLifecycleObserver;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,9 +15,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.net.ConnectivityManager;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.text.style.AbsoluteSizeSpan;
@@ -216,6 +218,7 @@ public class PLVLCLinkMicControlBar extends FrameLayout implements IPLVLCLinkMic
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="初始化广播监听器">
+    @SuppressLint("RestrictedApi")
     private void initBroadcastReceiver(final Context context) {
         context.registerReceiver(receiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
         if (context instanceof AppCompatActivity) {
@@ -259,9 +262,9 @@ public class PLVLCLinkMicControlBar extends FrameLayout implements IPLVLCLinkMic
             btnRingActionPortrait.setRingUpState();
             tvRequestTip.setVisibility(VISIBLE);
             if (isAudioState) {
-                tvRequestTip.setText(R.string.plv_linkmic_tip_request_audio_link_mic);
+                tvRequestTip.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_audio_link_mic);
             } else {
-                tvRequestTip.setText(R.string.plv_linkmic_tip_request_video_link_mic);
+                tvRequestTip.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_video_link_mic);
             }
             ll4BtnParent.setVisibility(INVISIBLE);
 
@@ -270,9 +273,9 @@ public class PLVLCLinkMicControlBar extends FrameLayout implements IPLVLCLinkMic
             llFunctionBtnParentLand.setVisibility(GONE);
             tvRequestTipLandscape.setVisibility(VISIBLE);
             if (isAudioState) {
-                tvRequestTipLandscape.setText(R.string.plv_linkmic_tip_request_audio_link_mic);
+                tvRequestTipLandscape.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_audio_link_mic);
             } else {
-                tvRequestTipLandscape.setText(R.string.plv_linkmic_tip_request_video_link_mic);
+                tvRequestTipLandscape.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_video_link_mic);
             }
 
             //设置屏幕方向的UI
@@ -353,11 +356,11 @@ public class PLVLCLinkMicControlBar extends FrameLayout implements IPLVLCLinkMic
 
         if (state == PLVLCLinkMicControllerState.STATE_TEACHER_LINK_MIC_OPEN || state == PLVLCLinkMicControllerState.STATE_TEACHER_LINK_MIC_OPEN_COLLAPSE) {
             if (isAudioState) {
-                tvRequestTip.setText(R.string.plv_linkmic_tip_request_audio_link_mic);
-                tvRequestTipLandscape.setText(R.string.plv_linkmic_tip_request_audio_link_mic);
+                tvRequestTip.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_audio_link_mic);
+                tvRequestTipLandscape.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_audio_link_mic);
             } else {
-                tvRequestTip.setText(R.string.plv_linkmic_tip_request_video_link_mic);
-                tvRequestTipLandscape.setText(R.string.plv_linkmic_tip_request_video_link_mic);
+                tvRequestTip.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_video_link_mic);
+                tvRequestTipLandscape.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_video_link_mic);
             }
         }
     }
@@ -372,9 +375,9 @@ public class PLVLCLinkMicControlBar extends FrameLayout implements IPLVLCLinkMic
         //更新竖屏UI
         tvRequestTip.setVisibility(VISIBLE);
         if (isAudioState) {
-            tvRequestTip.setText(R.string.plv_linkmic_tip_request_audio_link_mic);
+            tvRequestTip.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_audio_link_mic);
         } else {
-            tvRequestTip.setText(R.string.plv_linkmic_tip_request_video_link_mic);
+            tvRequestTip.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_video_link_mic);
         }
         btnRingActionPortrait.setRingUpState();
         ll4BtnParent.setVisibility(INVISIBLE);
@@ -383,9 +386,9 @@ public class PLVLCLinkMicControlBar extends FrameLayout implements IPLVLCLinkMic
         btnRingActionLandscape.setBackgroundResource(R.drawable.plvlc_linkmic_iv_ring_up);
         tvRequestTipLandscape.setVisibility(VISIBLE);
         if (isAudioState) {
-            tvRequestTipLandscape.setText(R.string.plv_linkmic_tip_request_audio_link_mic);
+            tvRequestTipLandscape.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_audio_link_mic);
         } else {
-            tvRequestTipLandscape.setText(R.string.plv_linkmic_tip_request_video_link_mic);
+            tvRequestTipLandscape.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_request_video_link_mic);
         }
         llFunctionBtnParentLand.setVisibility(GONE);
 
@@ -414,16 +417,16 @@ public class PLVLCLinkMicControlBar extends FrameLayout implements IPLVLCLinkMic
             orderText = "50+";
         }
         if (state == PLVLCLinkMicControllerState.STATE_REQUESTING_JOIN_LINK_MIC) {
-            tvRequestTip.setText(new PLVSpannableStringBuilder(getContext().getString(R.string.plv_linkmic_tip_requesting_link_mic))
-                    .appendExclude(PLVAppUtils.formatString(R.string.plv_linkmic_apply_pending, orderText), new AbsoluteSizeSpan(ConvertUtils.sp2px(12)) {
+            tvRequestTip.setText(new PLVSpannableStringBuilder(getContext().getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_requesting_link_mic))
+                    .appendExclude(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_linkmic_apply_pending, orderText), new AbsoluteSizeSpan(ConvertUtils.sp2px(12)) {
                         @Override
                         public void updateDrawState(@NonNull TextPaint ds) {
                             super.updateDrawState(ds);
                             ds.setColor(PLVFormatUtils.parseColor("#99FFFFFF"));
                         }
                     }));
-            tvRequestTipLandscape.setText(new PLVSpannableStringBuilder(getContext().getString(R.string.plv_linkmic_tip_requesting_link_mic))
-                    .appendExclude(PLVAppUtils.formatString(R.string.plv_linkmic_apply_pending, orderText), new AbsoluteSizeSpan(ConvertUtils.sp2px(10)) {
+            tvRequestTipLandscape.setText(new PLVSpannableStringBuilder(getContext().getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_requesting_link_mic))
+                    .appendExclude(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_linkmic_apply_pending, orderText), new AbsoluteSizeSpan(ConvertUtils.sp2px(10)) {
                         @Override
                         public void updateDrawState(@NonNull TextPaint ds) {
                             super.updateDrawState(ds);
@@ -610,10 +613,10 @@ public class PLVLCLinkMicControlBar extends FrameLayout implements IPLVLCLinkMic
                     return;
                 }
                 btnRingActionPortrait.setRingOffState();
-                tvRequestTip.setText(R.string.plv_linkmic_tip_requesting_link_mic);
+                tvRequestTip.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_requesting_link_mic);
 
                 btnRingActionLandscape.setBackgroundResource(R.drawable.plvlc_linkmic_iv_ring_off);
-                tvRequestTipLandscape.setText(R.string.plv_linkmic_tip_requesting_link_mic);
+                tvRequestTipLandscape.setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_tip_requesting_link_mic);
                 switch (state) {
                     case STATE_TEACHER_LINK_MIC_OPEN:
                         PLVCommonLog.d(TAG, "btnSetting.onClickRingUp->STATE_TEACHER_LINK_MIC_OPEN");
@@ -641,8 +644,8 @@ public class PLVLCLinkMicControlBar extends FrameLayout implements IPLVLCLinkMic
             public void onClickRingOff() {
                 PLVDialogFactory.createConfirmDialog(
                         getContext(),
-                        getResources().getString(R.string.plv_linkmic_dialog_hang_off_confirm_ask),
-                        getResources().getString(R.string.plv_linkmic_dialog_hang_off),
+                        getResources().getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_dialog_hang_off_confirm_ask),
+                        getResources().getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_dialog_hang_off),
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -784,7 +787,7 @@ public class PLVLCLinkMicControlBar extends FrameLayout implements IPLVLCLinkMic
     private boolean toastWhenFloatingPlayerShowing() {
         if (PLVFloatingPlayerManager.getInstance().isFloatingWindowShowing()) {
             PLVToast.Builder.context(getContext())
-                    .setText(R.string.plv_linkmic_floating_player_showing_tips)
+                    .setText(com.easefun.polyv.livecommon.R.string.plv_linkmic_floating_player_showing_tips)
                     .show();
             return true;
         }

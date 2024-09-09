@@ -1,9 +1,10 @@
 package com.easefun.polyv.livecommon.module.modules.linkmic.contract;
 
-import android.arch.lifecycle.LiveData;
 import android.content.Context;
 import android.view.SurfaceView;
 import android.view.View;
+
+import androidx.lifecycle.LiveData;
 
 import com.easefun.polyv.livecommon.module.modules.linkmic.model.PLVLinkMicItemDataBean;
 import com.easefun.polyv.livecommon.module.modules.linkmic.model.PLVLinkMicListShowMode;

@@ -3,10 +3,10 @@ package com.easefun.polyv.livecloudclass.modules.chatroom.chatmore;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.arrayListOf;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
@@ -65,12 +65,12 @@ public class PLVLCChatMoreLayout extends FrameLayout {
 
     //初始化支持的功能模块
     private final ArrayList<PLVChatFunctionVO> functionList = arrayListOf(
-            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_ONLY_TEACHER, R.drawable.plvlc_chatroom_btn_view_message_selector, PLVAppUtils.getString(R.string.plv_live_only_teacher), true),
-            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_SEND_IMAGE, R.drawable.plvlc_chatroom_btn_img_send, PLVAppUtils.getString(R.string.plv_live_send_img), false),
-            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_OPEN_CAMERA, R.drawable.plvlc_chatroom_btn_camera, PLVAppUtils.getString(R.string.plv_live_open_camera), false),
-            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_BULLETIN, R.drawable.plvlc_chatroom_btn_bulletin_show, PLVAppUtils.getString(R.string.plv_live_bulletin), true),
-            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_LANGUAGE_SWITCH, R.drawable.plvlc_chatroom_btn_language_switch, PLVAppUtils.getString(R.string.plv_live_language_switch), true),
-            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_MESSAGE, R.drawable.plvlc_chatroom_btn_message, PLVAppUtils.getString(R.string.plv_live_message), false)
+            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_ONLY_TEACHER, R.drawable.plvlc_chatroom_btn_view_message_selector, PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_live_only_teacher), true),
+            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_SEND_IMAGE, R.drawable.plvlc_chatroom_btn_img_send, PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_live_send_img), false),
+            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_OPEN_CAMERA, R.drawable.plvlc_chatroom_btn_camera, PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_live_open_camera), false),
+            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_BULLETIN, R.drawable.plvlc_chatroom_btn_bulletin_show, PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_live_bulletin), true),
+            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_LANGUAGE_SWITCH, R.drawable.plvlc_chatroom_btn_language_switch, PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_live_language_switch), true),
+            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_MESSAGE, R.drawable.plvlc_chatroom_btn_message, PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_live_message), false)
 //            new PLVChatFunctionVO(CHAT_FUNCTION_TYPE_EFFECT, R.drawable.plvlc_chatroom_btn_view_effect_selector, PLVAppUtils.getString(R.string.plv_chat_view_close_effect), false)
     );
 

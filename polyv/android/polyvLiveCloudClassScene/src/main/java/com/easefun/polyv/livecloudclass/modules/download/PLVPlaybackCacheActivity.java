@@ -4,9 +4,9 @@ import static com.plv.thirdpart.blankj.utilcode.util.ConvertUtils.dp2px;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
+import androidx.annotation.Nullable;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -65,8 +65,8 @@ public class PLVPlaybackCacheActivity extends PLVBaseActivity implements View.On
     }
 
     private void initTab() {
-        playbackCacheFragments.add(PLVPlaybackCacheFragment.create(PLVAppUtils.getString(R.string.plv_download_downloading), true));
-        playbackCacheFragments.add(PLVPlaybackCacheFragment.create(PLVAppUtils.getString(R.string.plv_download_downloaded), false));
+        playbackCacheFragments.add(PLVPlaybackCacheFragment.create(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_download_downloading), true));
+        playbackCacheFragments.add(PLVPlaybackCacheFragment.create(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_download_downloaded), false));
 
         viewPagerAdapter = new PLVViewPagerAdapter(getSupportFragmentManager(), playbackCacheFragments);
         playbackCacheVp.setAdapter(viewPagerAdapter);

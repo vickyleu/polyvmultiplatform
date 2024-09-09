@@ -1,8 +1,8 @@
 package com.easefun.polyv.livecloudclass.modules.ppt;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -95,7 +95,7 @@ public class PLVLCPPTView extends FrameLayout implements IPLVPPTContract.IPLVPPT
         //设置占位图
         pptPlaceHolderView.setPlaceHolderImg(R.drawable.plvlc_ppt_placeholder);
         //设置占位图文本
-        pptPlaceHolderView.setPlaceHolderText(getResources().getString(R.string.plv_ppt_no_document));
+        pptPlaceHolderView.setPlaceHolderText(getResources().getString(com.easefun.polyv.livecommon.R.string.plv_ppt_no_document));
     }
 
     private void loadWeb() {

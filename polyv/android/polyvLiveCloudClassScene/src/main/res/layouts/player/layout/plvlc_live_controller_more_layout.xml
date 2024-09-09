@@ -90,7 +90,7 @@
                     android:textColor="#C2C2C2"
                     android:textSize="12sp" />
 
-                <android.support.v7.widget.RecyclerView
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/plvlc_live_control_more_bitrate_rv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -114,7 +114,7 @@
                     android:textColor="#C2C2C2"
                     android:textSize="12sp" />
 
-                <android.support.v7.widget.RecyclerView
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/plvlc_live_control_more_lines_rv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -138,7 +138,7 @@
                     android:textColor="#C2C2C2"
                     android:textSize="12sp" />
 
-                <android.support.v7.widget.RecyclerView
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/plvlc_live_control_more_latency_rv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />

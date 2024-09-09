@@ -1,14 +1,14 @@
 package com.easefun.polyv.livecloudclass.modules.media.controller;
 
 import android.app.Activity;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Pair;
 import android.view.Gravity;
@@ -332,14 +332,14 @@ public class PLVLCLiveMediaController extends FrameLayout implements IPLVLCLiveM
                 if (addedAbilities.contains(PLVUserAbility.LIVE_DOCUMENT_ALLOW_USE_PAINT_ON_LINKMIC)) {
                     updatePaintModeEntrance = true;
                     PLVToast.Builder.context(getContext())
-                            .setText(R.string.plv_ppt_allow_use_paint)
+                            .setText(com.easefun.polyv.livecommon.R.string.plv_ppt_allow_use_paint)
                             .show();
                     show();
                 }
                 if (removedAbilities.contains(PLVUserAbility.LIVE_DOCUMENT_ALLOW_USE_PAINT_ON_LINKMIC)) {
                     updatePaintModeEntrance = true;
                     PLVToast.Builder.context(getContext())
-                            .setText(R.string.plv_ppt_no_allow_use_paint)
+                            .setText(com.easefun.polyv.livecommon.R.string.plv_ppt_no_allow_use_paint)
                             .show();
                 }
                 if (updatePaintModeEntrance) {
@@ -557,7 +557,7 @@ public class PLVLCLiveMediaController extends FrameLayout implements IPLVLCLiveM
         videoViewerCountLandTv.setVisibility(View.VISIBLE);
 
         String viewerCountText = StringUtils.toWString(viewerCount);
-        String text = PLVAppUtils.formatString(R.string.plv_player_viewer_count, viewerCountText);
+        String text = PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_player_viewer_count, viewerCountText);
 
         videoViewerCountPortTv.setText(text);
         videoViewerCountLandTv.setText(text);
@@ -569,7 +569,7 @@ public class PLVLCLiveMediaController extends FrameLayout implements IPLVLCLiveM
         videoViewerCountLandTv.setVisibility(View.VISIBLE);
 
         String viewerCountText = StringUtils.toWString(onlineCount);
-        String text = PLVAppUtils.formatString(R.string.plv_player_viewer_online_count, viewerCountText);
+        String text = PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_player_viewer_online_count, viewerCountText);
 
         videoViewerCountPortTv.setText(text);
         videoViewerCountLandTv.setText(text);
@@ -677,7 +677,8 @@ public class PLVLCLiveMediaController extends FrameLayout implements IPLVLCLiveM
     @Override
     public void notifyChatroomStatusChanged(boolean isCloseRoomStatus, boolean isFocusModeStatus) {
         if (startSendMessageLandIv != null) {
-            String text = PLVAppUtils.getString(isCloseRoomStatus ? R.string.plv_chat_input_tips_chatroom_close_2 : (isFocusModeStatus ? R.string.plv_chat_input_tips_focus : R.string.plv_chat_input_tips_chat));
+            String text = PLVAppUtils.getString(isCloseRoomStatus ? com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_chatroom_close_2 :
+                    (isFocusModeStatus ? com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_focus : com.easefun.polyv.livecommon.R.string.plv_chat_input_tips_chat));
             startSendMessageLandIv.setText(text);
             startSendMessageLandIv.setOnClickListener((!isCloseRoomStatus && !isFocusModeStatus) ? this : null);
         }

@@ -2,17 +2,17 @@ package com.easefun.polyv.livecloudclass.modules.pagemenu.commodity;
 
 import static com.plv.thirdpart.blankj.utilcode.util.ConvertUtils.dp2px;
 
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.MainThread;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
+import androidx.annotation.MainThread;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -363,7 +363,7 @@ public class PLVLCCommodityPushLayout extends FrameLayout implements View.OnClic
 
         commodityNameTv.setText(productContentBean.getName());
 
-        commodityPositionKnowTv.setText(getResources().getString(R.string.plv_commodity_position_details));
+        commodityPositionKnowTv.setText(getResources().getString(com.easefun.polyv.livecommon.R.string.plv_commodity_position_details));
         commodityPositionEnterTv.setText(productContentBean.getBtnShow());
     }
 
@@ -411,7 +411,7 @@ public class PLVLCCommodityPushLayout extends FrameLayout implements View.OnClic
         commoditySrcPriceTv.setVisibility(hideSrcPrice ? GONE : VISIBLE);
         if (productContentBean.isNormalProduct()) {
             commoditySrcPriceTv.setText("¥" + productContentBean.getPrice());
-            commodityRealPriceTv.setText(productContentBean.isFreeForPay() ? PLVAppUtils.getString(R.string.plv_commodity_free) : ("¥" + productContentBean.getRealPrice()));
+            commodityRealPriceTv.setText(productContentBean.isFreeForPay() ? PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_commodity_free) : ("¥" + productContentBean.getRealPrice()));
         } else if (productContentBean.isFinanceProduct()) {
             commodityRealPriceTv.setText(productContentBean.getYield());
         } else if (productContentBean.isPositionProduct()) {
@@ -508,7 +508,7 @@ public class PLVLCCommodityPushLayout extends FrameLayout implements View.OnClic
         final String link = getProductLink(productContentBean);
         if (TextUtils.isEmpty(link)) {
             PLVToast.Builder.context(getContext())
-                    .setText(R.string.plv_commodity_toast_empty_link)
+                    .setText(com.easefun.polyv.livecommon.R.string.plv_commodity_toast_empty_link)
                     .show();
             return false;
         }

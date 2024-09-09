@@ -99,14 +99,14 @@ public class PLVLCGreetingTextView extends PLVMarqueeTextView {
                 else if (i == 1)
                     ls = stringBuilder.toString().length() - lf - 2;
             }
-            span = new SpannableStringBuilder(PLVAppUtils.formatString(R.string.plv_chat_welcome_join_multi_2, stringBuilder.toString(), loginEventList.size() + ""));
+            span = new SpannableStringBuilder(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_chat_welcome_join_multi_2, stringBuilder.toString(), loginEventList.size() + ""));
 //            span.setSpan(new ForegroundColorSpan(Color.rgb(129, 147, 199)), 3, 3 + lf, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 //            span.setSpan(new ForegroundColorSpan(Color.rgb(129, 147, 199)), 3 + lf + 1, 3 + lf + 1 + ls, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 //            span.setSpan(new ForegroundColorSpan(Color.rgb(129, 147, 199)), 3 + lf + 1 + ls + 1, span.length() - 6, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             loginEventList.clear();
         } else {
             PLVLoginEvent loginEvent = loginEventList.remove(0);
-            span = new SpannableStringBuilder(PLVAppUtils.formatString(R.string.plv_chat_welcome_join_2, loginEvent.getUser().getNick()));
+            span = new SpannableStringBuilder(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_chat_welcome_join_2, loginEvent.getUser().getNick()));
 //            span.setSpan(new ForegroundColorSpan(Color.rgb(129, 147, 199)), 3, span.length() - 3, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         }
         final SpannableStringBuilder finalSpan = span;

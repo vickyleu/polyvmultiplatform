@@ -1,8 +1,8 @@
 package com.easefun.polyv.livecommon.module.modules.streamer.presenter;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
 
 import com.easefun.polyv.livecommon.R;
 import com.easefun.polyv.livecommon.module.modules.linkmic.model.PLVLinkMicItemDataBean;

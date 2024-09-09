@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecommon.module.modules.streamer.di;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.easefun.polyv.livecommon.module.modules.streamer.model.PLVSipLinkMicRepo;
 import com.easefun.polyv.livecommon.module.modules.streamer.presenter.PLVSipLinkMicViewModel;

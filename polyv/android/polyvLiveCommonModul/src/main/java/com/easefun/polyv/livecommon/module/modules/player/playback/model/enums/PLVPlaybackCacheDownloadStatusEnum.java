@@ -1,6 +1,7 @@
 package com.easefun.polyv.livecommon.module.modules.player.playback.model.enums;
 
-import android.arch.persistence.room.TypeConverter;
+
+import androidx.room.TypeConverter;
 
 import com.easefun.polyv.livecommon.R;
 import com.plv.foundationsdk.utils.PLVAppUtils;

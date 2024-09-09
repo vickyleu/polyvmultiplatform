@@ -2,11 +2,11 @@ package com.easefun.polyv.livecloudclass.modules.chatroom.adapter.holder;
 
 import static com.plv.foundationsdk.utils.PLVSugarUtil.nullable;
 
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.Observer;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
 import android.graphics.Color;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -103,7 +103,7 @@ public class PLVLCRedPaperPortViewHolder extends PLVChatMessageBaseViewHolder<PL
         });
         String showName = nickName;
         if (loginUserId != null && loginUserId.equals(userId)) {
-            showName = showName + PLVAppUtils.getString(R.string.plv_chat_me_2);
+            showName = showName + PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_me_2);
         }
         if (actor != null) {
             showName = actor + "-" + showName;
@@ -152,23 +152,23 @@ public class PLVLCRedPaperPortViewHolder extends PLVChatMessageBaseViewHolder<PL
                         }
                         switch (redPaperReceiveType) {
                             case AVAILABLE:
-                                chatroomRedPaperStatusTv.setText(R.string.plv_red_paper_receive);
+                                chatroomRedPaperStatusTv.setText(com.easefun.polyv.livecommon.R.string.plv_red_paper_receive);
                                 chatroomRedPaperReceiveMask.setVisibility(View.GONE);
                                 break;
                             case AVAILABLE_CLICKED:
-                                chatroomRedPaperStatusTv.setText(R.string.plv_red_paper_receive);
+                                chatroomRedPaperStatusTv.setText(com.easefun.polyv.livecommon.R.string.plv_red_paper_receive);
                                 chatroomRedPaperReceiveMask.setVisibility(View.VISIBLE);
                                 break;
                             case RECEIVED:
-                                chatroomRedPaperStatusTv.setText(R.string.plv_red_paper_received);
+                                chatroomRedPaperStatusTv.setText(com.easefun.polyv.livecommon.R.string.plv_red_paper_received);
                                 chatroomRedPaperReceiveMask.setVisibility(View.VISIBLE);
                                 break;
                             case RUN_OUT:
-                                chatroomRedPaperStatusTv.setText(R.string.plv_red_paper_run_out);
+                                chatroomRedPaperStatusTv.setText(com.easefun.polyv.livecommon.R.string.plv_red_paper_run_out);
                                 chatroomRedPaperReceiveMask.setVisibility(View.VISIBLE);
                                 break;
                             case EXPIRED:
-                                chatroomRedPaperStatusTv.setText(R.string.plv_red_paper_expired);
+                                chatroomRedPaperStatusTv.setText(com.easefun.polyv.livecommon.R.string.plv_red_paper_expired);
                                 chatroomRedPaperReceiveMask.setVisibility(View.VISIBLE);
                                 break;
                             default:

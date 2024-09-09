@@ -3,8 +3,8 @@ package com.easefun.polyv.livecommon.module.modules.linkmic.presenter.usecase;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.format;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.requireNotNull;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
+import androidx.lifecycle.MutableLiveData;
 
 import com.plv.foundationsdk.log.PLVCommonLog;
 import com.plv.linkmic.model.PLVJoinLeaveEvent;

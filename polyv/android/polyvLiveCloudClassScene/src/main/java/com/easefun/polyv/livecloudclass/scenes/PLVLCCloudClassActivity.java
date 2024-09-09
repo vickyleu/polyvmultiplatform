@@ -4,14 +4,14 @@ import static com.plv.foundationsdk.utils.PLVAppUtils.postToMainThread;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.firstNotEmpty;
 
 import android.app.Activity;
-import android.arch.lifecycle.Observer;
+import androidx.lifecycle.Observer;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Pair;
 import android.view.View;
@@ -311,10 +311,10 @@ public class PLVLCCloudClassActivity extends PLVBaseActivity {
                 this,
                 getResources().getString(
                         liveRoomDataManager.getConfig().isLive()
-                                ? R.string.plv_live_room_dialog_exit_confirm_ask
-                                : R.string.plv_playback_room_dialog_exit_confirm_ask
+                                ? com.easefun.polyv.livecommon.R.string.plv_live_room_dialog_exit_confirm_ask
+                                : com.easefun.polyv.livecommon.R.string.plv_playback_room_dialog_exit_confirm_ask
                 ),
-                getResources().getString(R.string.plv_common_dialog_exit),
+                getResources().getString(com.easefun.polyv.livecommon.R.string.plv_common_dialog_exit),
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

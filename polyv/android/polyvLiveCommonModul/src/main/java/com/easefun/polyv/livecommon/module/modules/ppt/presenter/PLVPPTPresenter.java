@@ -4,7 +4,7 @@ import static com.easefun.polyv.businesssdk.api.common.ppt.PolyvLivePPTProcessor
 import static com.easefun.polyv.businesssdk.api.common.ppt.PolyvLivePPTProcessor.SEND_SOCKET_EVENT;
 import static com.easefun.polyv.livescenes.log.ppt.PolyvPPTElog.PPTEvent.PPT_RECEIVE_WEB_MESSAGE;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.easefun.polyv.businesssdk.model.ppt.PolyvPPTAuthentic;
 import com.easefun.polyv.livecommon.module.modules.ppt.contract.IPLVPPTContract;

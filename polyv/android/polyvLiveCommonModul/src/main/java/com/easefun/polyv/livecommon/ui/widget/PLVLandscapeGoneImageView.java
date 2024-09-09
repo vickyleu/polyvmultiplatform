@@ -1,14 +1,17 @@
 package com.easefun.polyv.livecommon.ui.widget;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Configuration;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.annotation.Nullable;
+
 import com.plv.thirdpart.blankj.utilcode.util.ScreenUtils;
 
+@SuppressLint("AppCompatCustomView")
 public class PLVLandscapeGoneImageView extends ImageView {
 
     public PLVLandscapeGoneImageView(Context context) {

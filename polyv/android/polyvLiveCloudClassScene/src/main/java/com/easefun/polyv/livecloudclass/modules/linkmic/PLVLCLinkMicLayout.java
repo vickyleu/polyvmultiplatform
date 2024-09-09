@@ -3,20 +3,22 @@ package com.easefun.polyv.livecloudclass.modules.linkmic;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.media.AudioManager;
-import android.support.annotation.IntDef;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SimpleItemAnimator;
+import androidx.annotation.IntDef;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SimpleItemAnimator;
+
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -557,22 +559,22 @@ public class PLVLCLinkMicLayout extends FrameLayout implements IPLVLinkMicContra
     public void onLinkMicError(int errorCode, Throwable throwable) {
         PLVCommonLog.exception(throwable);
         if (errorCode == ERROR_PERMISSION_DENIED) {
-            new AlertDialog.Builder(getContext()).setTitle(R.string.plv_common_dialog_tip)
-                    .setMessage(R.string.plv_linkmic_error_tip_permission_denied)
-                    .setPositiveButton(R.string.plv_common_dialog_confirm, new DialogInterface.OnClickListener() {
+            new AlertDialog.Builder(getContext()).setTitle(com.easefun.polyv.livecommon.R.string.plv_common_dialog_tip)
+                    .setMessage(com.easefun.polyv.livecommon.R.string.plv_linkmic_error_tip_permission_denied)
+                    .setPositiveButton(com.easefun.polyv.livecommon.R.string.plv_common_dialog_confirm, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             PLVFastPermission.getInstance().jump2Settings(getContext());
                         }
                     })
-                    .setNegativeButton(R.string.plv_common_dialog_cancel, new DialogInterface.OnClickListener() {
+                    .setNegativeButton(com.easefun.polyv.livecommon.R.string.plv_common_dialog_cancel, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(getContext(), R.string.plv_linkmic_error_tip_permission_cancel, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), com.easefun.polyv.livecommon.R.string.plv_linkmic_error_tip_permission_cancel, Toast.LENGTH_SHORT).show();
                         }
                     }).setCancelable(false).show();
         } else {
-            ToastUtils.showShort(getResources().getString(R.string.plv_linkmic_toast_error) + errorCode);
+            ToastUtils.showShort(getResources().getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_toast_error) + errorCode);
         }
     }
 
@@ -609,12 +611,12 @@ public class PLVLCLinkMicLayout extends FrameLayout implements IPLVLinkMicContra
 
     @Override
     public void onJoinChannelTimeout() {
-        ToastUtils.showShort(PLVAppUtils.getString(R.string.plv_linkmic_join_channel_time_out));
+        ToastUtils.showShort(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_join_channel_time_out));
     }
 
     @Override
     public void onLinkMicMemberReachLimit() {
-        PLVToast.Builder.context(getContext()).setText(PLVAppUtils.getString(R.string.plv_linkmic_dialog_reach_the_interact_num_limit_2)).show();
+        PLVToast.Builder.context(getContext()).setText(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_dialog_reach_the_interact_num_limit_2)).show();
     }
 
     @Override
@@ -749,7 +751,7 @@ public class PLVLCLinkMicLayout extends FrameLayout implements IPLVLinkMicContra
     public void onJoinLinkMic() {
         //我，加入频道成功
         PLVCommonLog.d(TAG, "onJoinLinkMic");
-        ToastUtils.showShort(PLVAppUtils.getString(R.string.plv_linkmic_join_channel_success));
+        ToastUtils.showShort(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_join_channel_success));
         // 连麦时不允许小窗播放
         PLVDependManager.getInstance().get(PLVLCFloatingWindow.class).showByUser(false);
         // 连麦成功不再暂停rtc观看
@@ -856,12 +858,12 @@ public class PLVLCLinkMicLayout extends FrameLayout implements IPLVLinkMicContra
 
     @Override
     public void onTeacherHangupMe() {
-        ToastUtils.showShort(PLVAppUtils.getString(R.string.plv_linkmic_teacher_hangup_me));
+        ToastUtils.showShort(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_teacher_hangup_me));
     }
 
     @Override
     public void onNotInLinkMicList() {
-        ToastUtils.showShort(PLVAppUtils.getString(R.string.plv_linkmic_reconnect_timeout_please_try_again));
+        ToastUtils.showShort(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_reconnect_timeout_please_try_again));
         linkMicPresenter.leaveLinkMic();
     }
 
@@ -921,7 +923,7 @@ public class PLVLCLinkMicLayout extends FrameLayout implements IPLVLinkMicContra
                 }
 
                 if (moreThanOneUserSpeaking) {
-                    userNickSBuilder.append(PLVAppUtils.getString(R.string.plv_linkmic_more_than_one_user_speaking));
+                    userNickSBuilder.append(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_linkmic_more_than_one_user_speaking));
                 }
                 tvSpeakingUsersText.setText(userNickSBuilder.toString());
                 llSpeakingUsers.setVisibility(VISIBLE);

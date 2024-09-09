@@ -3,12 +3,14 @@ package com.easefun.polyv.livecommon.module.modules.beauty.helper;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.listOf;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.arch.lifecycle.GenericLifecycleObserver;
-import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleObserver;
-import android.arch.lifecycle.LifecycleOwner;
 import android.content.Context;
+
+import androidx.lifecycle.GenericLifecycleObserver;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
 
 import com.plv.beauty.api.IPLVBeautyManager;
 import com.plv.beauty.api.PLVBeautyManager;
@@ -57,6 +59,7 @@ public class PLVBeautyInitHelper {
     private static final String TAG = PLVBeautyInitHelper.class.getSimpleName();
 
     private IPLVBeautyManager.InitCallback beautyInitCallback;
+    @SuppressLint("RestrictedApi")
     private final LifecycleObserver clearCallbackOnDestroy = new GenericLifecycleObserver() {
         @Override
         public void onStateChanged(LifecycleOwner source, Lifecycle.Event event) {

@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecloudclass.modules.media.floating;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.plv.foundationsdk.component.di.PLVDependModule;
 

@@ -3,7 +3,7 @@ package com.easefun.polyv.livecloudclass.modules.pagemenu.commodity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.easefun.polyv.livecloudclass.modules.media.floating.PLVLCFloatingWindow;
 import com.easefun.polyv.livecommon.ui.window.PLVSimpleWebViewActivity;

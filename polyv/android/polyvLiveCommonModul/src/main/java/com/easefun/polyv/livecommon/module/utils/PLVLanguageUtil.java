@@ -7,8 +7,9 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.LocaleList;
-import android.support.annotation.RequiresApi;
-import android.support.v4.os.ConfigurationCompat;
+import androidx.annotation.RequiresApi;
+import androidx.core.os.ConfigurationCompat;
+
 import android.util.DisplayMetrics;
 import android.util.Pair;
 

@@ -3,18 +3,19 @@ package com.easefun.polyv.livecloudclass.modules.media;
 import static com.plv.foundationsdk.utils.PLVTimeUnit.seconds;
 
 import android.app.Activity;
-import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleObserver;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.OnLifecycleEvent;
+
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.OnLifecycleEvent;
 import android.content.Context;
 import android.content.res.Configuration;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.util.Pair;
 import android.view.LayoutInflater;
@@ -260,8 +261,8 @@ public class PLVLCPlaybackMediaLayout extends FrameLayout implements IPLVLCMedia
         videoView.enableRetry(true);
         videoView.setMaxRetryCount(MAX_RETRY_COUNT);
         //设置noStreamView
-        noStreamView.setPlaceHolderImg(R.drawable.plv_bg_player_error_ic);
-        noStreamView.setPlaceHolderText(getResources().getString(R.string.plv_player_video_playback_no_stream));
+        noStreamView.setPlaceHolderImg(com.easefun.polyv.livecommon.R.drawable.plv_bg_player_error_ic);
+        noStreamView.setPlaceHolderText(getResources().getString(com.easefun.polyv.livecommon.R.string.plv_player_video_playback_no_stream));
 
         videoView.setSubVideoView(subVideoView);
         videoView.setMediaController(mediaController);
@@ -272,7 +273,7 @@ public class PLVLCPlaybackMediaLayout extends FrameLayout implements IPLVLCMedia
     }
 
     private void initPlayErrorView() {
-        playErrorView.setPlaceHolderImg(R.drawable.plv_bg_player_error_ic);
+        playErrorView.setPlaceHolderImg(com.easefun.polyv.livecommon.R.drawable.plv_bg_player_error_ic);
         playErrorView.setOnRefreshViewClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -311,7 +312,7 @@ public class PLVLCPlaybackMediaLayout extends FrameLayout implements IPLVLCMedia
                     //发送信息到聊天室
                     Pair<Boolean, Integer> result = onViewActionListener.onSendChatMessageAction(message, chatQuoteVO);
                     if (!result.first) {
-                        ToastUtils.showShort(getResources().getString(R.string.plv_chat_toast_send_msg_failed) + ": " + result.second);
+                        ToastUtils.showShort(getResources().getString(com.easefun.polyv.livecommon.R.string.plv_chat_toast_send_msg_failed) + ": " + result.second);
                     }
                 }
             }
@@ -934,7 +935,7 @@ public class PLVLCPlaybackMediaLayout extends FrameLayout implements IPLVLCMedia
         public void onSubVideoViewCountDown(boolean isOpenAdHead, int totalTime, int remainTime, int adStage) {
             if (isOpenAdHead) {
                 llAuxiliaryCountDown.setVisibility(VISIBLE);
-                tvCountDown.setText(PLVAppUtils.formatString(R.string.plv_player_advertising_count_down, remainTime + ""));
+                tvCountDown.setText(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_player_advertising_count_down, remainTime + ""));
             }
         }
 

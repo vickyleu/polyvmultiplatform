@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecommon.module.modules.linkmic.di;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.easefun.polyv.livecommon.module.modules.linkmic.model.PLVLinkMicLocalShareData;
 import com.plv.foundationsdk.component.di.PLVDependModule;

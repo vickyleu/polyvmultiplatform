@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecloudclass.modules.pagemenu.chapter.adapter;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 

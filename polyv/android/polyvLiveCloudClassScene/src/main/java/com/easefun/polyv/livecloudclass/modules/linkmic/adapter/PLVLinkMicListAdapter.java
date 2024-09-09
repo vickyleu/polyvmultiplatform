@@ -1,15 +1,15 @@
 package com.easefun.polyv.livecloudclass.modules.linkmic.adapter;
 
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -535,7 +535,7 @@ public class PLVLinkMicListAdapter extends RecyclerView.Adapter<PLVLinkMicListAd
         }
         nickString.append(nick);
         if (myLinkMicId.equals(linkMicId)) {
-            nickString.append(PLVAppUtils.getString(R.string.plv_chat_me));
+            nickString.append(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_me));
         }
         holder.tvNick.setText(nickString.toString());
 
@@ -886,9 +886,9 @@ public class PLVLinkMicListAdapter extends RecyclerView.Adapter<PLVLinkMicListAd
 
             qualityWidget.shouldShowNoNetworkHint(false);
             qualityWidget.setNetQualityRes(
-                    R.drawable.plv_network_signal_watcher_good,
-                    R.drawable.plv_network_signal_watcher_middle,
-                    R.drawable.plv_network_signal_watcher_poor
+                    com.easefun.polyv.livecommon.R.drawable.plv_network_signal_watcher_good,
+                    com.easefun.polyv.livecommon.R.drawable.plv_network_signal_watcher_middle,
+                    com.easefun.polyv.livecommon.R.drawable.plv_network_signal_watcher_poor
             );
 
             observeFloatingPlayer();

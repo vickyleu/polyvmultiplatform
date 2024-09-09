@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecommon.module.modules.linkmic.model;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 /**
  * @author Hoshiiro

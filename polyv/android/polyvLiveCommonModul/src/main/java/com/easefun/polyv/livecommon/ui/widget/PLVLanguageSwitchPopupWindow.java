@@ -5,8 +5,8 @@ import static com.easefun.polyv.livecommon.module.utils.PLVLanguageUtil.LANGUAGE
 import static com.easefun.polyv.livecommon.module.utils.PLVLanguageUtil.LANGUAGE_EN;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.PopupWindow;

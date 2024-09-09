@@ -2,7 +2,7 @@ package com.easefun.polyv.livecommon.module.modules.streamer.presenter.usecase;
 
 import static com.plv.foundationsdk.utils.PLVSugarUtil.format;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.easefun.polyv.livecommon.module.modules.streamer.presenter.PLVStreamerPresenter;
 import com.plv.foundationsdk.log.PLVCommonLog;

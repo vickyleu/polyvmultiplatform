@@ -6,9 +6,10 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -112,7 +113,7 @@ public class PLVLCChatLandscapeLayout extends FrameLayout {
         chatCommonMessageList.addOnUnreadCountChangeListener(new PLVMessageRecyclerView.OnUnreadCountChangeListener() {
             @Override
             public void onChange(int currentUnreadCount) {
-                unreadMsgTv.setText(PLVAppUtils.formatString(R.string.plv_chat_view_new_msg_4, currentUnreadCount + ""));
+                unreadMsgTv.setText(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_chat_view_new_msg_4, currentUnreadCount + ""));
             }
         });
         chatCommonMessageList.attachToParent(swipeLoadView, true);//聊天信息列表附加到下拉控件中
@@ -198,7 +199,7 @@ public class PLVLCChatLandscapeLayout extends FrameLayout {
                 swipeLoadView.setEnabled(enabled);
             }
             if (!enabled && !isByClearData) {
-                ToastUtils.showShort(R.string.plv_chat_toast_history_all_loaded);
+                ToastUtils.showShort(com.easefun.polyv.livecommon.R.string.plv_chat_toast_history_all_loaded);
             }
         }
 
@@ -206,7 +207,7 @@ public class PLVLCChatLandscapeLayout extends FrameLayout {
         public void onHasNotAddedData() {
             if (unreadMsgTv != null) {
                 if (unreadMsgTv.getVisibility() != View.VISIBLE) {
-                    unreadMsgTv.setText(R.string.plv_chat_view_new_msg_3);
+                    unreadMsgTv.setText(com.easefun.polyv.livecommon.R.string.plv_chat_view_new_msg_3);
                     unreadMsgTv.setVisibility(View.VISIBLE);
                 }
             }
@@ -274,7 +275,7 @@ public class PLVLCChatLandscapeLayout extends FrameLayout {
                 if (chatCommonMessageList != null && !chatCommonMessageList.isLandscapeLayout()) {
                     return;
                 }
-                ToastUtils.showLong(isFocusModeStatus ? R.string.plv_chat_toast_focus_mode_open : R.string.plv_chat_toast_focus_mode_close);
+                ToastUtils.showLong(isFocusModeStatus ? com.easefun.polyv.livecommon.R.string.plv_chat_toast_focus_mode_open : com.easefun.polyv.livecommon.R.string.plv_chat_toast_focus_mode_close);
             }
         });
     }
@@ -292,7 +293,7 @@ public class PLVLCChatLandscapeLayout extends FrameLayout {
                 if (chatCommonMessageList == null || !chatCommonMessageList.isLandscapeLayout()) {
                     return;
                 }
-                ToastUtils.showLong(isCloseRoomStatus ? R.string.plv_chat_toast_chatroom_close : R.string.plv_chat_toast_chatroom_open);
+                ToastUtils.showLong(isCloseRoomStatus ? com.easefun.polyv.livecommon.R.string.plv_chat_toast_chatroom_close : com.easefun.polyv.livecommon.R.string.plv_chat_toast_chatroom_open);
             }
         });
     }
@@ -393,7 +394,7 @@ public class PLVLCChatLandscapeLayout extends FrameLayout {
                 addChatHistoryToList(chatMessageDataList, requestSuccessTime == 1);
             }
             if (isNoMoreHistory) {
-                ToastUtils.showShort(R.string.plv_chat_toast_history_all_loaded);
+                ToastUtils.showShort(com.easefun.polyv.livecommon.R.string.plv_chat_toast_history_all_loaded);
                 swipeLoadView.setEnabled(false);
             }
         }
@@ -407,7 +408,7 @@ public class PLVLCChatLandscapeLayout extends FrameLayout {
             swipeLoadView.setRefreshing(false);
             swipeLoadView.setEnabled(true);
             if (viewIndex == chatroomPresenter.getViewIndex(chatroomView)) {
-                ToastUtils.showShort(getContext().getString(R.string.plv_chat_toast_history_load_failed) + ": " + errorMsg);
+                ToastUtils.showShort(getContext().getString(com.easefun.polyv.livecommon.R.string.plv_chat_toast_history_load_failed) + ": " + errorMsg);
             }
         }
 

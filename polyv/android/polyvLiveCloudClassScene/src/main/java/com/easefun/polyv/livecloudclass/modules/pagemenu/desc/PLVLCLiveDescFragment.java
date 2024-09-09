@@ -4,12 +4,12 @@ import static com.plv.foundationsdk.utils.PLVSugarUtil.getOrDefault;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.mapOf;
 import static com.plv.foundationsdk.utils.PLVSugarUtil.pair;
 
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -134,13 +134,15 @@ public class PLVLCLiveDescFragment extends PLVBaseFragment {
             titleTv.setText(classDetailVO.getData().getName());
             //设置主持人名称
             String publisher = classDetailVO.getData().getPublisher();
-            publisherTv.setText(TextUtils.isEmpty(classDetailVO.getData().getPublisher()) ? PLVAppUtils.getString(R.string.plv_live_publisher_default) : publisher);
+            publisherTv.setText(TextUtils.isEmpty(classDetailVO.getData().getPublisher()) ? PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_live_publisher_default) : publisher);
             //设置直播图标
             PLVImageLoader.getInstance().loadImage(classDetailVO.getData().getCoverImage(), liveCoverIV);
             //设置直播状态
             updateStatusViewWithClassDetail();
             //设置直播开始时间
-            String liveStartTime = PLVAppUtils.getString(R.string.plv_live_start_time) + (StringUtils.isEmpty(classDetailVO.getData().getStartTime()) ? PLVAppUtils.getString(R.string.plv_live_nothing) : classDetailVO.getData().getStartTime());
+            String liveStartTime = PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_live_start_time) +
+                    (StringUtils.isEmpty(classDetailVO.getData().getStartTime()) ?
+                            PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_live_nothing) : classDetailVO.getData().getStartTime());
             startTimeTv.setText(liveStartTime);
             //设置点赞数
             if (likesCount == 0) {

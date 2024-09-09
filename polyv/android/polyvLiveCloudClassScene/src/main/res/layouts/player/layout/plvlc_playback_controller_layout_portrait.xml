@@ -23,7 +23,7 @@
         android:scaleType="fitXY"
         android:src="@drawable/plvlc_controller_video_bottom_portrait_gradient" />
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -108,7 +108,7 @@
             android:src="@drawable/plvlc_controller_ppt_sub_selector"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/plvlc_playback_controller_port_iv_full_screen" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/plvlc_playback_more_control_ll"

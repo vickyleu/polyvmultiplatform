@@ -2,7 +2,7 @@ package com.easefun.polyv.livecommon.module.modules.linkmic.presenter;
 
 import static com.plv.foundationsdk.utils.PLVSugarUtil.requireNotNull;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * @author Hoshiiro

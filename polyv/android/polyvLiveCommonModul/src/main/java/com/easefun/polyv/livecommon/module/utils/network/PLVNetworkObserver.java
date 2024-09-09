@@ -1,14 +1,15 @@
 package com.easefun.polyv.livecommon.module.utils.network;
 
-import android.arch.lifecycle.GenericLifecycleObserver;
-import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleOwner;
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.GenericLifecycleObserver;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
 
 import com.plv.foundationsdk.utils.PLVNetworkUtils;
 import com.plv.foundationsdk.utils.PLVSugarUtil;
@@ -90,6 +91,7 @@ public class PLVNetworkObserver {
         context.unregisterReceiver(networkReceiver);
     }
 
+    @SuppressLint("RestrictedApi")
     private void autoStopByLifecycle(final LifecycleOwner lifecycleOwner) {
         lifecycleOwner.getLifecycle().addObserver(new GenericLifecycleObserver() {
             @Override

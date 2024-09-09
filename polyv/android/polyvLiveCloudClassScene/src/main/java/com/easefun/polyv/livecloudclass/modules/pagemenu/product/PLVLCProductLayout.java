@@ -2,10 +2,10 @@ package com.easefun.polyv.livecloudclass.modules.pagemenu.product;
 
 import static com.plv.foundationsdk.utils.PLVTimeUnit.seconds;
 
-import android.arch.lifecycle.Observer;
+import androidx.lifecycle.Observer;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -91,7 +91,7 @@ public class PLVLCProductLayout extends FrameLayout {
                         final String productLink = onClickDataVO.getData().getLinkByType();
                         if (TextUtils.isEmpty(productLink)) {
                             PLVToast.Builder.context(getContext())
-                                    .setText(R.string.plv_commodity_toast_empty_link)
+                                    .setText(com.easefun.polyv.livecommon.R.string.plv_commodity_toast_empty_link)
                                     .show();
                             return;
                         }

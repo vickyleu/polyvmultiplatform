@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecommon.module.modules.multiroom.transmit.di;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.easefun.polyv.livecommon.module.modules.multiroom.transmit.model.PLVMultiRoomTransmitRepo;
 import com.easefun.polyv.livecommon.module.modules.multiroom.transmit.viewmodel.PLVMultiRoomTransmitViewModel;

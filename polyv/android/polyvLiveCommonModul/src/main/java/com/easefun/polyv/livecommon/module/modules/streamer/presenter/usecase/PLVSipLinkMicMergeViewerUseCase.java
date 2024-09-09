@@ -2,7 +2,7 @@ package com.easefun.polyv.livecommon.module.modules.streamer.presenter.usecase;
 
 import static com.plv.foundationsdk.utils.PLVSugarUtil.listOf;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.easefun.polyv.livecommon.module.modules.streamer.model.enums.PLVSipLinkMicState;
 import com.easefun.polyv.livecommon.module.modules.streamer.model.vo.PLVSipLinkMicViewerVO;

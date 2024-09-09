@@ -8,8 +8,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.graphics.Color;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -172,15 +172,15 @@ public class PLVLCMarkToolControllerLayout extends FrameLayout {
             public void onClick(View v) {
                 new PLVConfirmDialog(getContext())
                         .setTitleVisibility(GONE)
-                        .setContent(PLVAppUtils.getString(R.string.plv_ppt_clear_mask))
-                        .setLeftButtonText(R.string.plv_common_dialog_click_wrong)
+                        .setContent(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_ppt_clear_mask))
+                        .setLeftButtonText(com.easefun.polyv.livecommon.R.string.plv_common_dialog_click_wrong)
                         .setLeftBtnListener(new PLVConfirmDialog.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, View v) {
                                 dialog.dismiss();
                             }
                         })
-                        .setRightButtonText(R.string.plv_common_dialog_confirm_2)
+                        .setRightButtonText(com.easefun.polyv.livecommon.R.string.plv_common_dialog_confirm_2)
                         .setRightBtnListener(new PLVConfirmDialog.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, View v) {
@@ -292,7 +292,7 @@ public class PLVLCMarkToolControllerLayout extends FrameLayout {
         }
         callbackCurrentMarkToolState();
         PLVToast.Builder.context(getContext())
-                .setText(R.string.plv_ppt_enter_paint_mode)
+                .setText(com.easefun.polyv.livecommon.R.string.plv_ppt_enter_paint_mode)
                 .show();
     }
 
@@ -306,7 +306,7 @@ public class PLVLCMarkToolControllerLayout extends FrameLayout {
             onMarkToolActionListener.onPaintModeChanged(false);
         }
         PLVToast.Builder.context(getContext())
-                .setText(R.string.plv_ppt_exit_paint_mode)
+                .setText(com.easefun.polyv.livecommon.R.string.plv_ppt_exit_paint_mode)
                 .show();
     }
 

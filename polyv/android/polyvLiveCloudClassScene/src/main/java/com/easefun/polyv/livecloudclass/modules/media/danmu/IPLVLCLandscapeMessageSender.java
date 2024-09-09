@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecloudclass.modules.media.danmu;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.plv.socket.event.chat.PLVChatQuoteVO;
 

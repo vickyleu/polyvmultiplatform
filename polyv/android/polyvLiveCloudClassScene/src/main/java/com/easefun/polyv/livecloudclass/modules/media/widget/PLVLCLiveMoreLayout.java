@@ -4,9 +4,9 @@ import static com.plv.foundationsdk.utils.PLVSugarUtil.listOf;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Pair;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -524,7 +524,7 @@ public class PLVLCLiveMoreLayout implements View.OnClickListener {
 
         @Override
         public void onBindViewHolder(@NonNull final RvLinesViewHolder holder, @SuppressLint("RecyclerView") final int position) {
-            holder.tvLines.setText(PLVAppUtils.formatString(R.string.plv_player_route_n, (position + 1) + ""));
+            holder.tvLines.setText(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_player_route_n, (position + 1) + ""));
 
             holder.tvLines.setSelected(position == curSelectPos);
 
@@ -649,13 +649,13 @@ public class PLVLCLiveMoreLayout implements View.OnClickListener {
             LOW_LATENCY("", true) {
                 @Override
                 public String getLatencyName() {
-                    return PLVAppUtils.getString(R.string.plv_player_low_latency);
+                    return PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_player_low_latency);
                 }
             },
             NORMAL_LATENCY("", false) {
                 @Override
                 public String getLatencyName() {
-                    return PLVAppUtils.getString(R.string.plv_player_normal_latency);
+                    return PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_player_normal_latency);
                 }
             };
 

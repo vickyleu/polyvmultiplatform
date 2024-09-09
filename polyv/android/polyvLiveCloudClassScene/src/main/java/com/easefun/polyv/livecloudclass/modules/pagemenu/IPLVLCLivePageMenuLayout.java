@@ -1,6 +1,6 @@
 package com.easefun.polyv.livecloudclass.modules.pagemenu;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.easefun.polyv.livecloudclass.modules.chatroom.adapter.PLVLCChatCommonMessageList;
 import com.easefun.polyv.livecommon.module.data.IPLVLiveRoomDataManager;

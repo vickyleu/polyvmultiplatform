@@ -1,11 +1,12 @@
 package com.easefun.polyv.livecloudclass.modules.chatroom;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -84,7 +85,7 @@ public class PLVLCQuizFragment extends PLVInputFragment implements View.OnClickL
 
     // <editor-folder defaultstate="collapsed" desc="静态方法">
     public static String getDefaultTips() {
-        return PLVAppUtils.getString(R.string.plv_chat_quiz_default_tips);
+        return PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_quiz_default_tips);
     }
     // </editor-folder>
 
@@ -313,8 +314,8 @@ public class PLVLCQuizFragment extends PLVInputFragment implements View.OnClickL
         PLVSocketUserBean userBean = new PLVSocketUserBean();
         userBean.setUserType(PLVSocketUserConstant.USERTYPE_TEACHER);
 
-        userBean.setNick(PLVAppUtils.getString(R.string.plv_chat_quiz_default_teacher_nick));// no need i18n
-        userBean.setActor(PLVAppUtils.getString(R.string.plv_chat_quiz_default_teacher_actor));// no need i18n
+        userBean.setNick(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_quiz_default_teacher_nick));// no need i18n
+        userBean.setActor(PLVAppUtils.getString(com.easefun.polyv.livecommon.R.string.plv_chat_quiz_default_teacher_actor));// no need i18n
         if (teacherInfo != null) {
             if (!TextUtils.isEmpty(teacherInfo.getActor())) {
                 userBean.setActor(teacherInfo.getActor());
@@ -333,7 +334,7 @@ public class PLVLCQuizFragment extends PLVInputFragment implements View.OnClickL
     // <editor-fold defaultstate="collapsed" desc="聊天室 - 发送提问信息">
     private boolean sendQuestionMessage(String message) {
         if (message.trim().length() == 0) {
-            ToastUtils.showLong(R.string.plv_chat_toast_send_text_empty);
+            ToastUtils.showLong(com.easefun.polyv.livecommon.R.string.plv_chat_toast_send_text_empty);
             return false;
         } else {
             PolyvQuestionMessage questionMessage = new PolyvQuestionMessage(message);
@@ -349,7 +350,7 @@ public class PLVLCQuizFragment extends PLVInputFragment implements View.OnClickL
             } else {
                 //如果为-3，则已离线状态
                 //发送失败
-                ToastUtils.showShort(getString(R.string.plv_chat_toast_send_quiz_failed) + ":" + sendValue);
+                ToastUtils.showShort(getString(com.easefun.polyv.livecommon.R.string.plv_chat_toast_send_quiz_failed) + ":" + sendValue);
                 return false;
             }
         }

@@ -2,8 +2,8 @@ package com.easefun.polyv.livecloudclass.modules.pagemenu.tuwen;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +41,7 @@ public class PLVLCTuWenFragment extends PLVBaseFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.plv_horizontal_linear_layout, null);
+        view = inflater.inflate(com.easefun.polyv.livecommon.R.layout.plv_horizontal_linear_layout, null);
         initView();
         return view;
     }

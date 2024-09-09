@@ -1,10 +1,11 @@
 package com.easefun.polyv.livecommon.ui.widget;
 
 import android.content.Context;
-import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
+
+import androidx.appcompat.widget.AppCompatEditText;
 
 /**
  * @author suhongtao

@@ -7,8 +7,8 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Region;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -109,20 +109,20 @@ public class PLVLCPlaybackCacheDownloadProgressButton extends FrameLayout {
         playbackCacheDownloadProgressForegroundTv.setVisibility(isDownloading ? View.VISIBLE : View.GONE);
         if (!isDownloading) {
             if (statusEnum == PLVPlaybackCacheDownloadStatusEnum.NOT_IN_DOWNLOAD_LIST) {
-                playbackCacheDownloadStatusTv.setText(R.string.plv_download_at_once);
+                playbackCacheDownloadStatusTv.setText(com.easefun.polyv.livecommon.R.string.plv_download_at_once);
                 playbackCacheDownloadStatusTv.updateBackgroundColor(COLOR_DOWNLOAD_STATUS_BACKGROUND_NOT_DOWNLOAD);
             } else if (statusEnum == PLVPlaybackCacheDownloadStatusEnum.DOWNLOADED) {
-                playbackCacheDownloadStatusTv.setText(R.string.plv_download_downloaded);
+                playbackCacheDownloadStatusTv.setText(com.easefun.polyv.livecommon.R.string.plv_download_downloaded);
                 playbackCacheDownloadStatusTv.updateBackgroundColor(COLOR_DOWNLOAD_STATUS_BACKGROUND_DOWNLOADED);
             } else if (statusEnum == PLVPlaybackCacheDownloadStatusEnum.DOWNLOAD_FAIL) {
-                playbackCacheDownloadStatusTv.setText(R.string.plv_download_fail);
+                playbackCacheDownloadStatusTv.setText(com.easefun.polyv.livecommon.R.string.plv_download_fail);
                 playbackCacheDownloadStatusTv.updateBackgroundColor(COLOR_DOWNLOAD_STATUS_BACKGROUND_DOWNLOADED);
             }
         }
         if (isDownloading) {
             if (PLVPlaybackCacheDownloadStatusEnum.DOWNLOADING.equals(statusEnum)) {
-                playbackCacheDownloadProgressBackgroundTv.setText(PLVAppUtils.formatString(R.string.plv_download_downloading_2, progress + ""));
-                playbackCacheDownloadProgressForegroundTv.setText(PLVAppUtils.formatString(R.string.plv_download_downloading_2, progress + ""));
+                playbackCacheDownloadProgressBackgroundTv.setText(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_download_downloading_2, progress + ""));
+                playbackCacheDownloadProgressForegroundTv.setText(PLVAppUtils.formatString(com.easefun.polyv.livecommon.R.string.plv_download_downloading_2, progress + ""));
             } else {
                 playbackCacheDownloadProgressBackgroundTv.setText(statusEnum.getStatusName());
                 playbackCacheDownloadProgressForegroundTv.setText(statusEnum.getStatusName());
