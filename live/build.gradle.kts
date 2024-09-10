@@ -70,6 +70,7 @@ kotlin {
             isStatic = true
         }
         val path = file("src/nativeInterop/cinterop/ios")
+        // TODO 出现TXLiteAVSDK_TRTC冲突时,请到百家云或者保利威的podspec文件中修改版本号
         pod("polyv") {
             packageName = "what.the.fuck.polyv"
             source =
