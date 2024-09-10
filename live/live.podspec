@@ -8,15 +8,9 @@ Pod::Spec.new do |spec|
     spec.summary                  = 'Compose for iOS'
     spec.vendored_frameworks      = 'build/cocoapods/framework/live.framework'
                 
-    spec.ios.deployment_target    = '14.0'
-    spec.dependency 'MJRefresh', '~>3.7.7'
-    spec.dependency 'PLVImagePickerController', '~> 0.1.2'
-    spec.dependency 'PLVLiveScenesSDK', '~> 1.19.0'
-    spec.dependency 'Protobuf', '3.22.4'
-    spec.dependency 'SDWebImage'
-    spec.dependency 'SVGAPlayer', '~> 2.3'
+    spec.ios.deployment_target    = '12.0'
     spec.dependency 'polyv'
-                
+
     if !Dir.exist?('build/cocoapods/framework/live.framework') || Dir.empty?('build/cocoapods/framework/live.framework')
         raise "
 

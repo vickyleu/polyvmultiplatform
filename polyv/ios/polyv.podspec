@@ -17,7 +17,11 @@ Pod::Spec.new do |spec|
     # 依赖项
     spec.dependency 'PLVImagePickerController', '~> 0.1.2'
     spec.dependency 'PLVLiveScenesSDK', '~> 1.19.0'
+    spec.dependency 'MJRefresh', '~>3.7.7'
+    spec.dependency 'SVGAPlayer', '~> 2.3'
+    spec.dependency 'Protobuf', '3.22.4'
     spec.dependency 'SDWebImage'
+    spec.dependency 'TXLiteAVSDK_TRTC'
     # 添加额外的设置项
     spec.frameworks               = 'UIKit', 'Foundation'
     spec.requires_arc             = true

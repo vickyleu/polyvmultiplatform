@@ -1,7 +1,16 @@
 @file:OptIn(ExperimentalKotlinGradlePluginApi::class)
 
+import com.base.CocoapodsAppender
+import com.base.syntheticXCodeprojsTarget
+import com.base.updatePodspecFile
+import org.jetbrains.kotlin.builtins.StandardNames.FqNames.target
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.plugin.cocoapods.CocoapodsExtension
+import org.jetbrains.kotlin.gradle.targets.native.tasks.PodBuildTask
+import org.jetbrains.kotlin.gradle.targets.native.tasks.PodGenTask
+import org.jetbrains.kotlin.gradle.tasks.PodspecTask
+import java.util.Properties
+import kotlin.io.path.absolutePathString
 
 plugins {
 //    alias(libs.plugins.kotlin.multiplatform)
@@ -50,7 +59,7 @@ kotlin {
     cocoapods {
         summary = "Compose for iOS"
         homepage = ""
-        ios.deploymentTarget = "14.0"
+        ios.deploymentTarget = "12.0"
         version = "1.0.0"
 
         specRepos {
@@ -60,35 +69,32 @@ kotlin {
             baseName = "live"
             isStatic = true
         }
-        pod("PLVLiveScenesSDK") {
-            version = "~> 1.19.0"
-            linkOnly = true
-        }
-        pod("PLVImagePickerController") {
-            version = "~> 0.1.2"
-            linkOnly = true
-        }
-        pod("SVGAPlayer") {
-            version = "~> 2.3"
-            linkOnly = true
-        }
-        pod("Protobuf") {
-            version = "3.22.4"
-            linkOnly = true
-        }
-        pod("SDWebImage") {
-            linkOnly = true
-        }
-        pod("MJRefresh") {
-            version = "~>3.7.7"
-            linkOnly = true
-        }
+        val path = file("src/nativeInterop/cinterop/ios")
         pod("polyv") {
             packageName = "what.the.fuck.polyv"
             source =
-                CocoapodsExtension.CocoapodsDependency.PodLocation.Path(file("src/nativeInterop/cinterop/ios"))
+                CocoapodsExtension.CocoapodsDependency.PodLocation.Path(path)
         }
+        extraSpecAttributes["requires_arc"] = "true"
+        extraSpecAttributes["static_framework"] = "true"
         extraSpecAttributes["libraries"] = "['c++', 'sqlite3','z']" //导入系统库
+
+        val frameworkLinkDir = path.resolve("framework")
+        if(!frameworkLinkDir.exists()){
+            val defDir = project.layout.buildDirectory.get().asFile.resolve("cocoapods/framework/")
+            val absolute = defDir.absolutePath
+//            val relative = defDir.relativeTo(project.projectDir.resolve("src/nativeInterop/cinterop/ios"))
+//            println("relative::${relative.path}")
+            ProcessBuilder().directory(project.projectDir.resolve("src/nativeInterop/cinterop/ios")).command(
+                "ln",
+                "-sf",
+                "${absolute}/",
+                "./framework"
+            ).start().apply {
+                waitFor()
+            }.inputStream.bufferedReader().readText()
+        }
+        extraSpecAttributes["vendored_frameworks"] = "framework/live.framework" //导入系统库
     }
 
     sourceSets {
@@ -136,3 +142,23 @@ android {
         targetCompatibility = JavaVersion.toVersion(libs.versions.jvmTarget.get())
     }
 }
+
+
+
+//tasks.withType<PodGenTask> {
+//    val podFile = this.podfile.get()
+//    doLast {
+//        val builder = CocoapodsAppender.Builder(podFile)
+//        builder.append("target.build_configurations.each do |config|",
+//            """
+//                # 强制移除对 TXLiteAVSDK_TRTC 12.0.16292 的依赖
+//                if target.name == 'PLVLiveScenesSDK'
+//                  config.build_settings['OTHER_LDFLAGS'] = '${'$'}(inherited) -framework TXLiteAVSDK_TRTC'
+//                end
+//                if target.name == 'TXLiteAVSDK_TRTC'
+//                  config.build_settings['OTHER_LDFLAGS'] = '${'$'}(inherited) -framework TXLiteAVSDK_TRTC'
+//                end
+//      """.trimIndent())
+//        builder.build()
+//    }
+//}

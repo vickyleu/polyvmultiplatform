@@ -6,27 +6,11 @@ Pod::Spec.new do |spec|
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'Compose for iOS'
-    spec.vendored_frameworks      = '../../../buildOut/KMMComposeDev/subprojects/polyvlive/cocoapods/framework/live.framework'
                 
-    spec.ios.deployment_target    = '14.0'
-    spec.dependency 'MJRefresh', '~>3.7.7'
-    spec.dependency 'PLVImagePickerController', '~> 0.1.2'
-    spec.dependency 'PLVLiveScenesSDK', '~> 1.19.0'
-    spec.dependency 'Protobuf', '3.22.4'
-    spec.dependency 'SDWebImage'
-    spec.dependency 'SVGAPlayer', '~> 2.3'
+                
+    spec.ios.deployment_target    = '12.0'
     spec.dependency 'polyv'
                 
-    if !Dir.exist?('../../../buildOut/KMMComposeDev/subprojects/polyvlive/cocoapods/framework/live.framework') || Dir.empty?('../../../buildOut/KMMComposeDev/subprojects/polyvlive/cocoapods/framework/live.framework')
-        raise "
-
-        Kotlin framework 'live' doesn't exist yet, so a proper Xcode project can't be generated.
-        'pod install' should be executed after running ':generateDummyFramework' Gradle task:
-
-            ./gradlew :polyvlive:generateDummyFramework
-
-        Alternatively, proper pod installation is performed during Gradle sync in the IDE (if Podfile location is set)"
-    end
                 
     spec.xcconfig = {
         'ENABLE_USER_SCRIPT_SANDBOXING' => 'NO',
@@ -56,5 +40,8 @@ Pod::Spec.new do |spec|
             SCRIPT
         }
     ]
+    spec.requires_arc = true
+    spec.static_framework = true
     spec.libraries = ['c++', 'sqlite3','z']
+    spec.vendored_frameworks = framework/live.framework
 end
