@@ -95,7 +95,7 @@ kotlin {
                 waitFor()
             }.inputStream.bufferedReader().readText()
         }
-        extraSpecAttributes["vendored_frameworks"] = "framework/live.framework" //导入系统库
+        extraSpecAttributes["vendored_frameworks"] = "'src/nativeInterop/cinterop/ios/framework/live.framework'" //导入系统库
     }
 
     sourceSets {

@@ -43,5 +43,5 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true
     spec.static_framework = true
     spec.libraries = ['c++', 'sqlite3','z']
-    spec.vendored_frameworks = framework/live.framework
+    spec.vendored_frameworks = 'src/nativeInterop/cinterop/ios/framework/live.framework'
 end
