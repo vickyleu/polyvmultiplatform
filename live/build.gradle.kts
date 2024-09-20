@@ -1,16 +1,7 @@
 @file:OptIn(ExperimentalKotlinGradlePluginApi::class)
 
-import com.base.CocoapodsAppender
-import com.base.syntheticXCodeprojsTarget
-import com.base.updatePodspecFile
-import org.jetbrains.kotlin.builtins.StandardNames.FqNames.target
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.plugin.cocoapods.CocoapodsExtension
-import org.jetbrains.kotlin.gradle.targets.native.tasks.PodBuildTask
-import org.jetbrains.kotlin.gradle.targets.native.tasks.PodGenTask
-import org.jetbrains.kotlin.gradle.tasks.PodspecTask
-import java.util.Properties
-import kotlin.io.path.absolutePathString
 
 plugins {
 //    alias(libs.plugins.kotlin.multiplatform)
@@ -143,23 +134,3 @@ android {
         targetCompatibility = JavaVersion.toVersion(libs.versions.jvmTarget.get())
     }
 }
-
-
-
-//tasks.withType<PodGenTask> {
-//    val podFile = this.podfile.get()
-//    doLast {
-//        val builder = CocoapodsAppender.Builder(podFile)
-//        builder.append("target.build_configurations.each do |config|",
-//            """
-//                # 强制移除对 TXLiteAVSDK_TRTC 12.0.16292 的依赖
-//                if target.name == 'PLVLiveScenesSDK'
-//                  config.build_settings['OTHER_LDFLAGS'] = '${'$'}(inherited) -framework TXLiteAVSDK_TRTC'
-//                end
-//                if target.name == 'TXLiteAVSDK_TRTC'
-//                  config.build_settings['OTHER_LDFLAGS'] = '${'$'}(inherited) -framework TXLiteAVSDK_TRTC'
-//                end
-//      """.trimIndent())
-//        builder.build()
-//    }
-//}
