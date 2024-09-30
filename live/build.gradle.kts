@@ -7,7 +7,7 @@ plugins {
 //    alias(libs.plugins.kotlin.multiplatform)
 //    alias(libs.plugins.kotlin.cocoapods)
 //    alias(libs.plugins.android.library)
-    id(libs.plugins.kotlin.multiplatform.get().pluginId)
+    id(libs.plugins.kotlinMultiplatform.get().pluginId)
     id(libs.plugins.kotlin.cocoapods.get().pluginId)
     id(libs.plugins.android.library.get().pluginId)
 }
@@ -95,7 +95,8 @@ kotlin {
             implementation(libs.coil.core)
         }
         androidMain.dependencies {
-            implementation(projects.polyvLiveCloudClassScene){
+            compileOnly(projects.polyvLiveCommonModul)
+            compileOnly(projects.polyvLiveCloudClassScene){
                 exclude("com.google.android","flexbox")
             }
         }
