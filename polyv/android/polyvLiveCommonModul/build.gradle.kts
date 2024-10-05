@@ -3,7 +3,9 @@ plugins {
     id(libs.plugins.kotlin.android.get().pluginId)
     id(libs.plugins.android.library.get().pluginId)
 }
-
+kotlin{
+    jvmToolchain(libs.versions.jvmTarget.get().toInt())
+}
 android {
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     namespace = "com.easefun.polyv.livecommon"
