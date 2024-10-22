@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
     spec.name                     = 'polyv'
     spec.version                  = '1.0.0'
     spec.homepage                 = 'https://your-homepage-url.com'  # 你可以填写项目的主页
-    spec.source                   = { :path => './polyv/ios/' }
+    spec.source                   = { :path => '.' }
     spec.authors                  = { 'Your Name' => 'your-email@example.com' }  # 替换为你的名字和邮箱
     spec.license                  = { :type => 'MIT', :file => 'LICENSE' }  # 设置合适的许可证
     spec.summary                  = 'Polyv SDK for iOS integration'
@@ -11,9 +11,9 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target    = '12.0'
 
     # 指定源文件路径
-    spec.source_files             = 'PLVLiveCloudClassScene/**/*.{h,m,mm,swift}', 'PLVLiveCommonModule/**/*.{h,m,mm,swift}'  # 根据文件结构调整
-    spec.public_header_files      = 'PLVLiveCloudClassScene/**/*.h', 'PLVLiveCommonModule/**/*.h'  # 根据文件结构调整
-    spec.resources                = 'PLVLiveCloudClassScene/Resource/**/*'
+    spec.source_files             = 'polyv/ios/PLVLiveCloudClassScene/**/*.{h,m,mm,swift}', 'polyv/ios/PLVLiveCommonModule/**/*.{h,m,mm,swift}'  # 根据文件结构调整
+    spec.public_header_files      = 'polyv/ios/PLVLiveCloudClassScene/**/*.h', 'polyv/ios/PLVLiveCommonModule/**/*.h'  # 根据文件结构调整
+    spec.resources                = 'polyv/ios/PLVLiveCloudClassScene/Resource/**/*'
     # 依赖项
     spec.dependency 'PLVImagePickerController', '~> 0.1.2'
     spec.dependency 'PLVLiveScenesSDK', '~> 1.19.0'
