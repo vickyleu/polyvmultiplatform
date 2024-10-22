@@ -11,9 +11,9 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target    = '12.0'
 
     # 指定源文件路径
-    spec.source_files             = 'polyv/ios/PLVLiveCloudClassScene/**/*.{h,m,mm,swift}', 'polyv/ios/PLVLiveCommonModule/**/*.{h,m,mm,swift}'  # 根据文件结构调整
-    spec.public_header_files      = 'polyv/ios/PLVLiveCloudClassScene/**/*.h', 'polyv/ios/PLVLiveCommonModule/**/*.h'  # 根据文件结构调整
-    spec.resources                = 'polyv/ios/PLVLiveCloudClassScene/Resource/**/*'
+    spec.source_files             = 'PLVLiveCloudClassScene/**/*.{h,m,mm,swift}', 'PLVLiveCommonModule/**/*.{h,m,mm,swift}'  # 根据文件结构调整
+    spec.public_header_files      = 'PLVLiveCloudClassScene/**/*.h', 'PLVLiveCommonModule/**/*.h'  # 根据文件结构调整
+    spec.resources                = 'PLVLiveCloudClassScene/Resource/**/*'
     # 依赖项
     spec.dependency 'PLVImagePickerController', '~> 0.1.2'
     spec.dependency 'PLVLiveScenesSDK', '~> 1.19.0'
