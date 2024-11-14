@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
     spec.license                  = { :type => 'MIT', :file => 'LICENSE' }  # 设置合适的许可证
     spec.summary                  = 'Polyv SDK for iOS integration'
 
-    spec.libraries                = 'c++'
+#     spec.libraries                = 'c++'
     spec.ios.deployment_target    = '12.0'
 
     # 指定源文件路径
@@ -15,16 +15,17 @@ Pod::Spec.new do |spec|
     spec.public_header_files      = 'PLVLiveCloudClassScene/**/*.h', 'PLVLiveCommonModule/**/*.h'  # 根据文件结构调整
     spec.resources                = 'PLVLiveCloudClassScene/Resource/**/*'
     # 依赖项
-    spec.dependency 'PLVImagePickerController', '~> 0.1.2'
-    spec.dependency 'PLVLiveScenesSDK', '~> 1.19.0'
-    spec.dependency 'MJRefresh', '~>3.7.7'
+    spec.dependency 'PLVImagePickerController', '0.1.3'
+    spec.dependency 'PLVLiveScenesSDK', '1.19.1'
+    spec.dependency 'MJRefresh', '~> 3.7.7'
     spec.dependency 'SVGAPlayer', '~> 2.3'
     spec.dependency 'Protobuf', '3.22.4'
     spec.dependency 'SDWebImage'
     spec.dependency 'TXLiteAVSDK_TRTC'
     # 添加额外的设置项
     spec.frameworks               = 'UIKit', 'Foundation'
-    spec.requires_arc             = true
-    # 设为静态框架
+#     # Automatic Reference Counting
+#     spec.requires_arc             = true
+#     # 设为静态框架
     spec.static_framework = true
 end

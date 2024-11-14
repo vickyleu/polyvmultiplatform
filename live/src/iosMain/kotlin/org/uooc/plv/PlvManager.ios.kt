@@ -7,7 +7,6 @@ import kotlinx.coroutines.IO
 import kotlinx.coroutines.withContext
 import platform.UIKit.UIApplication
 import platform.UIKit.UINavigationController
-import platform.UIKit.addChildViewController
 import what.the.fuck.polyv.PLVChannelTypeAlone
 import what.the.fuck.polyv.PLVChannelTypePPT
 import what.the.fuck.polyv.PLVLCCloudClassViewController
