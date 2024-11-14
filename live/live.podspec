@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
     spec.license                  = ''
     spec.summary                  = 'Compose for iOS'
                 
-                
+    spec.libraries                = 'c++'
     spec.ios.deployment_target    = '12.0'
     spec.dependency 'polyv'
                 
@@ -40,8 +40,5 @@ Pod::Spec.new do |spec|
             SCRIPT
         }
     ]
-    spec.requires_arc = true
-    spec.static_framework = true
-    spec.libraries = ['c++', 'sqlite3','z']
-    spec.vendored_frameworks = 'src/nativeInterop/cinterop/ios/framework/live.framework'
+    spec.vendored_frameworks = 'live.framework'
 end

@@ -5,3 +5,5 @@
 **/.build
 **/build
 polyv/ios/framework
+fakePod/Pods
+fakePod/Podfile.lock
