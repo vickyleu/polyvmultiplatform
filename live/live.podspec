@@ -9,12 +9,7 @@ Pod::Spec.new do |spec|
                 
     spec.libraries                = 'c++'
     spec.ios.deployment_target    = '12.0'
-    spec.dependency 'MJRefresh', '~> 3.7.7'
-    spec.dependency 'PLVImagePickerController', '0.1.3'
-    spec.dependency 'Protobuf', '3.22.4'
-    spec.dependency 'SDWebImage'
-    spec.dependency 'SVGAPlayer', '~> 2.3'
-    spec.dependency 'TXLiteAVSDK_TRTC'
+    spec.dependency 'SDWebImage', '5.20.0'
     spec.dependency 'polyv'
                 
                 
@@ -46,5 +41,5 @@ Pod::Spec.new do |spec|
             SCRIPT
         }
     ]
-    spec.vendored_frameworks = 'src/nativeInterop/cinterop/ios/framework/live.framework'
+    spec.vendored_frameworks = 'live.framework'
 end
