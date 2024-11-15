@@ -85,29 +85,12 @@ kotlin {
         }
         framework {
             baseName = "live"
-            isStatic = true
+            isStatic = false
             optimized = true
             debuggable = false
         }
         val path = file("src/nativeInterop/cinterop/ios")
-        pod("SDWebImage")
-        /*pod("PLVLiveScenesSDK") {
-            packageName = "what.the.fuck.polyv"
-            version="1.19.1"
-        }*/
-        pod("PLVImagePickerController","0.1.3")
-        pod("MJRefresh","~> 3.7.7")
-        pod("Protobuf"){
-            version="3.22.4"
-        }
-        pod("SVGAPlayer"){
-            version="~> 2.3"
-            // 添加 GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS 定义
-            this.extraOpts+= listOf("-compiler-option", "-DGPB_USE_PROTOBUF_FRAMEWORK_IMPORTS")
-            this.useInteropBindingFrom("Protobuf")
-        }
 
-        pod("TXLiteAVSDK_TRTC")
         // TODO 出现TXLiteAVSDK_TRTC冲突时,请到百家云或者保利威的podspec文件中修改版本号
         pod("polyv") {
             packageName = "what.the.fuck.polyv"
