@@ -9,6 +9,7 @@ Pod::Spec.new do |spec|
                 
     spec.libraries                = 'c++'
     spec.ios.deployment_target    = '12.0'
+    spec.dependency 'SDWebImage', '5.20.0'
     spec.dependency 'polyv'
                 
                 
