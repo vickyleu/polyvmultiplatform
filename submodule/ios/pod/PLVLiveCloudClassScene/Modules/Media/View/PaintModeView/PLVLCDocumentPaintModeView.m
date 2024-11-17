@@ -9,7 +9,7 @@
 #import "PLVLCDocumentPaintModeView.h"
 #import "PLVLCUtils.h"
 #import "PLVMultiLanguageManager.h"
-#import "PLVLCBrushToolBarView.h"
+#import "BrushTool/PLVLCBrushToolBarView.h"
 #import "PLVLCDocumentInputView.h"
 #import "PLVLCBrushToolSelectSheet.h"
 #import "PLVLCBrushColorSelectSheet.h"

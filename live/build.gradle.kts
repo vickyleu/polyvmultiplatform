@@ -129,7 +129,7 @@ kotlin {
     ).forEach {
         it.binaries {
             framework {
-                isStatic = true
+                isStatic = false
                 baseName = "live"
             }
         }
@@ -198,7 +198,7 @@ kotlin {
         }
         framework {
             baseName = "live"
-            isStatic = false
+            isStatic = true
             optimized = true
             debuggable = false
         }

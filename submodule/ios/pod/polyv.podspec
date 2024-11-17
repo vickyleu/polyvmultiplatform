@@ -11,9 +11,13 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target    = '12.0'
 
     # 指定源文件路径
-    spec.source_files             = 'PLVLiveCloudClassScene/**/*.{h,m,mm,swift}', 'PLVLiveCommonModule/**/*.{h,m,mm,swift}'  # 根据文件结构调整
-    spec.public_header_files      = 'PLVLiveCloudClassScene/**/*.h', 'PLVLiveCommonModule/**/*.h'  # 根据文件结构调整
-    spec.resources                = 'PLVLiveCloudClassScene/Resource/**/*'
+    spec.source_files             = ['PLVLiveCloudClassScene/**/*.{h,m,mm,swift}', 'PLVLiveCommonModule/**/*.{h,m,mm,swift}']  # 根据文件结构调整
+    spec.public_header_files      = ['PLVLiveCloudClassScene/**/*.h', 'PLVLiveCommonModule/**/*.h']  # 根据文件结构调整
+    spec.resources                = ['PLVLiveCloudClassScene/**/*.bundle', 'PLVLiveCommonModule/**/*.bundle']
+#     spec.resource_bundles = {
+#       'PLVLiveCloudClassSceneBundle' => 'PLVLiveCloudClassScene/**/*.bundle',
+#       'PLVLiveCommonModuleBundle' => 'PLVLiveCommonModule/**/*.bundle'
+#     }
     # 依赖项
     spec.dependency 'PLVImagePickerController', '0.1.3'
     spec.dependency 'PLVLiveScenesSDK', '1.19.1'
@@ -27,5 +31,5 @@ Pod::Spec.new do |spec|
     }
     # 添加额外的设置项
     spec.frameworks               = 'UIKit', 'Foundation'
-    spec.static_framework = false
+    spec.static_framework = true
 end

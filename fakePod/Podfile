@@ -6,10 +6,10 @@ source 'https://cdn.cocoapods.org'
 target 'polyv' do
 # Comment the next line if you don't want to use dynamic frameworks
 # use_frameworks! #:linkage => :static
-use_frameworks! #(:linkage => :static)
+use_frameworks!(:linkage => :static)
 inhibit_all_warnings!
 project_root = File.expand_path('..', __FILE__)
-pod 'polyv', :path => "#{project_root}/../submodule/ios/polyv.podspec"
+pod 'polyv', :path => "#{project_root}/../submodule/ios/pod/polyv.podspec"
 
 end
 

@@ -1,6 +1,0 @@
-framework module live {
-  umbrella header "placeholder.h"
-
-  export *
-  module * { export * }
-}

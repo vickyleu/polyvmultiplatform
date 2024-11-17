@@ -10,7 +10,7 @@
 #import "PLVLCPageController.h"
 #import "PLVLCQuizViewController.h"
 #import "PLVLCTuwenViewController.h"
-#import "PLVLCTextViewController.h"
+#import "text/PLVLCTextViewController.h"
 #import "PLVLCQAViewController.h"
 #import "PLVLCIframeViewController.h"
 #import "PLVLCPlaybackListViewController.h"

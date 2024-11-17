@@ -11,7 +11,7 @@
 #import "PLVMultiLanguageManager.h"
 #import <PLVLiveScenesSDK/PLVLiveScenesSDK.h>
 #import <PLVFoundationSDK/PLVFoundationSDK.h>
-#import "PLVModel/PLVModel.h"
+#import "PLVModel.h"
 
 @interface PLVCommodityPushView ()
 
