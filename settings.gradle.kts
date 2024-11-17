@@ -171,8 +171,8 @@ dependencyResolutionManagement {
 include(":live")
 
 include(":polyvLiveCloudClassScene").apply {
-    project(":polyvLiveCloudClassScene").projectDir = file("./polyv/android/polyvLiveCloudClassScene")
+    project(":polyvLiveCloudClassScene").projectDir = file("./submodule/android/polyvLiveCloudClassScene")
 }
 include(":polyvLiveCommonModul").apply {
-    project(":polyvLiveCommonModul").projectDir = file("./polyv/android/polyvLiveCommonModul")
+    project(":polyvLiveCommonModul").projectDir = file("./submodule/android/polyvLiveCommonModul")
 }

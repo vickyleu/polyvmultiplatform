@@ -49,8 +49,6 @@ buildscript {
     }
 }
 
-
-
 allprojects {
     val properties = Properties().apply {
         runCatching { rootProject.file("local.properties") }
@@ -302,6 +300,22 @@ allprojects {
     }
 }
 
+afterEvaluate{
+    val live = rootProject.project("live")
+    val polyvLiveCloudClassScene= rootProject.project("polyvLiveCloudClassScene")
+
+    live.afterEvaluate{
+        polyvLiveCloudClassScene.afterEvaluate{
+            live.tasks.findByName("generateDefPolyv").apply {
+                println("generateDefPolyv: $this")
+            }
+            polyvLiveCloudClassScene.tasks.findByName("compileReleaseJavaWithJavac").apply {
+                println("compileReleaseJavaWithJavac: $this")
+            }
+        }
+    }
+
+}
 
 tasks.register("deletePackages") {
 
@@ -389,8 +403,6 @@ tasks.register("deletePackages") {
         }
     }
 }
-
-
 val packageTypes = listOf("npm", "maven", "docker", "container")
 val visibilityTypes = listOf("public", "private", "internal")
 val allPackages = mutableListOf<Map<String, Any>>()

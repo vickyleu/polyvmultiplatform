@@ -9,7 +9,7 @@ target 'polyv' do
 use_frameworks! #(:linkage => :static)
 inhibit_all_warnings!
 project_root = File.expand_path('..', __FILE__)
-pod 'polyv', :path => "#{project_root}/../polyv/ios/polyv.podspec"
+pod 'polyv', :path => "#{project_root}/../submodule/ios/polyv.podspec"
 
 end
 

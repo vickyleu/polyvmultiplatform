@@ -1,10 +1,7 @@
 @file:OptIn(ExperimentalKotlinGradlePluginApi::class)
 
-import org.gradle.internal.extensions.stdlib.capitalized
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.plugin.cocoapods.CocoapodsExtension
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 
 plugins {
 //    alias(libs.plugins.kotlin.multiplatform)
@@ -14,11 +11,96 @@ plugins {
     id(libs.plugins.kotlin.cocoapods.get().pluginId)
     id(libs.plugins.android.library.get().pluginId)
 }
+
 //afterEvaluate{
 //    afterEvaluate{
-//        tasks.getByName("podspec").dependsOn("transformIosTestCInteropDependenciesMetadataForIde")
+//       /* tasks.withType<DefFileTask>().configureEach {
+//            val task = this
+//            val podName = task.pod.get().moduleName
+//            val taskName = "generateDef${podName}"
+//
+//            task.inputs.file(tasks.named("xcodeVersion").get().outputs.files.singleFile)
+//            task.dependsOn("xcodeVersion")
+//
+//            tasks.named("podGenIos").get().inputs.file(task.outputs.files.singleFile)
+//            tasks.named("podGenIos").get().dependsOn(task)
+//
+////            doFirst {
+////                tasks.named(taskName) {
+////                    inputs.file(tasks.named("xcodeVersion").get().outputs.files.singleFile)
+////                    dependsOn("xcodeVersion")
+////                }
+////                tasks.named("podGenIos") {
+////                    inputs.file(tasks.named(taskName).get().outputs.files.singleFile)
+////                    dependsOn(taskName)
+////                }
+////            }
+//        }
+//        tasks.withType<PodSetupBuildTask>().configureEach {
+//            val task = this
+//            val podName = task.pod.get().moduleName
+//            println("task.name::${task.name}  podName:$podName")
+//            val arch = task.name.split(podName).last()
+//
+//            val relatedTasks = tasks.matching { it.name.startsWith("cinterop${podName}") }.asIterable().toList()
+//            println("arch:$arch task:${task.name}  tasks======>${relatedTasks.joinToString { it.name }}")
+//            relatedTasks.forEach {relatedTask->
+//                val taskName = relatedTask.name.split(podName).last()
+//                when(arch){
+//                    "Iphonesimulator"->{
+//                        if (taskName.contains("IosSimulatorArm64")||taskName.contains("IosSimulatorArm64")) {
+////                            task.mustRunAfter(relatedTask)
+//                        }
+//                    }
+//                    "Iphoneos"->{
+//                        if (taskName.contains("IosArm64")) {
+////                            task.mustRunAfter(relatedTask)
+//                        }
+//                    }
+//                }
+//            }
+//        }*/
+//       /* tasks.named("generateDefPolyv") {
+//            inputs.file(tasks.named("generateDefPLVLiveScenesSDK").get().outputs.files.singleFile)
+//            dependsOn("generateDefPLVLiveScenesSDK")
+//        }*/
+//        tasks.named("publish") {
+//            dependsOn(":polyvLiveCommonModul:publish", ":polyvLiveCloudClassScene:publish") // 指定依赖子模块的发布任务
+//        }
+//
+//
+//
+//        tasks.withType<AbstractPublishToMaven>().configureEach {
+//            println("commonizeNativeDistribution afterEvaluate====>>${this}")
+//            mustRunAfter(":polyvLiveCommonModul:publish", ":polyvLiveCloudClassScene:publish")
+//        }
+//
+//        /*tasks.findByName("generateDefPolyv")?.apply {
+//            println("${rootProject.project("polyvLiveCloudClassScene").tasks.map { it.name }}")
+//
+//
+//            inputs.file(rootProject.project("polyvLiveCloudClassScene").tasks.named("compileReleaseJavaWithJavac").get().outputs.files.singleFile)
+////            inputs.file(rootProject.tasks.named(":polyvLiveCloudClassScene:packageReleaseResources").get().outputs.files.singleFile)
+////            inputs.file(rootProject.tasks.named(":polyvLiveCloudClassScene:generateReleaseResValues").get().outputs.files.singleFile)
+////            inputs.file(rootProject.tasks.named(":polyvLiveCloudClassScene:processReleaseManifest").get().outputs.files.singleFile)
+////            inputs.file(rootProject.tasks.named(":polyvLiveCloudClassScene:syncReleaseLibJars").get().outputs.files.singleFile)
+////            inputs.file(rootProject.tasks.named(":polyvLiveCloudClassScene:compileReleaseJavaWithJavac").get().outputs.files.singleFile)
+////            inputs.file(rootProject.tasks.named(":polyvLiveCloudClassScene:packageReleaseResources").get().outputs.files.singleFile)
+//        }*/
+//        tasks.findByName("xcodeVersion")?.apply {
+//            val xcodeVersion = this
+//            tasks.findByName("generateDefPolyv")?.apply {
+//                val generateDefPolyv = this
+//                generateDefPolyv.inputs.file(xcodeVersion.outputs.files.singleFile)
+//                generateDefPolyv.mustRunAfter(xcodeVersion)
+//            }
+//        }
+//
 //    }
 //}
+
+
+
 kotlin {
     compilerOptions {
         freeCompilerArgs = listOf(
@@ -35,22 +117,20 @@ kotlin {
     }
 
 
-
     applyDefaultHierarchyTemplate()
+
     androidTarget {
         publishLibraryVariants("release")
     }
-    val xcFramework = XCFramework()
-    configure(listOf(
+    listOf(
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
-    )) {
-        binaries {
+    ).forEach {
+        it.binaries {
             framework {
                 isStatic = true
                 baseName = "live"
-                xcFramework.add(this)
             }
         }
     }
@@ -122,7 +202,8 @@ kotlin {
             optimized = true
             debuggable = false
         }
-        val path = file("../polyv")
+        val parent = project.projectDir.parentFile as File
+        val path = parent.resolve("polyv")
         val path2 = file("src/nativeInterop/cinterop/ios")
 //        val path = file("src/nativeInterop/cinterop/ios")
 
@@ -133,13 +214,18 @@ kotlin {
 
 
 
-        // TODO 出现TXLiteAVSDK_TRTC冲突时,请到百家云或者保利威的podspec文件中修改版本号
+//        // TODO 出现TXLiteAVSDK_TRTC冲突时,请到百家云或者保利威的podspec文件中修改版本号
+//        pod("PLVLiveScenesSDK") {
+//            packageName = "what.the.fuck.polyv"
+//            version="1.19.1"
+//        }
         pod("polyv") {
             packageName = "what.the.fuck.polyv"
-
+//            this.useInteropBindingFrom("PLVLiveScenesSDK")
             source =
                 CocoapodsExtension.CocoapodsDependency.PodLocation.Path(path)
         }
+
         val frameworkLinkDir = path2.resolve("framework")
         if (!frameworkLinkDir.exists()) {
             val defDir = project.layout.buildDirectory.get().asFile.resolve("cocoapods/framework/")

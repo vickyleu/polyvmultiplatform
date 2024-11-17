@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
     spec.license                  = { :type => 'MIT', :file => 'LICENSE' }  # 设置合适的许可证
     spec.summary                  = 'Polyv SDK for iOS integration'
     spec.ios.deployment_target    = '12.0'
-    spec.vendored_frameworks = 'polyv/polyv.xcframework'
+    spec.vendored_frameworks = 'polyv.xcframework'
     spec.dependency 'PLVImagePickerController', '0.1.3'
     spec.dependency 'PLVLiveScenesSDK', '1.19.1'
     spec.dependency 'MJRefresh', '~> 3.7.7'

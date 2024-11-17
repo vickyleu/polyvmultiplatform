@@ -4,6 +4,6 @@
 **/.kotlin
 **/.build
 **/build
-polyv/ios/framework
+submodule/ios/framework
 fakePod/Pods
 fakePod/Podfile.lock
