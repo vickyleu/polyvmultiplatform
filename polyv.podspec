@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
     spec.license                  = { :type => 'MIT', :file => 'LICENSE' }  # 设置合适的许可证
     spec.summary                  = 'Polyv SDK for iOS integration'
     spec.ios.deployment_target    = '12.0'
-    spec.vendored_frameworks = 'polyv.xcframework'
+    spec.vendored_frameworks = 'polyv/polyv.xcframework'
     spec.pod_target_xcconfig = {
         'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',
     }
