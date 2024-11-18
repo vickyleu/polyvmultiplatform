@@ -1,6 +1,0 @@
-framework module polyv_origin {
-  umbrella header "polyv_origin-umbrella.h"
-
-  export *
-  module * { export * }
-}
