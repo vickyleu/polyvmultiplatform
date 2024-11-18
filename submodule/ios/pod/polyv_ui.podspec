@@ -13,11 +13,10 @@ Pod::Spec.new do |spec|
     # 指定源文件路径
     spec.source_files             = ['PLVLiveCloudClassScene/**/*.{h,m,mm,swift}', 'PLVLiveCommonModule/**/*.{h,m,mm,swift}']  # 根据文件结构调整
     spec.public_header_files      = ['PLVLiveCloudClassScene/**/*.h', 'PLVLiveCommonModule/**/*.h']  # 根据文件结构调整
-    spec.resources                = ['PLVLiveCloudClassScene/**/*.bundle', 'PLVLiveCommonModule/**/*.bundle']
-#     spec.resource_bundles = {
-#       'PLVLiveCloudClassSceneBundle' => 'PLVLiveCloudClassScene/**/*.bundle',
-#       'PLVLiveCommonModuleBundle' => 'PLVLiveCommonModule/**/*.bundle'
-#     }
+#     spec.resources                = ['PLVLiveCloudClassScene/**/*.bundle', 'PLVLiveCommonModule/**/*.bundle']
+    spec.resource_bundles = {
+      'Resources' =>  ['PLVLiveCloudClassScene/**/*.bundle', 'PLVLiveCommonModule/**/*.bundle'],
+    }
     # 依赖项
     spec.dependency 'PLVImagePickerController', '0.1.3'
     spec.dependency 'PLVLiveScenesSDK', '1.19.1'

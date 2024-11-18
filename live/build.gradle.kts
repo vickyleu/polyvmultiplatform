@@ -148,7 +148,7 @@ kotlin {
     ).forEach {
         it.binaries {
             framework {
-                isStatic = false
+                isStatic = true
                 baseName = "live"
             }
         }
@@ -216,7 +216,7 @@ kotlin {
             this.url("https://github.com/aliyun/aliyun-specs.git")
         }
         framework {
-            baseName = "live"
+            baseName = "POLY"
             isStatic = true
             optimized = true
             debuggable = false
@@ -240,6 +240,7 @@ kotlin {
 //        }
         pod("polyv") {
             packageName = "what.the.fuck.polyv"
+            moduleName = "polyv_ui"
 //            this.useInteropBindingFrom("PLVLiveScenesSDK")
             source =
                 CocoapodsExtension.CocoapodsDependency.PodLocation.Path(path)

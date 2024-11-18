@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
                 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':live',
-        'PRODUCT_MODULE_NAME' => 'live',
+        'PRODUCT_MODULE_NAME' => 'POLY',
     }
                 
     spec.script_phases = [
