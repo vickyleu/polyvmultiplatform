@@ -300,22 +300,22 @@ allprojects {
     }
 }
 
-afterEvaluate{
-    val live = rootProject.project("live")
-    val polyvLiveCloudClassScene= rootProject.project("polyvLiveCloudClassScene")
-
-    live.afterEvaluate{
-        polyvLiveCloudClassScene.afterEvaluate{
-            live.tasks.findByName("generateDefPolyv").apply {
-                println("generateDefPolyv: $this")
-            }
-            polyvLiveCloudClassScene.tasks.findByName("compileReleaseJavaWithJavac").apply {
-                println("compileReleaseJavaWithJavac: $this")
-            }
-        }
-    }
-
-}
+//afterEvaluate{
+//    val live = rootProject.project("live")
+//    val polyvLiveCloudClassScene= rootProject.project("polyvLiveCloudClassScene")
+//
+//    live.afterEvaluate{
+//        polyvLiveCloudClassScene.afterEvaluate{
+//            live.tasks.findByName("generateDefPolyv").apply {
+//                println("generateDefPolyv: $this")
+//            }
+//            polyvLiveCloudClassScene.tasks.findByName("compileReleaseJavaWithJavac").apply {
+//                println("compileReleaseJavaWithJavac: $this")
+//            }
+//        }
+//    }
+//
+//}
 
 tasks.register("deletePackages") {
 
