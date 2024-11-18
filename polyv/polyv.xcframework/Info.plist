@@ -38,6 +38,8 @@
 	</array>
 	<key>CFBundlePackageType</key>
 	<string>XFWK</string>
+	<key>CFBundleName</key>
+    <string>polyv</string>
 	<key>XCFrameworkFormatVersion</key>
 	<string>1.0</string>
 </dict>
