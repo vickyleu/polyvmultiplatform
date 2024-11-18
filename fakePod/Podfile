@@ -3,13 +3,13 @@ platform :ios, '13.0'
 project './iosApp.xcodeproj'
 
 source 'https://cdn.cocoapods.org'
-target 'polyv' do
+target 'iosApp' do
 # Comment the next line if you don't want to use dynamic frameworks
 # use_frameworks! #:linkage => :static
 use_frameworks!(:linkage => :static)
 inhibit_all_warnings!
 project_root = File.expand_path('..', __FILE__)
-pod 'polyv', :path => "#{project_root}/../submodule/ios/pod/polyv.podspec"
+pod 'polyv_origin', :path => "#{project_root}/../submodule/ios/pod/polyv_origin.podspec"
 
 end
 

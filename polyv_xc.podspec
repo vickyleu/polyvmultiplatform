@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'polyv'
+    spec.name                     = 'polyv_xc'
     spec.version                  = '1.0.0'
     spec.homepage                 = 'https://your-homepage-url.com'  # 你可以填写项目的主页
     spec.source                   = { :git => 'https://github.com/vickyleu/polyvmultiplatform'}
@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
     spec.license                  = { :type => 'MIT', :file => 'LICENSE' }  # 设置合适的许可证
     spec.summary                  = 'Polyv SDK for iOS integration'
     spec.ios.deployment_target    = '12.0'
-    spec.vendored_frameworks = 'polyv.xcframework'
+    spec.vendored_frameworks = 'polyv/polyv_origin.xcframework'
     spec.dependency 'PLVImagePickerController', '0.1.3'
     spec.dependency 'PLVLiveScenesSDK', '1.19.1'
     spec.dependency 'MJRefresh', '~> 3.7.7'

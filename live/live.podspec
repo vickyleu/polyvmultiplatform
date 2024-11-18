@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
                 
     spec.libraries                = 'c++'
     spec.ios.deployment_target    = '12.0'
-    spec.dependency 'polyv'
+    spec.dependency 'polyv_xc'
                 
                 
     spec.xcconfig = {

@@ -219,7 +219,7 @@ kotlin {
 //            packageName = "what.the.fuck.polyv"
 //            version="1.19.1"
 //        }
-        pod("polyv") {
+        pod("polyv_xc") {
             packageName = "what.the.fuck.polyv"
 //            this.useInteropBindingFrom("PLVLiveScenesSDK")
             source =

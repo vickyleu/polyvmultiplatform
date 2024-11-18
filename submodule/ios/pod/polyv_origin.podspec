@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'polyv'
+    spec.name                     = 'polyv_origin'
     spec.version                  = '1.0.0'
     spec.homepage                 = 'https://your-homepage-url.com'  # 你可以填写项目的主页
     spec.source                   = { :git => 'https://github.com/vickyleu/polyvmultiplatform' }

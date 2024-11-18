@@ -63,7 +63,7 @@ build_xcframework() {
     fi
 }
 
-build_xcframework polyv
+build_xcframework polyv_origin
 
 
 if [ $? -ne 0 ]; then
