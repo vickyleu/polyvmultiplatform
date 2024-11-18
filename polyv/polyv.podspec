@@ -6,8 +6,9 @@ Pod::Spec.new do |spec|
     spec.authors                  = { 'Your Name' => 'your-email@example.com' }  # 替换为你的名字和邮箱
     spec.license                  = { :type => 'MIT', :file => 'LICENSE' }  # 设置合适的许可证
     spec.summary                  = 'Polyv SDK for iOS integration'
+    spec.platform          = :ios
     spec.ios.deployment_target    = '12.0'
-    spec.vendored_frameworks = 'polyv.xcframework'
+    spec.ios.vendored_frameworks = 'polyv.xcframework'
     spec.dependency 'PLVImagePickerController', '0.1.3'
     spec.dependency 'PLVLiveScenesSDK', '1.19.1'
     spec.dependency 'MJRefresh', '~> 3.7.7'
