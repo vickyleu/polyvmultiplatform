@@ -1,6 +1,0 @@
-framework module polyv_ui {
-  umbrella header "polyv_ui-umbrella.h"
-
-  export *
-  module * { export * }
-}
