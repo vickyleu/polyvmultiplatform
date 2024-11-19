@@ -240,7 +240,7 @@ kotlin {
 //        }
         pod("polyv") {
             packageName = "what.the.fuck.polyv"
-            moduleName = "polyv_ui"
+            moduleName = "polyv"
 //            this.useInteropBindingFrom("PLVLiveScenesSDK")
             source =
                 CocoapodsExtension.CocoapodsDependency.PodLocation.Path(path)
