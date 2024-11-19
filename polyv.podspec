@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
     spec.name                     = 'polyv'
     spec.version                  = '1.0.0'
     spec.homepage                 = 'https://your-homepage-url.com'  # 你可以填写项目的主页
-    spec.source                   = { :podspec => 'https://raw.githubusercontent.com/vickyleu/polyvmultiplatform/refs/heads/main/polyv/polyv.podspec' }
+    spec.source                   = { :git => 'https://github.com/vickyleu/polyvmultiplatform'}
     spec.authors                  = { 'Your Name' => 'your-email@example.com' }  # 替换为你的名字和邮箱
     spec.license                  = { :type => 'MIT', :file => 'LICENSE' }  # 设置合适的许可证
     spec.summary                  = 'Polyv SDK for iOS integration'
