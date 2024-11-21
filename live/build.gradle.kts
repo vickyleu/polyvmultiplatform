@@ -11,7 +11,6 @@ plugins {
 //    alias(libs.plugins.kotlin.cocoapods)
 //    alias(libs.plugins.android.library)
     id(libs.plugins.kotlinMultiplatform.get().pluginId)
-    id(libs.plugins.kotlin.cocoapods.get().pluginId)
     id(libs.plugins.android.library.get().pluginId)
 }
 
@@ -148,38 +147,30 @@ kotlin {
     ).forEach {
         it.binaries {
             framework {
-                isStatic = true
+                isStatic = false
                 baseName = "live"
                 transitiveExport=true
                 export("org.uooc.live:live")
             }
         }
-    }
+        it.compilations.getByName("main"){
+            val PLVBusinessSDK by cinterops.creating{
+                defFile("src/nativeInterop/cinterop/PLVBusinessSDK.def")
+                includeDirs(projectDir.resolve("src/nativeInterop/thirdparty/PlvBussiness"))
+                packageName = "what.the.fuck.polyv"
+            }
+            val PLVFoundationSDK by cinterops.creating{
+                defFile("src/nativeInterop/cinterop/PLVFoundationSDK.def")
+                includeDirs(projectDir.resolve("src/nativeInterop/thirdparty/PlvFoundation"))
+                packageName = "what.the.fuck.polyv"
+            }
 
-    cocoapods{
-        summary = "Compose for iOS"
-        homepage = ""
-        ios.deploymentTarget = "12.0"
-        version = "1.0.0"
-        val parent = project.projectDir.parentFile as File
-        val path = parent.resolve("polyv")
-        specRepos {
-            this.url("https://github.com/aliyun/aliyun-specs.git")
-        }
-        framework {
-            baseName = "POLY"
-            isStatic = true
-            optimized = true
-            debuggable = false
-            transitiveExport=true
-            export("org.uooc.live:pod")
-        }
-        noPodspec()
-        pod("polyv") {
-            packageName = "what.the.fuck.polyv"
-            moduleName = "polyv"
-            source =
-                CocoapodsExtension.CocoapodsDependency.PodLocation.Path(path)
+            val polyv by cinterops.creating{
+                defFile("src/nativeInterop/cinterop/polyv.def")
+                includeDirs(projectDir.resolve("src/nativeInterop/thirdparty/polyv"))
+                packageName = "what.the.fuck.polyv"
+            }
+
         }
     }
     sourceSets {
