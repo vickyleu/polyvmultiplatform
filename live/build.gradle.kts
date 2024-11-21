@@ -11,7 +11,7 @@ plugins {
 //    alias(libs.plugins.kotlin.cocoapods)
 //    alias(libs.plugins.android.library)
     id(libs.plugins.kotlinMultiplatform.get().pluginId)
-//    id(libs.plugins.kotlin.cocoapods.get().pluginId)
+    id(libs.plugins.kotlin.cocoapods.get().pluginId)
     id(libs.plugins.android.library.get().pluginId)
 }
 
@@ -152,13 +152,26 @@ kotlin {
                 baseName = "live"
             }
         }
-        it.compilations.getByName("main"){
-            val polyv by cinterops.creating{
-                defFile("src/nativeInterop/cinterop/polyv.def")
-                includeDirs(projectDir.resolve("src/nativeInterop/cinterop/polyv"))
-                packageName = "what.the.fuck.polyv"
-            }
-        }
+//        it.compilations.getByName("main"){
+//            val PLVFoundationSDK by cinterops.creating{
+//                defFile("src/nativeInterop/cinterop/PLVFoundationSDK.def")
+//                includeDirs(projectDir.resolve("src/nativeInterop/cinterop/PLVFoundationSDK"))
+//                packageName = "what.the.fuck.polyv"
+//            }
+//            val PLVLiveScenesSDK by cinterops.creating{
+//                defFile("src/nativeInterop/cinterop/PLVLiveScenesSDK.def")
+//                includeDirs(projectDir.resolve("src/nativeInterop/cinterop/PLVLiveScenesSDK"))
+//                packageName = "what.the.fuck.polyv"
+//            }
+//
+//
+////            val polyv by cinterops.creating{
+////                defFile("src/nativeInterop/cinterop/polyv.def")
+////                includeDirs(projectDir.resolve("src/nativeInterop/cinterop/polyv"))
+////                packageName = "what.the.fuck.polyv"
+////            }
+//
+//        }
 
     }
 
@@ -213,6 +226,34 @@ kotlin {
 //            linkerOpts("-framework", "SDWebImage") //, "-F/Users/user/Projects/MyFramework/ios/SDK"
 //        }
     }*/
+
+    cocoapods{
+        summary = "Compose for iOS"
+        homepage = ""
+        ios.deploymentTarget = "12.0"
+        version = "1.0.0"
+        val parent = project.projectDir.parentFile as File
+        val path = parent.resolve("polyv")
+        specRepos {
+            this.url("https://github.com/aliyun/aliyun-specs.git")
+        }
+        framework {
+            baseName = "POLY"
+            isStatic = false
+            optimized = true
+            debuggable = false
+        }
+        noPodspec()
+
+        pod("PLVLiveScenesSDK","1.19.1")
+        pod("polyv") {
+            packageName = "what.the.fuck.polyv"
+            moduleName = "polyv"
+            source =
+                CocoapodsExtension.CocoapodsDependency.PodLocation.Path(path)
+        }
+    }
+
 
    /* cocoapods {
         summary = "Compose for iOS"
