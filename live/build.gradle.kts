@@ -148,84 +148,13 @@ kotlin {
     ).forEach {
         it.binaries {
             framework {
-                isStatic = false
+                isStatic = true
                 baseName = "live"
+                transitiveExport=true
+                export("org.uooc.live:live")
             }
         }
-//        it.compilations.getByName("main"){
-//            val PLVFoundationSDK by cinterops.creating{
-//                defFile("src/nativeInterop/cinterop/PLVFoundationSDK.def")
-//                includeDirs(projectDir.resolve("src/nativeInterop/cinterop/PLVFoundationSDK"))
-//                packageName = "what.the.fuck.polyv"
-//            }
-//            val PLVLiveScenesSDK by cinterops.creating{
-//                defFile("src/nativeInterop/cinterop/PLVLiveScenesSDK.def")
-//                includeDirs(projectDir.resolve("src/nativeInterop/cinterop/PLVLiveScenesSDK"))
-//                packageName = "what.the.fuck.polyv"
-//            }
-//
-//
-////            val polyv by cinterops.creating{
-////                defFile("src/nativeInterop/cinterop/polyv.def")
-////                includeDirs(projectDir.resolve("src/nativeInterop/cinterop/polyv"))
-////                packageName = "what.the.fuck.polyv"
-////            }
-//
-//        }
-
     }
-
-    /*listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "live"
-            isStatic = true
-            xcFramework.add(this)
-        }
-//        it.compilations.getByName("main") {
-//            val polyv by cinterops.creating {
-//                // Path to .def file
-//                defFile("src/nativeInterop/cinterop/polyv.def")
-//                packageName = "what.the.fuck.polyv"
-//                compilerOpts("-framework", "polyv") //, "-F/Users/user/Projects/MyFramework/ios/SDK"
-//                compilerOpts("-framework", "SDWebImage") //, "-F/Users/user/Projects/MyFramework/ios/SDK"
-//
-//                val list = listOf(projectDir.resolve("src/nativeInterop/cinterop/ios/PLVLiveCloudClassScene"),
-//                    projectDir.resolve("src/nativeInterop/cinterop/ios/PLVLiveCommonModule"),
-//                    projectDir.resolve("src/nativeInterop/cinterop/ios/Headers"),
-//                    project.layout.buildDirectory.get().asFile.resolve("cocoapods/synthetic/ios/Pods/SDWebImage/SDWebImage/Core/")
-//                )
-//                val allHeaderDirs = list.flatMap { dir ->
-//                    dir.walk()
-//                        .filter { it.isDirectory && !it.name.equals("Resource", ignoreCase = true) } // 排除 Resource 目录
-//                        .map { it.absolutePath } // 获取所有子目录
-//                }
-//                includeDirs(*allHeaderDirs.toTypedArray())
-//
-//                val headerFiles = listOf(
-//                    projectDir.resolve("src/nativeInterop/cinterop/ios/PLVLiveCloudClassScene"),
-//                    projectDir.resolve("src/nativeInterop/cinterop/ios/PLVLiveCommonModule"),
-//                    projectDir.resolve("src/nativeInterop/cinterop/ios/Headers")
-//                ).flatMap { dir ->
-//                    dir.walk()
-//                        .filter { it.isFile && it.extension == "h" }
-//                        .toList()
-//                }
-//                // 添加头文件目录
-//                headers(*headerFiles.toTypedArray())
-//
-//            }
-//
-//        }
-//        it.binaries.all {
-//            // Tell the linker where the framework is located.
-//            linkerOpts("-framework", "polyv") //, "-F/Users/user/Projects/MyFramework/ios/SDK"
-//            linkerOpts("-framework", "SDWebImage") //, "-F/Users/user/Projects/MyFramework/ios/SDK"
-//        }
-    }*/
 
     cocoapods{
         summary = "Compose for iOS"
@@ -239,13 +168,13 @@ kotlin {
         }
         framework {
             baseName = "POLY"
-            isStatic = false
+            isStatic = true
             optimized = true
             debuggable = false
+            transitiveExport=true
+            export("org.uooc.live:pod")
         }
         noPodspec()
-
-        pod("PLVLiveScenesSDK","1.19.1")
         pod("polyv") {
             packageName = "what.the.fuck.polyv"
             moduleName = "polyv"
@@ -253,80 +182,6 @@ kotlin {
                 CocoapodsExtension.CocoapodsDependency.PodLocation.Path(path)
         }
     }
-
-
-   /* cocoapods {
-        summary = "Compose for iOS"
-        homepage = ""
-        ios.deploymentTarget = "12.0"
-        version = "1.0.0"
-
-        specRepos {
-            this.url("https://github.com/aliyun/aliyun-specs.git")
-        }
-        framework {
-            baseName = "POLY"
-            isStatic = true
-            optimized = true
-            debuggable = false
-        }
-        val parent = project.projectDir.parentFile as File
-        val path = parent.resolve("polyv")
-        val path2 = file("src/nativeInterop/cinterop/ios")
-//        val path = file("src/nativeInterop/cinterop/ios")
-
-//        pod("SDWebImage"){
-//            version = "5.20.0"
-//            linkOnly=true
-//        }
-
-
-
-//        // TODO 出现TXLiteAVSDK_TRTC冲突时,请到百家云或者保利威的podspec文件中修改版本号
-//        pod("PLVLiveScenesSDK") {
-//            packageName = "what.the.fuck.polyv"
-//            version="1.19.1"
-//        }
-        pod("polyv") {
-            packageName = "what.the.fuck.polyv"
-            moduleName = "polyv"
-//            this.useInteropBindingFrom("PLVLiveScenesSDK")
-            source =
-                CocoapodsExtension.CocoapodsDependency.PodLocation.Path(path)
-        }
-
-        val frameworkLinkDir = path2.resolve("framework")
-        if (!frameworkLinkDir.exists()) {
-            val defDir = project.layout.buildDirectory.get().asFile.resolve("cocoapods/framework/")
-            val absolute = defDir.absolutePath
-//            val relative = defDir.relativeTo(project.projectDir.resolve("src/nativeInterop/cinterop/ios"))
-//            println("relative::${relative.path}")
-            ProcessBuilder().directory(project.projectDir.resolve("src/nativeInterop/cinterop/ios"))
-                .command(
-                    "ln",
-                    "-sf",
-                    "${absolute}/",
-                    "./framework"
-                ).start().apply {
-                waitFor()
-            }.inputStream.bufferedReader().readText()
-        }
-        extraSpecAttributes["vendored_frameworks"] =
-            "'live.framework'" //导入系统库
-    }*/
-    /*targets.withType<KotlinNativeTarget> {
-        val platform = when (this.name) {
-            "iosX64", "iosSimulatorArm64" -> "iphonesimulator"
-            "iosArm64" -> "iphoneos"
-            else -> error("Unsupported target ${this.name}")
-        }
-
-    }*/
-
-    /*tasks.withType<DefFileTask>().configureEach {
-        this.pod.get().source
-    }*/
-
     sourceSets {
         commonMain.dependencies {
             implementation(project.dependencies.platform(libs.coil.bom))
@@ -340,43 +195,6 @@ kotlin {
         }
     }
 }
-
-/*val frameworkSourcePath = "src/nativeInterop/cinterop/ios/framework" // 你的 framework 源目录
-val frameworkTargetBasePath = "src/nativeInterop/cinterop/ios" // 你的 framework 源目录
-tasks.register("copyFrameworks") {
-    kotlin.targets.withType<KotlinNativeTarget>().forEach { target ->
-        val platform = when (target.konanTarget.family) {
-            org.jetbrains.kotlin.konan.target.Family.IOS -> when (target.konanTarget) {
-                org.jetbrains.kotlin.konan.target.KonanTarget.IOS_ARM64 -> "iphoneos"
-                org.jetbrains.kotlin.konan.target.KonanTarget.IOS_X64,
-                org.jetbrains.kotlin.konan.target.KonanTarget.IOS_SIMULATOR_ARM64 -> "iphonesimulator"
-                else -> error("Unsupported target ${target.konanTarget.name}")
-            }
-            else -> error("Target is not iOS")
-        }
-        val arch = when (target.konanTarget) {
-            org.jetbrains.kotlin.konan.target.KonanTarget.IOS_ARM64 -> "arm64"
-            org.jetbrains.kotlin.konan.target.KonanTarget.IOS_X64 -> "x86_64"
-            org.jetbrains.kotlin.konan.target.KonanTarget.IOS_SIMULATOR_ARM64 -> "arm64e"
-            else -> error("Unsupported architecture ${target.konanTarget.name}")
-        }
-        val sourceDir = file("$frameworkSourcePath/live.framework")
-        val targetDir = file("$frameworkTargetBasePath/$arch/live.framework")
-        println("taskName:>>>>:targetDir>>>:${targetDir.absolutePath}")
-        doLast {
-            if (sourceDir.exists()) {
-                targetDir.parentFile.mkdirs()
-                sourceDir.copyRecursively(targetDir, overwrite = true)
-                println("Framework for $arch ($platform) copied to ${targetDir.absolutePath}")
-            } else {
-                println("Source framework not found in $frameworkSourcePath for $arch ($platform)")
-            }
-        }
-
-    }
-
-}*/
-
 android {
     namespace = "org.uooc.plv"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
