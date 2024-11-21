@@ -11,7 +11,7 @@ plugins {
 //    alias(libs.plugins.kotlin.cocoapods)
 //    alias(libs.plugins.android.library)
     id(libs.plugins.kotlinMultiplatform.get().pluginId)
-    id(libs.plugins.kotlin.cocoapods.get().pluginId)
+//    id(libs.plugins.kotlin.cocoapods.get().pluginId)
     id(libs.plugins.android.library.get().pluginId)
 }
 
@@ -148,10 +148,18 @@ kotlin {
     ).forEach {
         it.binaries {
             framework {
-                isStatic = true
+                isStatic = false
                 baseName = "live"
             }
         }
+        it.compilations.getByName("main"){
+            val polyv by cinterops.creating{
+                defFile("src/nativeInterop/cinterop/polyv.def")
+                includeDirs(projectDir.resolve("src/nativeInterop/cinterop/polyv"))
+                packageName = "what.the.fuck.polyv"
+            }
+        }
+
     }
 
     /*listOf(
@@ -206,7 +214,7 @@ kotlin {
 //        }
     }*/
 
-    cocoapods {
+   /* cocoapods {
         summary = "Compose for iOS"
         homepage = ""
         ios.deploymentTarget = "12.0"
@@ -264,20 +272,14 @@ kotlin {
         }
         extraSpecAttributes["vendored_frameworks"] =
             "'live.framework'" //导入系统库
-    }
-   /* targets.withType<KotlinNativeTarget> {
+    }*/
+    /*targets.withType<KotlinNativeTarget> {
         val platform = when (this.name) {
             "iosX64", "iosSimulatorArm64" -> "iphonesimulator"
             "iosArm64" -> "iphoneos"
             else -> error("Unsupported target ${this.name}")
         }
-        afterEvaluate {
-            if(this@withType.name.lowercase().contains("ios")){
-                val taskName= "publish${this@withType.name.capitalized()}PublicationToGitHubPackagesRepository"
-                println("taskName:>>>>:${taskName}")
-                tasks.getByName(taskName).dependsOn("copyFrameworks")
-            }
-        }
+
     }*/
 
     /*tasks.withType<DefFileTask>().configureEach {

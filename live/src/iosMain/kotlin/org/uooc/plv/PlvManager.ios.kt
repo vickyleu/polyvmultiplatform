@@ -14,6 +14,7 @@ import what.the.fuck.polyv.PLVMultiLanguageManager
 import what.the.fuck.polyv.PLVMultiLanguageModeZH
 import what.the.fuck.polyv.PLVRoomLoginClient
 
+
 actual class PlvManager private actual constructor() {
     actual companion object {
         private var _instance: PlvManager? = null

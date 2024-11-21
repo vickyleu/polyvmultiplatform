@@ -1,3 +1,2 @@
 language = Objective-C
-headers = PLVLCCloudClassViewController.h PLVMultiLanguageManager.h PLVRoomLoginClient.h
-linkerOpts = -framework SDWebImage -framework PLVLiveScenesSDK -framework PLVImagePickerController -framework MJRefresh
+headers = PLVLCCloudClassViewController.h PLVMultiLanguageManager.h PLVRoomLoginClient.h PLVRoomUser.h
