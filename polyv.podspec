@@ -9,16 +9,17 @@ Pod::Spec.new do |spec|
     spec.platform          = :ios
     spec.ios.deployment_target    = '12.0'
     spec.ios.vendored_frameworks = 'polyv/polyv.xcframework'
-    spec.dependency 'PLVImagePickerController', '0.1.3'
-    spec.dependency 'PLVLiveScenesSDK', '1.19.1'
-    spec.dependency 'MJRefresh', '~> 3.7.7'
-    spec.dependency 'SVGAPlayer', '~> 2.3'
-    spec.dependency 'Protobuf', '3.22.4'
-    spec.dependency 'SDWebImage'
-    spec.dependency 'TXLiteAVSDK_TRTC'
+#     spec.dependency 'PLVImagePickerController', '0.1.3'
+#     spec.dependency 'PLVLiveScenesSDK', '1.19.1'
+#     spec.dependency 'MJRefresh', '~> 3.7.7'
+#     spec.dependency 'SVGAPlayer', '~> 2.3'
+#     spec.dependency 'Protobuf', '3.22.4'
+#     spec.dependency 'SDWebImage'
+#     spec.dependency 'TXLiteAVSDK_TRTC'
     spec.pod_target_xcconfig = {
         'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',
     }
     # 添加额外的设置项
     spec.frameworks               = 'UIKit', 'Foundation'
+    spec.static_framework = false
 end

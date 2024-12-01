@@ -30,5 +30,5 @@ Pod::Spec.new do |spec|
     }
     # 添加额外的设置项
     spec.frameworks               = 'UIKit', 'Foundation'
-    # spec.static_framework = true
+    spec.static_framework = false
 end

@@ -9,6 +9,14 @@ target 'iosApp' do
 use_frameworks!(:linkage => :static)
 inhibit_all_warnings!
 project_root = File.expand_path('..', __FILE__)
+pod 'PLVImagePickerController', '0.1.3'
+pod 'PLVLiveScenesSDK', '1.19.1'
+pod 'MJRefresh', '~> 3.7.7'
+pod 'SVGAPlayer', '~> 2.3'
+pod 'Protobuf', '3.22.4'
+pod 'SDWebImage'
+pod 'TXLiteAVSDK_TRTC'
+
 pod 'polyv', :path => "#{project_root}/../submodule/ios/pod/polyv.podspec"
 
 end

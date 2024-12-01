@@ -12,28 +12,12 @@ if [ $? -ne 0 ]; then
 fi
 
 build_xcframework() {
-    # Build for iOS Device
-    xcodebuild archive \
-      -workspace $WORKSPACE_NAME \
-      -scheme $1 \
-      -destination "generic/platform=iOS Simulator" \
-      -configuration Release only_active_arch=no \
-      -sdk iphoneos \
-      -archivePath fakePod/build/ios_devices.xcarchive \
-      SKIP_INSTALL=NO \
-      BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
-      OTHER_SWIFT_FLAGS="-Xfrontend -module-interface-preserve-types-as-written"
-
-    if [ $? -ne 0 ]; then
-        echo "Build $1 for iOS Device failed. Exiting..."
-        exit 1
-    fi
-
     # Build for iOS Simulator
     xcodebuild archive \
       -workspace $WORKSPACE_NAME \
       -scheme $1 \
-      -destination "generic/platform=iOS" \
+      -verbose \
+      -destination "generic/platform=iOS Simulator" \
       -configuration Release only_active_arch=no \
       -sdk iphonesimulator \
       -archivePath fakePod/build/ios_simulator.xcarchive \
@@ -41,9 +25,26 @@ build_xcframework() {
       BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
       OTHER_SWIFT_FLAGS="-Xfrontend -module-interface-preserve-types-as-written"
 
-
     if [ $? -ne 0 ]; then
         echo "Build $1 for iOS Simulator failed. Exiting..."
+        exit 1
+    fi
+
+    # Build for iOS Device
+    xcodebuild archive \
+      -workspace $WORKSPACE_NAME \
+      -scheme $1 \
+      -verbose \
+      -destination "generic/platform=iOS" \
+      -configuration Release only_active_arch=no \
+      -sdk iphoneos \
+      -archivePath fakePod/build/ios_devices.xcarchive \
+      SKIP_INSTALL=NO \
+      BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
+     OTHER_SWIFT_FLAGS="-Xfrontend -module-interface-preserve-types-as-written"
+
+    if [ $? -ne 0 ]; then
+        echo "Build $1 for iOS Device failed. Exiting..."
         exit 1
     fi
 
