@@ -19,7 +19,8 @@ Pod::Spec.new do |spec|
     }
     # 依赖项
     spec.dependency 'PLVImagePickerController', '0.1.3'
-    spec.dependency 'PLVLiveScenesSDK', '1.19.1'
+    spec.dependency 'PLVLiveScenesSDK', '1.19.0'
+    spec.dependency 'PLVFoundationSDK', '1.19.0'
     spec.dependency 'MJRefresh', '~> 3.7.7'
     spec.dependency 'SVGAPlayer', '~> 2.3'
     spec.dependency 'Protobuf', '3.22.4'
