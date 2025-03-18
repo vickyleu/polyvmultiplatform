@@ -1,2 +1,3 @@
 language = Objective-C
 headers = PLVFoundationSDK.h
+headerFilter = PLVFoundationSDK.h

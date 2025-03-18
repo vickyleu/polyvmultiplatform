@@ -3,10 +3,14 @@ package com.easefun.polyv.livecloudclass.modules.ppt;
 import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
@@ -38,7 +42,9 @@ import com.plv.livescenes.linkmic.manager.PLVLinkMicConfig;
 
 import net.plv.android.jsbridge.BridgeHandler;
 import net.plv.android.jsbridge.CallBackFunction;
-
+import androidx.webkit.WebViewAssetLoader;
+import androidx.webkit.WebViewClientCompat;
+import androidx.webkit.WebViewAssetLoader.AssetsPathHandler;
 /**
  * date: 2020/8/6
  * author: hwj
@@ -319,14 +325,35 @@ public class PLVLCPPTView extends FrameLayout implements IPLVPPTContract.IPLVPPT
                 hideLoading();
                 if (canLoadWeb()) {
                     final WebSettings pptWebSetting = pptWebView.getSettings();
-                    boolean allowFileAccess = true;
-                    pptWebSetting.setAllowFileAccess(allowFileAccess);
-                    pptWebSetting.setAllowFileAccessFromFileURLs(allowFileAccess);
-
+//                    boolean allowFileAccess = true;
+                    pptWebSetting.setAllowFileAccess(true);
+//                    pptWebSetting.setAllowFileAccess(allowFileAccess);
+//                    pptWebSetting.setAllowFileAccessFromFileURLs(allowFileAccess);
+                    pptWebSetting.setAllowFileAccessFromFileURLs(false);
+                    pptWebSetting.setAllowUniversalAccessFromFileURLs(false);
+                    initAssetLoader(pptWebView.getContext(),pptWebView);
                     pptWebView.loadLocalPpt(localCacheVO);
                 }
             }
-
+            private  void initAssetLoader(Context context, WebView webView) {
+                // 创建 WebViewAssetLoader 对象，将 assets 映射到 “/assets/”
+                final WebViewAssetLoader assetLoader = new WebViewAssetLoader.Builder()
+                        .setDomain("https://inapp.polyv.net")
+                        .addPathHandler("/assets/", new AssetsPathHandler(context))
+                        .build();
+                // 需要访问文件时,使用https://inapp.polyv.net/assets/xxx.html 就能访问本地文件中的Assets
+                // 设置 WebViewClient 拦截请求，从而加载本地资源
+                webView.setWebViewClient(new WebViewClientCompat() {
+                    @Override
+                    public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
+                        return assetLoader.shouldInterceptRequest(request.getUrl());
+                    }
+                    @Override
+                    public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
+                        return assetLoader.shouldInterceptRequest(Uri.parse(url));
+                    }
+                });
+            }
             @Override
             public void play(String message) {
                 PLVCommonLog.d(TAG, "PLVLCPPTView.play=" + message);

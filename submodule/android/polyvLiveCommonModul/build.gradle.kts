@@ -95,5 +95,6 @@ android {
         //noinspection UseTomlInstead
         api("com.google.android.flexbox:flexbox:3.0.0")
         api("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+        api("androidx.webkit:webkit:1.13.0")
     }
 }

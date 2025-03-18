@@ -11,16 +11,16 @@ import android.webkit.JsPromptResult;
 import android.webkit.JsResult;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
-import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 import com.plv.thirdpart.blankj.utilcode.util.ActivityUtils;
 import com.plv.thirdpart.blankj.utilcode.util.LogUtils;
-
+import androidx.webkit.WebViewAssetLoader;
+import androidx.webkit.WebViewClientCompat;
+import androidx.webkit.WebViewAssetLoader.AssetsPathHandler;
 public class PLVWebViewHelper {
 
     public static void initWebView(Context context, WebView webView) {
@@ -29,7 +29,7 @@ public class PLVWebViewHelper {
 
     public static void initWebView(Context context, WebView webView, boolean isUseActionView) {
         initWebSettings(context, webView);
-        initListener(webView, isUseActionView);
+        initListener(webView,context, isUseActionView);
     }
 
     private static boolean hasKitkat() {
@@ -77,35 +77,55 @@ public class PLVWebViewHelper {
         webSettings.setSupportZoom(true);
         // 设置 UserAgent 属性
         webSettings.setUserAgentString("");
-        // 允许加载本地 html 文件/false
-        webSettings.setAllowFileAccess(allowFileAccess);
 
+        // 禁用 file 协议相关的访问，改用 WebViewAssetLoader 以 https:// 形式加载本地资源
+        webSettings.setAllowFileAccess(true);
+        webSettings.setAllowFileAccessFromFileURLs(false);
+        webSettings.setAllowUniversalAccessFromFileURLs(false);
 
-        // 允许通过 file url 加载的 Javascript 读取其他的本地文件,Android 4.1 之前默认是true，在 Android 4.1 及以后默认是false,也就是禁止
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            webSettings.setAllowFileAccessFromFileURLs(allowFileAccessFromFileURLs);
-        }
-        // 允许通过 file url 加载的 Javascript 可以访问其他的源，包括其他的文件和 http，https 等其他的源，
-        // Android 4.1 之前默认是true，在 Android 4.1 及以后默认是false,也就是禁止
-        // 如果此设置是允许，则 setAllowFileAccessFromFileURLs 不起做用
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            webSettings.setAllowUniversalAccessFromFileURLs(allowUniversalAccessFromFileURLs);
-        }
+//        // 允许加载本地 html 文件/false
+//        webSettings.setAllowFileAccess(allowFileAccess);
+//        // 允许通过 file url 加载的 Javascript 读取其他的本地文件,Android 4.1 之前默认是true，在 Android 4.1 及以后默认是false,也就是禁止
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+//            webSettings.setAllowFileAccessFromFileURLs(allowFileAccessFromFileURLs);
+//        }
+//        // 允许通过 file url 加载的 Javascript 可以访问其他的源，包括其他的文件和 http，https 等其他的源，
+//        // Android 4.1 之前默认是true，在 Android 4.1 及以后默认是false,也就是禁止
+//        // 如果此设置是允许，则 setAllowFileAccessFromFileURLs 不起做用
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+//            webSettings.setAllowUniversalAccessFromFileURLs(allowUniversalAccessFromFileURLs);
+//        }
     }
 
-    private static void initListener(WebView webView, boolean isUseActionView) {
-        webView.setWebViewClient(new SafeWebViewClient().setIsUseActionView(isUseActionView));
+    private static void initListener(WebView webView, Context context, boolean isUseActionView) {
+        webView.setWebViewClient(new SafeWebViewClient(context).setIsUseActionView(isUseActionView));
         webView.setWebChromeClient(new SafeWebChromeClient());
     }
 
-    public static class SafeWebViewClient extends WebViewClient {
+    public static class SafeWebViewClient extends WebViewClientCompat {
         private boolean isUseActionView;
+
+        private Context context;
+        public SafeWebViewClient(Context context) {
+            this.context= context;
+        }
+        final WebViewAssetLoader assetLoader = new WebViewAssetLoader.Builder()
+                .addPathHandler("/assets/", new AssetsPathHandler(context))
+                .build();
 
         public SafeWebViewClient setIsUseActionView(boolean isUseActionView) {
             this.isUseActionView = isUseActionView;
             return this;
         }
 
+        @Override
+        public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
+            return assetLoader.shouldInterceptRequest(request.getUrl());
+        }
+        @Override
+        public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
+            return assetLoader.shouldInterceptRequest(Uri.parse(url));
+        }
         /**
          * 当WebView得页面Scale值发生改变时回调
          */
@@ -209,22 +229,22 @@ public class PLVWebViewHelper {
          * @param request 当前产生 request 请求
          * @return WebResourceResponse
          */
-        @Override
-        public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
-            return super.shouldInterceptRequest(view, request);
-        }
-
-        /**
-         * WebView 访问 url 出错
-         *
-         * @param view
-         * @param request
-         * @param error
-         */
-        @Override
-        public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
-            super.onReceivedError(view, request, error);
-        }
+//        @Override
+//        public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
+//            return super.shouldInterceptRequest(view, request);
+//        }
+//
+//        /**
+//         * WebView 访问 url 出错
+//         *
+//         * @param view
+//         * @param request
+//         * @param error
+//         */
+//        @Override
+//        public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+//            super.onReceivedError(view, request, error);
+//        }
 
         /**
          * WebView ssl 访问证书出错，handler.cancel()取消加载，handler.proceed()对然错误也继续加载
