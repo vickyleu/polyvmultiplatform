@@ -61,6 +61,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)displayLotteryWidgetView:(UIView *)lotteryWidgetView;
 
+- (void)displayWelfareLotteryWidgetView:(UIView *)welfareLotteryWidgetView;
+
 /// 是否显示打开商品库的按钮
 /// @param show YES 显示 NO 不显示
 - (void)showCommodityButton:(BOOL)show;
@@ -88,6 +90,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// 点击回复某条消息
 - (void)didTapReplyChatModel:(PLVChatModel *)model;
 
+/// 更新在线列表人数
+- (void)updateOnlineListButton:(NSInteger)onlineCount;
+
+/// 是否显示福利抽奖挂件视图
+/// @param show YES 显示 NO 不显示
+- (void)showWelfareLotteryWidgetView:(BOOL)show;
+
 @end
 
 @protocol PLVLCLiveRoomPlayerSkinViewDelegate <NSObject>
@@ -107,6 +116,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 打开商品库按钮点击的回调
 /// @param liveRoomPlayerSkinView 横屏 直播间播放器皮肤视图
 - (void)plvLCLiveRoomPlayerSkinViewCommodityButtonClicked:(PLVLCLiveRoomPlayerSkinView *)liveRoomPlayerSkinView;
+
+/// 打开成员列表点击的回调
+/// @param liveRoomPlayerSkinView 横屏 直播间播放器皮肤视图
+- (void)plvLCLiveRoomPlayerSkinViewOnlineListButtonClicked:(PLVLCLiveRoomPlayerSkinView *)liveRoomPlayerSkinView;
+
+- (void)plvLCLiveRoomPlayerSkinViewLinkMicFullscreenButtonClicked:(PLVLCLiveRoomPlayerSkinView *)liveRoomPlayerSkinView userWannaLinkMicAreaViewShow:(BOOL)show;
 
 @end
 

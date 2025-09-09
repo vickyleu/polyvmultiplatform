@@ -11,6 +11,7 @@
 #import "PLVLCRedpackButtonView.h"
 #import "PLVLCCardPushButtonView.h"
 #import "PLVLCLotteryWidgetView.h"
+#import "PLVLCWelfareLotteryWidgetView.h"
 
 @class PLVChatModel;
 
@@ -34,6 +35,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param show 当前的显示状态
 - (void)plvLCChatViewController:(PLVLCChatViewController *)chatVC lotteryWidgetShowStatusChanged:(BOOL)show;
 
+/// 点击福利抽奖挂件的回调
+- (void)plvLCChatViewControllerWannaShowWelfareLottery:(PLVLCChatViewController *)chatVC;
+
+/// 福利抽奖挂件显示状态改变的的回调
+- (void)plvLCChatViewController:(PLVLCChatViewController *)chatVC welfareLotteryWidgetShowStatusChanged:(BOOL)show;
+
 @end
 
 extern NSString *PLVLCChatroomOpenBulletinNotification;
@@ -42,11 +49,15 @@ extern NSString *PLVLCChatroomOpenInteractAppNotification;
 
 extern NSString *PLVLCChatroomOpenRewardViewNotification;
 
+extern NSString *PLVLCChatroomOpenPipSetNotification;
+
 @interface PLVLCChatViewController : UIViewController
 
 @property (nonatomic, weak) id<PLVLCChatViewControllerDelegate> delegate;
 
 @property (nonatomic, weak) UIViewController *liveRoom;
+
+@property (nonatomic, assign) BOOL enableReward;
 
 /// 点赞悬浮按钮（含点赞数、点赞动画）自定义视图
 @property (nonatomic, strong) PLVLCLikeButtonView *likeButtonView;
@@ -59,6 +70,9 @@ extern NSString *PLVLCChatroomOpenRewardViewNotification;
 
 /// 红包挂件视图
 @property (nonatomic, strong) PLVLCLotteryWidgetView *lotteryWidgetView;
+
+/// 福利抽奖挂件视图
+@property (nonatomic, strong) PLVLCWelfareLotteryWidgetView *welfareLotteryWidgetView;
 
 /// 初始化方法
 - (instancetype)initWithLiveRoom:(UIViewController *)liveRoom;
@@ -80,6 +94,12 @@ extern NSString *PLVLCChatroomOpenRewardViewNotification;
 /// 更新抽奖插件信息
 /// @param dataArray 抽奖插件数据
 - (void)updateLotteryWidgetViewInfo:(NSArray *)dataArray;
+
+/// 更新福利抽奖插件信息
+/// @param dict 福利抽奖插件数据
+- (void)updateWelfareLotteryWidgetInfo:(NSDictionary *)dict;
+
+- (CGFloat)getKeyboardToolViewHeight;
 
 @end
 

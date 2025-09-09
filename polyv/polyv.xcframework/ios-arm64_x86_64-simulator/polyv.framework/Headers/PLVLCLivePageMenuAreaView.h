@@ -23,13 +23,16 @@ typedef NS_ENUM(NSInteger, PLVLCLivePageMenuType) {
     PLVLCLivePageMenuTypeText,          // 自定义图文直播
     PLVLCLivePageMenuTypeQA,            // 问答功能
     PLVLCLivePageMenuTypeIframe,        // 推广外链
-    PLVLCLivePageMenuTypeBuy            // 边看边买
+    PLVLCLivePageMenuTypeBuy,           // 边看边买
+    PLVLCLivePageMenuTypeMembers,       // 成员列表
+    PLVLCLivePageMenuTypeAISummary      // AI看功能
 };
 
 /// 将后端返回的menu字符串转化为枚举值PLVLCLivePageMenuType
 PLVLCLivePageMenuType PLVLCMenuTypeWithMenuTypeString(NSString *menuString);
 
 @protocol PLVLCLivePageMenuAreaViewDelegate;
+@class PLVChatUser;
 
 @interface PLVLCLivePageMenuAreaView : UIView
 
@@ -51,6 +54,9 @@ PLVLCLivePageMenuType PLVLCMenuTypeWithMenuTypeString(NSString *menuString);
 /// 直播用户信息发生改变时调用
 - (void)updateLiveUserInfo;
 
+/// 直播用户登录后更新问答时调用
+- (void)updateQAUserInfo;
+
 /// 通过菜单视图，更新聊天回放viewModel到聊天室视图
 - (void)updatePlaybackViewModel:(PLVLCChatroomPlaybackViewModel *)playbackViewModel;
 
@@ -64,6 +70,8 @@ PLVLCLivePageMenuType PLVLCMenuTypeWithMenuTypeString(NSString *menuString);
 /// @param dict 商品菜单参数
 - (void)updateProductMenuTab:(NSDictionary *)dict;
 
+- (void)updateOnlineList:(NSArray <PLVChatUser *>*)list total:(NSInteger)total;
+
 - (void)displayProductPageToExternalView:(UIView *)externalView;
 
 - (void)rollbackProductPageContentView;
@@ -72,6 +80,14 @@ PLVLCLivePageMenuType PLVLCMenuTypeWithMenuTypeString(NSString *menuString);
 
 /// 更新章节菜单Tab
 - (void)updateSectionMenuTab;
+
+- (CGFloat)getKeyboardToolViewHeight;
+
+/// 更新AI看Tab的回放视频信息
+- (void)updateAISummaryVideoInfoWithVideoId:(NSString *)videoId;
+
+/// 更新AI看Tab的暂存/素材库视频信息
+- (void)updateAISummaryVideoInfoWithFileId:(NSString *)fileId;
 
 @end
 
@@ -119,6 +135,29 @@ PLVLCLivePageMenuType PLVLCMenuTypeWithMenuTypeString(NSString *menuString);
 /// @param pageMenuAreaView 菜单视图
 /// @param show 当前的显示状态
 - (void)plvLCLivePageMenuAreaView:(PLVLCLivePageMenuAreaView *)pageMenuAreaView lotteryWidgetShowStatusChanged:(BOOL)show;
+
+/// 在线列表规则显示的回调
+/// @param pageMenuAreaView 菜单视图
+- (void)plvLCLivePageMenuAreaViewWannaShowOnlineListRule:(PLVLCLivePageMenuAreaView *)pageMenuAreaView;
+
+/// 在线列表更新的回调
+- (void)plvLCLivePageMenuAreaViewNeedUpdateOnlineList:(PLVLCLivePageMenuAreaView *)pageMenuAreaView;
+
+/// 多会场跳转回调
+- (void)plvLCLivePageMenuAreaView:(PLVLCLivePageMenuAreaView *)pageMenuAreaView didJumpToOtherChannel:(NSString *)channelId isPlayback:(BOOL)isPlayback;
+
+/// 点击福利抽奖挂件的回调
+/// @param pageMenuAreaView 菜单视图
+- (void)plvLCLivePageMenuAreaViewWannaShowWelfareLottery:(PLVLCLivePageMenuAreaView *)pageMenuAreaView;
+
+/// 福利抽奖挂件显示状态改变的的回调
+/// @param pageMenuAreaView 菜单视图
+/// @param show 当前的显示状态
+- (void)plvLCLivePageMenuAreaView:(PLVLCLivePageMenuAreaView *)pageMenuAreaView welfareLotteryWidgetShowStatusChanged:(BOOL)show;
+
+/// AI看需要主动传递视频信息
+/// @param pageMenuAreaView 菜单视图
+- (void)plvLCLivePageMenuAreaViewShouldSetupVideo:(PLVLCLivePageMenuAreaView *)pageMenuAreaView;
 
 @end
 NS_ASSUME_NONNULL_END

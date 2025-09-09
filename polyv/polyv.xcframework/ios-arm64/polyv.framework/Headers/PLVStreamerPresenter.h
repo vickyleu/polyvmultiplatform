@@ -202,7 +202,7 @@ typedef NS_ENUM(NSInteger, PLVStreamerPresenterErrorCode) {
 ///       默认 NO；修改此项配置，可调用 [setupLocalVideoPreviewSameAsRemoteWatch:] 方法
 @property (nonatomic, assign, readonly) BOOL localVideoPreviewSameAsRemoteWatch;
 
-/// 当前 降噪等级(默认值:PLVBLinkMicNoiseCancellationLevelAggressive)
+/// 当前 降噪等级(默认值:PLVBLinkMicNoiseCancellationLevelDeafult)
 @property (nonatomic, assign, readonly) PLVBLinkMicNoiseCancellationLevel noiseCancellationLevel;
 
 /// 当前 支持外接设备 是否开启，默认关闭
@@ -373,6 +373,16 @@ typedef NS_ENUM(NSInteger, PLVStreamerPresenterErrorCode) {
 /// @note YES: 本地视频预览镜像，则远端观看效果亦镜像，即效果保持一致；
 ///       NO: 本地视频预览无论是否镜像，远端观看效果均不镜像，即效果相互独立，互不干扰；
 - (void)setupLocalVideoPreviewSameAsRemoteWatch:(BOOL)localSameAsRemote;
+
+/// 设置贴纸图片
+///
+/// @param stickerImage 贴纸图片资源
+- (void)setStickerImage:(nullable UIImage *)stickerImage;
+
+/// 设置抠像模式  背景图资源
+/// @param mode 抠像模式
+/// @param matBgImage 抠像后填充背景
+- (void)setAIMattingMode:(PLVBLinkMicAIMattingMode)mode image:(nullable UIImage *)matBgImage;
 
 #pragma mark CDN流管理
 /// 开始推流
@@ -776,6 +786,17 @@ typedef NS_ENUM(NSInteger, PLVStreamerPresenterErrorCode) {
 - (void)plvStreamerPresenter:(PLVStreamerPresenter *)presenter
            linkMicOnlineUser:(PLVLinkMicOnlineUser *)onlineUser
                  authSpeaker:(BOOL)authSpeaker;
+
+
+- (void)plvStreamerPresenter:(PLVStreamerPresenter *)presenter
+           linkMicOnlineUser:(PLVLinkMicOnlineUser *)onlineUser
+                 authFirstSite:(BOOL)authFirstSite;
+
+/// 第一画面发生改变
+///
+/// @param presenter 推流管理器
+/// @param firstSiteUserId 当前第一画面用户ID
+- (void)plvStreamerPresenter:(PLVStreamerPresenter *)presenter firstSiteChanged:(NSString *)firstSiteUserId;
 
 /// 连麦在线用户需要强制下麦
 ///

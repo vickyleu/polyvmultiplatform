@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 extern NSString *PLVLCChatroomFunctionGotNotification;
 
+@class PLVPlaybackResumeConfig;
+
 /// 推流分辨率设置
 typedef NS_ENUM (NSInteger, PLVResolutionType) {
     PLVResolutionType180P = 0, // 180p（标清）
@@ -83,6 +85,41 @@ typedef NS_ENUM(NSInteger, PLVMixLayoutType) {
 @property (nonatomic, assign) BOOL listenMain;
 /// 是否双师模式
 @property (nonatomic, assign, readonly) BOOL transmitMode;
+/// 防录屏开关，默认 NO
+/// @note 直播以及回放场景下有效，开启防录屏开关时，不支持画中画功能；连麦场景下不结束连麦，非连麦场景会自动暂停，待录屏开启后尝试自动播放
+@property (nonatomic, assign) BOOL captureScreenProtect;
+/// 全屏保护开关，默认 NO
+/// @note YES-开启防录屏开关且录屏时，将整个观看页隐藏；NO-开启防录屏开关且录屏时，仅播放器和连麦区域隐藏
+@property (nonatomic, assign) BOOL fullScreenProtectWhenCaptureScreen;
+/// 防系统截屏开关，默认NO
+/// @note 直播和回放场景有效， 开启防系统截屏后，不支持系统画中画播放
+@property (nonatomic, assign) BOOL systemScreenShotProtect;
+
+/// 退出直播间 自动启动小窗播放  默认NO
+@property (nonatomic, assign) BOOL disableStartPipWhenExitLiveRoom;
+/// 退到app 后台 自动启动小窗播放 默认NO
+@property (nonatomic, assign) BOOL disableStartPipWhenEnterBackground;
+
+/// 系统小窗开关控制说明
+///  1）系统版本 14.0 以上（15.0 以上支持自动启动小窗）
+///  2）防录屏开关 关闭
+///  3）防截屏开关 关闭
+///  4）平台管理后台开启小窗功能 开启
+///  5）退出直播间自动开启小窗开关 开启
+///  6）app退到后台自动开启小窗开关 开启
+///  7）播放器状态  播放中
+///
+/// 退到app 后台，是否可以自动开启小窗播放
+/// @note YES ，需要满足小窗开关条件 1）2）3）4）5）6）7）
+@property (nonatomic, assign, readonly) BOOL canAutoStartPictureInPicture;
+
+/// 离开直播间页面 开启小窗
+/// @Note YES, 需要满足条件 1）2）3）4）5）7）
+@property (nonatomic, assign, readonly) BOOL needStartPictureInPictureWhenExitLiveRoom;
+
+/// 是否支持小窗功能
+/// @note YES 需要满足 1）2）3）4)
+@property (nonatomic, assign, readonly) BOOL canSupportPictureInPicure;
 
 #pragma mark 直播独有属性
 /// 直播状态
@@ -113,6 +150,8 @@ typedef NS_ENUM(NSInteger, PLVMixLayoutType) {
 @property (nonatomic, strong) NSArray<PLVLivePlaybackSectionModel *> *sectionList;
 /// 无网络且播放离线缓存情况下是否展示直播介绍页面
 @property (nonatomic, assign) BOOL noNetWorkOfflineIntroductionEnabled;
+/// 回放续播配置，默认为10秒阈值
+@property (nonatomic, strong) PLVPlaybackResumeConfig *playbackResumeConfig;
 
 #pragma mark 聊天室独有属性
 
@@ -164,8 +203,17 @@ typedef NS_ENUM(NSInteger, PLVMixLayoutType) {
 @property (nonatomic, assign) NSTimeInterval liveDuration;
 /// 当前直播是否正在进行 （该值只对讲师身份有效）
 @property (nonatomic, assign) BOOL liveStatusIsLiving;
-/// 后台是否开启了美颜功能
+/// 后台是否开启了美颜功能 高级美颜
 @property (nonatomic, assign) BOOL appBeautyEnabled;
+/// 美颜类型  保利威轻美颜 高级美颜优先级高于轻美颜
+@property (nonatomic, copy) NSString *appBeautyType;
+/// 美颜sdk需要和rtc 匹配， 增加判断是否可以使用美颜
+@property (nonatomic, assign, readonly) BOOL canUseBeauty;
+/// 是否支持轻美颜
+@property (nonatomic, assign, readonly) BOOL lightBeautyEnabled;
+/// 是否支持AI 抠像
+@property (nonatomic, assign, readonly) BOOL mattingEnabled;
+
 /// 后台开启 APP纯视频横屏开播 默认比例(16:9 , 4:3)
 @property (nonatomic, copy) NSString *appWebStartResolutionRatio;
 /// 后台是否开启 APP纯视频横屏开播可调比例功能
@@ -188,6 +236,22 @@ typedef NS_ENUM(NSInteger, PLVMixLayoutType) {
 @property (nonatomic, copy) NSString *defaultOpenMicLinkEnabled;
 // 频道默认开关，仅新版连麦生效
 @property (nonatomic, assign, readonly) PLVChannelLinkMicMediaType defaultChannelLinkMicMediaType;
+// 后台是否显示混流布局按钮，YES显示，NO不显示
+@property (nonatomic, assign) BOOL showMixLayoutButtonEnabled;
+// 后台是否显示横竖屏按钮，YES显示，NO不显示（仅适用于纯视频开播）
+@property (nonatomic, assign) BOOL showOrientationButtonEnabled;
+// 是否开启桌面消息，YES开启，NO关闭（仅适用于纯视频开播）
+@property (nonatomic, assign) BOOL desktopChatEnabled;
+// 开播端是否显示成员列表开关
+@property (nonatomic, assign) BOOL appStartMemberListEnabled;
+// 开播端是否显示混流布局开关
+@property (nonatomic, assign) BOOL appStartMultiplexingLayoutEnabled;
+// 开播端是否显示签到开关
+@property (nonatomic, assign) BOOL appStartCheckinEnabled;
+// 开播端是否显示礼物打赏开关
+@property (nonatomic, assign) BOOL appStartGiftDonateEnabled;
+// 开播端是否显示礼物特效开关
+@property (nonatomic, assign) BOOL appStartGiftEffectEnabled;
 
 #pragma mark SIP独有属性
 /// 支持SIP模式
@@ -237,6 +301,32 @@ typedef NS_ENUM(NSInteger, PLVMixLayoutType) {
 /// 将清晰度枚举值转换成字符串
 /// @return 返回值为nil时表示参数resolutionType出错，无法转换
 + (NSString * _Nullable)mixLayoutTypeStringWithType:(PLVMixLayoutType)mixLayoutType;
+
+@end
+
+#pragma mark - PLVPlaybackResumeConfig 回放续播配置
+
+@interface PLVPlaybackResumeConfig : NSObject
+
+/// 是否启用自定义续播阈值，默认YES
+@property (nonatomic, assign) BOOL enabled;
+
+/// 头部阈值（秒），播放位置小于此值时不续播，默认10秒
+/// 例如：设置为1，表示播放位置小于1秒时从头播放
+@property (nonatomic, assign) NSTimeInterval headThreshold;
+
+/// 尾部阈值（秒），剩余时长小于此值时不续播，默认10秒
+/// 例如：设置为1，表示剩余时长小于1秒时从头播放
+@property (nonatomic, assign) NSTimeInterval tailThreshold;
+
+/// 创建默认配置（头尾都是10秒）
++ (instancetype)defaultConfig;
+
+/// 创建自定义配置
+/// @param headThreshold 头部阈值
+/// @param tailThreshold 尾部阈值
++ (instancetype)configWithHeadThreshold:(NSTimeInterval)headThreshold
+                           tailThreshold:(NSTimeInterval)tailThreshold;
 
 @end
 

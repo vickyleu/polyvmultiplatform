@@ -154,17 +154,6 @@ kotlin {
             }
         }
         it.compilations.getByName("main"){
-            val PLVBusinessSDK by cinterops.creating{
-                defFile("src/nativeInterop/cinterop/PLVBusinessSDK.def")
-                includeDirs(projectDir.resolve("src/nativeInterop/thirdparty/PlvBussiness"))
-                packageName = "what.the.fuck.polyv"
-            }
-            val PLVFoundationSDK by cinterops.creating{
-                defFile("src/nativeInterop/cinterop/PLVFoundationSDK.def")
-                includeDirs(projectDir.resolve("src/nativeInterop/thirdparty/PlvFoundation"))
-                packageName = "what.the.fuck.polyv"
-            }
-//
             val polyv by cinterops.creating{
                 defFile("src/nativeInterop/cinterop/polyv.def")
                 includeDirs(projectDir.resolve("src/nativeInterop/thirdparty/polyv"))

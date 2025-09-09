@@ -72,6 +72,9 @@ typedef NS_ENUM(NSUInteger, PLVLCMediaAreaViewLiveSceneType) {
 /// 当前播放时间
 @property (nonatomic, assign, readonly) NSTimeInterval currentPlayTime;
 
+/// 是否播放中
+@property (nonatomic, assign, readonly) BOOL isPlaying;
+
 /// 当前播放器类型
 ///
 /// @note 可通过 [switchAreaViewLiveSceneTypeTo:] 方法进行切换；仅适用在视频类型为 ‘直播’ 时使用此类型值
@@ -112,6 +115,9 @@ typedef NS_ENUM(NSUInteger, PLVLCMediaAreaViewLiveSceneType) {
 
 /// 当前是否处于画笔模式
 @property (nonatomic, assign, readonly) BOOL isInPaintMode;
+
+/// 更新自动启动小窗控制状态
+@property (nonatomic, assign) BOOL updateCanAutoStartPictureInPicture;
 
 #pragma mark UI
 /// 媒体播放器皮肤视图 (用于 竖屏时 显示)
@@ -217,6 +223,9 @@ typedef NS_ENUM(NSUInteger, PLVLCMediaAreaViewLiveSceneType) {
 /// @param show 是否显示 评论上墙视图
 /// @param message 消息详情
 - (void)showPinMessagePopupView:(BOOL)show message:(PLVSpeakTopMessage * _Nullable)message;
+
+/// 显示规则列表
+- (void)showOnlineListRuleListView;
 
 @end
 
@@ -363,6 +372,9 @@ typedef NS_ENUM(NSUInteger, PLVLCMediaAreaViewLiveSceneType) {
 
 #pragma mark 下载视图的回调
 - (void)plvLCMediaAreaViewClickDownloadListButton:(PLVLCMediaAreaView *)mediaAreaView;
+
+#pragma mark 防录屏的回调
+- (void)plvLCMediaAreaView:(PLVLCMediaAreaView *)mediaAreaView preventScreenCapturing:(BOOL)start;
 
 @end
 

@@ -36,6 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 视频加载缓慢时缺省页显示时间，默认15秒
 @property (nonatomic, assign) NSInteger defaultPageShowDuration;
 
+/// 退到后台 是否自动开启小窗播放
+@property (nonatomic, assign) BOOL updateCanAutoStartPictureInPicture;
+
 #pragma mark 数据
 /// 当前播放器的频道号
 @property (nonatomic, copy, readonly) NSString * channelId;
@@ -78,6 +81,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 回放视频ID(请求'直播回放视频的信息'接口返回的视频Id，与后台回放列表看到的vid不是同一个数据)
 @property (nonatomic, copy, readonly) NSString *videoId;
+
+/// 文件ID(请求'直播回放视频的信息'接口返回的文件Id，与后台回放列表看到的vid不是同一个数据，适用于暂存/素材库)
+@property (nonatomic, copy, readonly) NSString *fileId;
 
 #pragma mark 状态
 /// 当前“播放器的频道号”是否与“外部频道号”一致
@@ -123,6 +129,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 播放器当前的缩放尺寸
 @property (nonatomic, assign,readonly) IJKMPMovieScalingMode scalingMode;
+
+/// 当前播放器是否播放中
+@property (nonatomic, assign, readonly) BOOL isPlaying;
 
 #pragma mark UI
 /// 外部传入的，负责承载播放器画面的父视图
@@ -235,6 +244,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param fileId 暂存视频fileId
 - (void)changeFileId:(NSString *)fileId;
 
+#pragma mark 播放速度记忆功能
+/// 获取支持的播放速度数组
+- (NSArray<NSString *> *)getSupportedPlaybackSpeeds;
+
+/// 获取缓存的播放速度
+- (CGFloat)getCachedPlaybackSpeed;
+
+/// 获取缓存播放速度对应的UI选中索引
+- (NSInteger)getCachedPlaybackSpeedIndex;
+
+/// 自动恢复保存的播放速度（仅回放场景有效）
+- (void)restoreCachedPlaybackSpeed;
+
 @end
 
 @protocol PLVPlayerPresenterDelegate <NSObject>
@@ -287,6 +309,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// @param playerPresenter 播放器管理器
 - (void)playerPresenterResumePlaying:(PLVPlayerPresenter *)playerPresenter;
+
+/// 播放器 是否启用防录屏
+/// @note 仅开启防录屏开关，才会进行回调
+///
+/// @param start 是否正在防录屏
+-  (void)playerPresenter:(PLVPlayerPresenter *)playerPresenter preventScreenCapturing:(BOOL)start;
 
 #pragma mark 直播相关
 /// 直播 ‘流状态’ 更新

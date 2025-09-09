@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/PLVBeautyViewModel.h</key>
 		<data>
-		9cu4TeGhkAtuCfXZGVn/BL1NKfo=
+		gEIvFSiA1irXlmUvDdGJo6+Zczg=
 		</data>
 		<key>Headers/PLVBroadcastExtensionLauncher.h</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/PLVChatroomPresenter.h</key>
 		<data>
-		Xgz3w3pZoKPFqgaSeiz3WD+QnzI=
+		8NDaudXf3+udAUJeoe1n4ZClruY=
 		</data>
 		<key>Headers/PLVCloseRoomModel.h</key>
 		<data>
@@ -99,6 +99,10 @@
 		<key>Headers/PLVCommodityDetailViewController.h</key>
 		<data>
 		AWFU+I+XF1ISamMsJrNu8uFDtvE=
+		</data>
+		<key>Headers/PLVCommodityPushSmallCardView.h</key>
+		<data>
+		CA01YXWflyv4T0tfqffFXxpwZNM=
 		</data>
 		<key>Headers/PLVCommodityPushView.h</key>
 		<data>
@@ -182,7 +186,7 @@
 		</data>
 		<key>Headers/PLVInteractGenericView.h</key>
 		<data>
-		v6WuBf7CqmeLtra6mZ3LSXt+zhc=
+		EJOwLo0AJQqXd2BPrMjKrU1lj8g=
 		</data>
 		<key>Headers/PLVInteractLottery.h</key>
 		<data>
@@ -200,13 +204,17 @@
 		<data>
 		Q/ykItlxtea1jS098EE7wKdQgBc=
 		</data>
+		<key>Headers/PLVLCAISummaryViewController.h</key>
+		<data>
+		hsu5VXXTQA8ajToN5nATFAqkn2Q=
+		</data>
 		<key>Headers/PLVLCBasePlayerSkinView.h</key>
 		<data>
-		HLXxX2tYM0vdfkJuiwOh+X7FxhE=
+		1pJwuMtp3bn0hs69FT9179MfQzc=
 		</data>
 		<key>Headers/PLVLCBottomSheet.h</key>
 		<data>
-		p36ciDLoJhSEVRKYlG03fXupOl8=
+		oC++U96r9hyHxegJxPuDAcZjISI=
 		</data>
 		<key>Headers/PLVLCBrushColorButton.h</key>
 		<data>
@@ -246,7 +254,7 @@
 		</data>
 		<key>Headers/PLVLCChatViewController.h</key>
 		<data>
-		SvCv9vvLCqaQd1V7TKaD7xBrP+8=
+		SCHMs/QpiBQbZeL3H7x3v9Tct20=
 		</data>
 		<key>Headers/PLVLCChatroomPlaybackViewModel.h</key>
 		<data>
@@ -254,11 +262,15 @@
 		</data>
 		<key>Headers/PLVLCChatroomViewModel.h</key>
 		<data>
-		hQpzsfEnvtrzAq/LhzFURGZibhs=
+		+ziXyK9h6d1bPBA0zMk/VhYH/uI=
 		</data>
 		<key>Headers/PLVLCCloudClassViewController.h</key>
 		<data>
-		uJw0N0k/zmsYWBFT7gvjv0uIzP8=
+		FjSKdEGz+Q40HZchBAhO3NXMwMY=
+		</data>
+		<key>Headers/PLVLCCustomIntroductionMessageCell.h</key>
+		<data>
+		YiFVuuqhWC19iDPAhPaySo4wTsg=
 		</data>
 		<key>Headers/PLVLCDescBottomView.h</key>
 		<data>
@@ -350,7 +362,7 @@
 		</data>
 		<key>Headers/PLVLCKeyboardMoreView.h</key>
 		<data>
-		+ihUeVN42w6Dc3MDByn7jt421x4=
+		s8lW7u8FpwiD0AycQ9glydCtmXE=
 		</data>
 		<key>Headers/PLVLCKeyboardTextView.h</key>
 		<data>
@@ -358,11 +370,15 @@
 		</data>
 		<key>Headers/PLVLCKeyboardToolView.h</key>
 		<data>
-		+LjNADTY6oWIv9FoQnqEKj3veAo=
+		4RFPI98n+HDNRxMp8e8YMWstYao=
 		</data>
 		<key>Headers/PLVLCLandscapeBaseCell.h</key>
 		<data>
 		OttNQtzfN0v2cQzmCVcrhLBYjxo=
+		</data>
+		<key>Headers/PLVLCLandscapeCustomIntroductionMessageCell.h</key>
+		<data>
+		C28Qh1VEFf4z86zpPVON6X/Gyds=
 		</data>
 		<key>Headers/PLVLCLandscapeFileCell.h</key>
 		<data>
@@ -410,7 +426,7 @@
 		</data>
 		<key>Headers/PLVLCLinkMicAreaView.h</key>
 		<data>
-		xo154L10CtthFFS7NJB12VV8d1w=
+		ZAiG7tb3mB12nYGmc5g0d6uVn/A=
 		</data>
 		<key>Headers/PLVLCLinkMicCanvasView.h</key>
 		<data>
@@ -446,7 +462,7 @@
 		</data>
 		<key>Headers/PLVLCLivePageMenuAreaView.h</key>
 		<data>
-		g8vMGArILFQeLTrizPobqu4v46Q=
+		/3vQxjZUrWOu6+LaSC16MQ4/nbA=
 		</data>
 		<key>Headers/PLVLCLiveRoomLandscapeInputView.h</key>
 		<data>
@@ -454,7 +470,7 @@
 		</data>
 		<key>Headers/PLVLCLiveRoomPlayerSkinView.h</key>
 		<data>
-		ansdfeosWabKJyVPJF5xBn96PPQ=
+		Qf4U1SI1cEK/XydJ1gsSbE3hMy0=
 		</data>
 		<key>Headers/PLVLCLongContentMessageCell.h</key>
 		<data>
@@ -470,7 +486,7 @@
 		</data>
 		<key>Headers/PLVLCMediaAreaView.h</key>
 		<data>
-		Fg6BZjT6ETpelRLQwgGb2Yg1rEU=
+		6nCDNj18i1fBVJ9M7+jDzHx+57A=
 		</data>
 		<key>Headers/PLVLCMediaBrightnessView.h</key>
 		<data>
@@ -494,15 +510,19 @@
 		</data>
 		<key>Headers/PLVLCMediaMoreCell.h</key>
 		<data>
-		TvMf3A1OnufcEn24fPgBElpjid4=
+		DOa1ZZsFOy+GxJoU4qB0uu8J0cE=
 		</data>
 		<key>Headers/PLVLCMediaMoreModel.h</key>
 		<data>
-		OWdw4EXlzqP/NokZV4VZzwepy1I=
+		09hey2XS9tZ46Scad9G/FUbT1jA=
 		</data>
 		<key>Headers/PLVLCMediaMoreView.h</key>
 		<data>
-		KKrUI1jDKNa7ElsjGwzFtAmX+GI=
+		NiFh9nrmbsKGluoL0lgxoFOJZtA=
+		</data>
+		<key>Headers/PLVLCMediaPipSet.h</key>
+		<data>
+		o9gvtHpI41SVr1oqMZ750+98DK8=
 		</data>
 		<key>Headers/PLVLCMediaPlayerCanvasView.h</key>
 		<data>
@@ -524,6 +544,14 @@
 		<data>
 		HlG1AyCHhSrQ5wqx737Z/6+CBhA=
 		</data>
+		<key>Headers/PLVLCMultiMeetingViewCell.h</key>
+		<data>
+		VWYOncAxiAOxyH+Nm4In+GB4MmE=
+		</data>
+		<key>Headers/PLVLCMultiMeetingViewController.h</key>
+		<data>
+		z0VPkFNrmMhAj04QTMzz7LNOzFU=
+		</data>
 		<key>Headers/PLVLCNewMessageView.h</key>
 		<data>
 		C9KaSrwmb407XVl21D5PSKi43ks=
@@ -535,6 +563,22 @@
 		<key>Headers/PLVLCNotifyMarqueeView.h</key>
 		<data>
 		thbdkh/SiiptkfWufuc4gpbgqN0=
+		</data>
+		<key>Headers/PLVLCOnlineListRuleSheet.h</key>
+		<data>
+		hwq6rkB2QhfwegHzvfVZEh7bCPk=
+		</data>
+		<key>Headers/PLVLCOnlineListSheet.h</key>
+		<data>
+		KZMpGwi/4k0E6EQtbVFu7o0XPXI=
+		</data>
+		<key>Headers/PLVLCOnlineListViewCell.h</key>
+		<data>
+		jAYY9s3d9HMCrkXCwoF2vh0wu2c=
+		</data>
+		<key>Headers/PLVLCOnlineListViewController.h</key>
+		<data>
+		pl/mKcCYgT9fjJZcib/d6FNYla0=
 		</data>
 		<key>Headers/PLVLCPageController.h</key>
 		<data>
@@ -562,7 +606,7 @@
 		</data>
 		<key>Headers/PLVLCQAViewController.h</key>
 		<data>
-		HYkmRuzFsl8GKQ/PHlXq9ODuARw=
+		D8jE7vQpwFOIb65ONV7vkoYnBXM=
 		</data>
 		<key>Headers/PLVLCQuitSpeakMessageCell.h</key>
 		<data>
@@ -616,6 +660,14 @@
 		<data>
 		jpSLnSe+uc7CEQtY8AMXezMYK9U=
 		</data>
+		<key>Headers/PLVLCSubtitleSettingCell.h</key>
+		<data>
+		x+TUmTx3H8HdPq2NcUADgn9hL6U=
+		</data>
+		<key>Headers/PLVLCSubtitleSettingsView.h</key>
+		<data>
+		wQ7/l32jpeaXOu6qso7wD1rHd5I=
+		</data>
 		<key>Headers/PLVLCTabbarItemCell.h</key>
 		<data>
 		Ey1GUzv3h+K2ftkVvMKPMLsm5GE=
@@ -630,19 +682,27 @@
 		</data>
 		<key>Headers/PLVLCUtils.h</key>
 		<data>
-		S+xYTotIKOYmGOgGiFHg0B5CIKE=
+		UJYLUXlPTShOemVACmHuPjpqzos=
 		</data>
 		<key>Headers/PLVLCWelcomeView.h</key>
 		<data>
 		UuegxJPUZhWT59Y5jiPnxfNY12A=
 		</data>
+		<key>Headers/PLVLCWelfareLotteryWidgetView.h</key>
+		<data>
+		XyM/da7v6KlWbjR8llj0Y1LWjAE=
+		</data>
 		<key>Headers/PLVLinkMicOnlineUser+LC.h</key>
 		<data>
 		R0eyxgSIcQ7Snt2hlXO81JTlRAY=
 		</data>
+		<key>Headers/PLVLinkMicOnlineUser+SA.h</key>
+		<data>
+		VB8vfdUfXWZcCzoQb5RS6wn8cec=
+		</data>
 		<key>Headers/PLVLinkMicOnlineUser.h</key>
 		<data>
-		PvYQF0oE5zMBI98ODfVx/e6AE8M=
+		5Qj2V2gFmTbMwv+tdORlA2uJ49I=
 		</data>
 		<key>Headers/PLVLinkMicPresenter.h</key>
 		<data>
@@ -655,6 +715,10 @@
 		<key>Headers/PLVLinkMicWaitUser.h</key>
 		<data>
 		xTbC3PZpmP9Ax3iMaiCB4f1/MG0=
+		</data>
+		<key>Headers/PLVLiveEmptyView.h</key>
+		<data>
+		ZO3y5EyXlx4BEJljztvbu/jozEU=
 		</data>
 		<key>Headers/PLVLiveMarqueeAnimationManager.h</key>
 		<data>
@@ -680,17 +744,45 @@
 		<data>
 		n1DTkEpKxK5EKlN+m4hzpA/W/XI=
 		</data>
+		<key>Headers/PLVLiveScenesSubtitleItem.h</key>
+		<data>
+		KXnp3W5GEGamUNODZyIFPOQnLxc=
+		</data>
+		<key>Headers/PLVLiveScenesSubtitleManager.h</key>
+		<data>
+		zu7CVKwDw9fU8FcsJ4KQD/xuEo0=
+		</data>
+		<key>Headers/PLVLiveScenesSubtitleParser.h</key>
+		<data>
+		k8oZNqICysdI2XnySC3kAsMbF4s=
+		</data>
+		<key>Headers/PLVLiveScenesSubtitleView.h</key>
+		<data>
+		Z65ilJXTsI8kgUO704e5He5+aSw=
+		</data>
+		<key>Headers/PLVLiveScenesSubtitleViewModel.h</key>
+		<data>
+		PWgr/hkb+avChliuyE1rtGV0lq0=
+		</data>
+		<key>Headers/PLVLiveSearchBar.h</key>
+		<data>
+		UTKbrQVKCAs44G0bon/ZQjvB5Fg=
+		</data>
 		<key>Headers/PLVLiveToast.h</key>
 		<data>
 		xT6zD5nNZhlSYlEYqnFgDqkeplE=
 		</data>
 		<key>Headers/PLVMemberPresenter.h</key>
 		<data>
-		KrWa5UgdaxPfIq4LS9RCgpoxLAY=
+		M6zr6k5SDtnrfWj5bammm4/lrFs=
 		</data>
 		<key>Headers/PLVMultiLanguageManager.h</key>
 		<data>
-		zvqQ4EkMMXjYvZOIjWwxE+0b96o=
+		eAhuhXusfAYT+2x8oL+YG/MuHX4=
+		</data>
+		<key>Headers/PLVMultiMeetingManager.h</key>
+		<data>
+		fkkADZllSYw2cYSo/nvcuM+d1Sk=
 		</data>
 		<key>Headers/PLVMultiRoleLinkMicPresenter.h</key>
 		<data>
@@ -726,7 +818,7 @@
 		</data>
 		<key>Headers/PLVPinMessagePopupView.h</key>
 		<data>
-		EK9U5d41LxKICtrN8Wkn7oFK8Ok=
+		+l5tBrvazR0Ko/zOZ6dCo3NJWQE=
 		</data>
 		<key>Headers/PLVPlayerLogoView.h</key>
 		<data>
@@ -734,7 +826,7 @@
 		</data>
 		<key>Headers/PLVPlayerPresenter.h</key>
 		<data>
-		3S7o0rpuW0oftZBkLyk4TF+QVVQ=
+		ML1jGHpP4JJ2KitAIm3VhDECEyQ=
 		</data>
 		<key>Headers/PLVPopoverView.h</key>
 		<data>
@@ -778,7 +870,7 @@
 		</data>
 		<key>Headers/PLVRoomData.h</key>
 		<data>
-		emKn2n0zUVLXMuhgJZSG11pd77U=
+		Padw29gccXGukFW2F2VeFv6d+F0=
 		</data>
 		<key>Headers/PLVRoomDataManager.h</key>
 		<data>
@@ -791,6 +883,358 @@
 		<key>Headers/PLVRoomUser.h</key>
 		<data>
 		tlq/0MlJlo/taQntvoamHF4FdCA=
+		</data>
+		<key>Headers/PLVSABadNetworkSwitchButton.h</key>
+		<data>
+		xgLWSG1o3URw9zcCZMvr+1l8YgI=
+		</data>
+		<key>Headers/PLVSABadNetworkSwitchSheet.h</key>
+		<data>
+		+6GVHP73YRlmGJH4eYFXjJmAflA=
+		</data>
+		<key>Headers/PLVSABadNetworkTipsView.h</key>
+		<data>
+		Oy1cX1BgYBQE+i6U+Qddoy5M2eI=
+		</data>
+		<key>Headers/PLVSABaseMessageCell.h</key>
+		<data>
+		jxnPX9cedz3JoLZmHh6Cpd2R8U4=
+		</data>
+		<key>Headers/PLVSABeautyBaseViewController.h</key>
+		<data>
+		20trEgbFFkoqWbWh88OiVtRltGA=
+		</data>
+		<key>Headers/PLVSABeautyCellModel.h</key>
+		<data>
+		wSwJD4w2g03bs6cwRRUxE7bnM/M=
+		</data>
+		<key>Headers/PLVSABeautyCollectionViewCell.h</key>
+		<data>
+		ydU95puhHpEiGuV9GYQ9x8KjjMc=
+		</data>
+		<key>Headers/PLVSABeautyContentView.h</key>
+		<data>
+		3xox1SC6LCPdY4Zs7oQ4pokeCac=
+		</data>
+		<key>Headers/PLVSABeautyFaceViewController.h</key>
+		<data>
+		p/PKlEZz7LBuhBV2A3e2E7pVXN4=
+		</data>
+		<key>Headers/PLVSABeautyFilterCollectionViewCell.h</key>
+		<data>
+		Rn4bUWnByb3bxTBqkEKMxypyz28=
+		</data>
+		<key>Headers/PLVSABeautyFilterTitleView.h</key>
+		<data>
+		RnKOoABjK/BuOegZiBpXP8fYdHU=
+		</data>
+		<key>Headers/PLVSABeautyFilterViewController.h</key>
+		<data>
+		yLnRAqbRPPQ+uvQXl8+m2OIlQu8=
+		</data>
+		<key>Headers/PLVSABeautyMaskView.h</key>
+		<data>
+		+d+SmgiR9y8UfU2cED+2wZDzSWE=
+		</data>
+		<key>Headers/PLVSABeautyPageContentView.h</key>
+		<data>
+		/bNxGRMyPKC15ZrgVC+zOh4+IFE=
+		</data>
+		<key>Headers/PLVSABeautySheet.h</key>
+		<data>
+		uQs97ts67SSgGoNDoO0Nme54d3c=
+		</data>
+		<key>Headers/PLVSABeautySliderView.h</key>
+		<data>
+		LcXM1+psOiO/EU70W7zzA8VZeK0=
+		</data>
+		<key>Headers/PLVSABeautySwitch.h</key>
+		<data>
+		nckMs2dch/SiqpRcEZocKT5TFfk=
+		</data>
+		<key>Headers/PLVSABeautyTitleButton.h</key>
+		<data>
+		/6qLsyM1iX5joKYHur2wtAfkDAQ=
+		</data>
+		<key>Headers/PLVSABeautyTitleView.h</key>
+		<data>
+		PySS5b9+SfYPyEoG7Bq4C/23qAU=
+		</data>
+		<key>Headers/PLVSABeautyWhitenViewController.h</key>
+		<data>
+		bxWapeHxUeGnwCYA40rw1AR7jP8=
+		</data>
+		<key>Headers/PLVSABitRateSheet.h</key>
+		<data>
+		w8kBc7uWpKoJhDbaTFOeDyKVtxo=
+		</data>
+		<key>Headers/PLVSABitRateTableViewCell.h</key>
+		<data>
+		vcEA18VD26/j4zWb/R5O1cJkenY=
+		</data>
+		<key>Headers/PLVSABottomSheet.h</key>
+		<data>
+		zSH/O+zrGRhJVYGSGj50PPNePck=
+		</data>
+		<key>Headers/PLVSACameraAndMicphoneStateView.h</key>
+		<data>
+		lUhZg7Q6lfLu8RnJVVdG9zx/8gs=
+		</data>
+		<key>Headers/PLVSAChannelInfoSheet.h</key>
+		<data>
+		FdL23j4z1yVL30XU0OSLEBvh8P8=
+		</data>
+		<key>Headers/PLVSAChatroomAreaView.h</key>
+		<data>
+		GivhGn7JVOavZUAX0JsPnEoEuf0=
+		</data>
+		<key>Headers/PLVSAChatroomGiftView.h</key>
+		<data>
+		Fu8TP6qqd0gAxgf1yo22FbZ8fGo=
+		</data>
+		<key>Headers/PLVSAChatroomListView.h</key>
+		<data>
+		5xdOvYtUF02vOfIyjC7in5sLcuo=
+		</data>
+		<key>Headers/PLVSAChatroomViewModel.h</key>
+		<data>
+		lJyPRwfQ1Tm2Sr7bHMABDdwEHAE=
+		</data>
+		<key>Headers/PLVSAChatroomWelcomView.h</key>
+		<data>
+		9HQY4nZXoB5Sfoznlsmeblk93W4=
+		</data>
+		<key>Headers/PLVSACountDownView.h</key>
+		<data>
+		HdMsDdWQfczatqvsI7xeXFCMsvI=
+		</data>
+		<key>Headers/PLVSADesktopChatSettingGuideViewController.h</key>
+		<data>
+		ydKUPNEgAs2VzTTDhUVUBnWzaTE=
+		</data>
+		<key>Headers/PLVSADesktopChatSettingSheet.h</key>
+		<data>
+		qrZQE0Tw7u2jYxU4Nt5SqGOAmBw=
+		</data>
+		<key>Headers/PLVSAEmojiPopupView.h</key>
+		<data>
+		7FK5Z8AwgtB3aObZ0eFCSRsrdmU=
+		</data>
+		<key>Headers/PLVSAEmojiSelectView.h</key>
+		<data>
+		amDWaWTZRp38BiOnzMQV1xgfdWw=
+		</data>
+		<key>Headers/PLVSAExternalDeviceSwitchSheet.h</key>
+		<data>
+		nb+FMGuGVqZZy0UjZfSj4TaV8q4=
+		</data>
+		<key>Headers/PLVSAFinishStreamerSheet.h</key>
+		<data>
+		wpn3bDT+m8oUes73n2EirFAh3SU=
+		</data>
+		<key>Headers/PLVSAImageEmotionMessageCell.h</key>
+		<data>
+		JCR0MF0RJWVY7olwfZwfzwR5izY=
+		</data>
+		<key>Headers/PLVSAImageMessageCell.h</key>
+		<data>
+		QpSK73GhmDOE2RivI4Q1toe0nNg=
+		</data>
+		<key>Headers/PLVSALinkMicAreaView.h</key>
+		<data>
+		RmpYi0rZuvBU/8ZGAxI+sUKeo/8=
+		</data>
+		<key>Headers/PLVSALinkMicCanvasView.h</key>
+		<data>
+		t3zLB/YXBlBbr7P0t6wBj0QF/pk=
+		</data>
+		<key>Headers/PLVSALinkMicGuideView.h</key>
+		<data>
+		RmBOhkzyGjDloKxAw8X4sWFN7vs=
+		</data>
+		<key>Headers/PLVSALinkMicLayoutSwitchGuideView.h</key>
+		<data>
+		qV2c8Q2RQQCfExaQFiXkQpQYsZQ=
+		</data>
+		<key>Headers/PLVSALinkMicMenuPopup.h</key>
+		<data>
+		TdLFA35uwPqtWJJ/yU+Q2xdFxMs=
+		</data>
+		<key>Headers/PLVSALinkMicPreviewView.h</key>
+		<data>
+		NxbiTm5RLJ8hYLDkHMQBrW/zlL8=
+		</data>
+		<key>Headers/PLVSALinkMicSettingSheet.h</key>
+		<data>
+		ZEjx3Zg3w7M88Ds7itYRVl2Jc2A=
+		</data>
+		<key>Headers/PLVSALinkMicSpeakerPlaceholderView.h</key>
+		<data>
+		hZnJ2RdzYnugb/8caRKEztAUJyU=
+		</data>
+		<key>Headers/PLVSALinkMicTipView.h</key>
+		<data>
+		mYuBhAjtM6YEaDoMRai6CwDAshE=
+		</data>
+		<key>Headers/PLVSALinkMicUserInfoSheet.h</key>
+		<data>
+		74/OJOznhEFinof66GaIlqo4lCY=
+		</data>
+		<key>Headers/PLVSALinkMicWindowCell.h</key>
+		<data>
+		AErAB/3FgbxsIXnkr7H+0NA8HiU=
+		</data>
+		<key>Headers/PLVSALinkMicWindowsSpeakerView.h</key>
+		<data>
+		WGTUUIsh77n2DdPO7lL9U25L1zA=
+		</data>
+		<key>Headers/PLVSALinkMicWindowsView.h</key>
+		<data>
+		1a0f2Fx2XR7sbVwIpRn37CTEDns=
+		</data>
+		<key>Headers/PLVSALongContentMessageCell.h</key>
+		<data>
+		NGwLy4O6uDC3i2Unvcw/93RXofM=
+		</data>
+		<key>Headers/PLVSALongContentMessageSheet.h</key>
+		<data>
+		Dzwxy1hHm7GFwH/pTElg6UOPIlk=
+		</data>
+		<key>Headers/PLVSAManageCommoditySheet.h</key>
+		<data>
+		kDuhHLanNAjKx6ZrVuwDnUrFnOw=
+		</data>
+		<key>Headers/PLVSAMemberCell.h</key>
+		<data>
+		rTXKA3E/+7vX0U8kgRitjtqwe9g=
+		</data>
+		<key>Headers/PLVSAMemberPopup.h</key>
+		<data>
+		HYuPTyZeTW+FmqMHSFez3N+baig=
+		</data>
+		<key>Headers/PLVSAMemberSheet.h</key>
+		<data>
+		QPM4tJsRAZpxiJufgKRlUEoP4po=
+		</data>
+		<key>Headers/PLVSAMixLayoutSheet.h</key>
+		<data>
+		26AFerN01RWWJV2SZlaED1KrvQ0=
+		</data>
+		<key>Headers/PLVSAMoreInfoSheet.h</key>
+		<data>
+		cEs9iGzollVYPnJnImK+R2yfU60=
+		</data>
+		<key>Headers/PLVSANetMenuPopup.h</key>
+		<data>
+		TnVNAcVLTqYCtaaHO4UkE/FMdic=
+		</data>
+		<key>Headers/PLVSANetworkStatePopup.h</key>
+		<data>
+		Yh+BS+tKkhOCyXCZUec0lmaPDn0=
+		</data>
+		<key>Headers/PLVSANewMessgaeTipView.h</key>
+		<data>
+		NWZXgTFinzy9QSrtLID3flbFd38=
+		</data>
+		<key>Headers/PLVSANoiseCancellationModeSwitchSheet.h</key>
+		<data>
+		8xMGDkaFQwvNH40/UxkX1CmYMVw=
+		</data>
+		<key>Headers/PLVSAProhibitWordTipView.h</key>
+		<data>
+		tYVd3LlbVfjB0e6H0HFaAbQF004=
+		</data>
+		<key>Headers/PLVSAQuoteMessageCell.h</key>
+		<data>
+		F3o4YU9R98/yreIedqsmdyYltnw=
+		</data>
+		<key>Headers/PLVSARepliedMsgView.h</key>
+		<data>
+		qdKHxKAsmvpSpFENTmYzV6NJglQ=
+		</data>
+		<key>Headers/PLVSARewardMessageCell.h</key>
+		<data>
+		zIHtZ8h7agV6Jmi+EiexkKoBjp0=
+		</data>
+		<key>Headers/PLVSAScreenShareCustomPictureInPictureManager.h</key>
+		<data>
+		BFw4Jaw0qeaRf9y2Azsl7HN3f/U=
+		</data>
+		<key>Headers/PLVSAScreenSharePipCustomView.h</key>
+		<data>
+		rdqN7uPSGOgPYj2FCtFhBThaOoI=
+		</data>
+		<key>Headers/PLVSASendMessageTextView.h</key>
+		<data>
+		aEsviqlLsJ6Y4EgTY355g+vVyvo=
+		</data>
+		<key>Headers/PLVSASendMessageToolView.h</key>
+		<data>
+		T4SqXcvvSc/7Q2m99G+k5IlCx3c=
+		</data>
+		<key>Headers/PLVSASendMessageView.h</key>
+		<data>
+		3JP30sdkvy1Jec0wfMEft5C76UI=
+		</data>
+		<key>Headers/PLVSAShadowMaskView.h</key>
+		<data>
+		LMc9kwaMdtXAhbHyd5UaDFBTT6o=
+		</data>
+		<key>Headers/PLVSASlideRightTipsView.h</key>
+		<data>
+		bPD1dBCbVyOZ5Zt+nYYU33O2374=
+		</data>
+		<key>Headers/PLVSASliderView.h</key>
+		<data>
+		PZycXdW2hbkYq3ok0eOkF/HAJRo=
+		</data>
+		<key>Headers/PLVSASpeakMessageCell.h</key>
+		<data>
+		GWEDMP2ywoAp/zQTjBH016r27Fo=
+		</data>
+		<key>Headers/PLVSAStatusBarButton.h</key>
+		<data>
+		ILzdp6kgrpxzHduHmWNvTMHUNhs=
+		</data>
+		<key>Headers/PLVSAStatusbarAreaView.h</key>
+		<data>
+		pIFp+X2lDSiFb6B9KENzq8n3B8k=
+		</data>
+		<key>Headers/PLVSAStreamAlertController.h</key>
+		<data>
+		46yZSL6c2h1j8L+ZksCG/fwzfBc=
+		</data>
+		<key>Headers/PLVSAStreamerFinishView.h</key>
+		<data>
+		43/9Qr/sALkyLbG8K9W4rveoFbk=
+		</data>
+		<key>Headers/PLVSAStreamerHomeView.h</key>
+		<data>
+		q7MdKhZ65x08cTjOin28teVbvzc=
+		</data>
+		<key>Headers/PLVSAStreamerSettingView.h</key>
+		<data>
+		JH5zE/PhN2Fj6hRV7I+pUERijNk=
+		</data>
+		<key>Headers/PLVSAStreamerViewController.h</key>
+		<data>
+		owu53vKlfvrWYzyL9J/+eVf52q0=
+		</data>
+		<key>Headers/PLVSASwitchSuccessTipsView.h</key>
+		<data>
+		GukNWeALN461w+QTclr0yxSdkYA=
+		</data>
+		<key>Headers/PLVSAToolbarAreaView.h</key>
+		<data>
+		RUkHECpasRjkQPRHKArF2K6PZio=
+		</data>
+		<key>Headers/PLVSAUtils.h</key>
+		<data>
+		Rt7d9qBO4d1JfG1M/0TMgD92iHc=
+		</data>
+		<key>Headers/PLVSecureView.h</key>
+		<data>
+		TZWd+8c/HCQq8c2wL67Vkb4ryz8=
 		</data>
 		<key>Headers/PLVShareLivePosterModel.h</key>
 		<data>
@@ -808,6 +1252,50 @@
 		<data>
 		fFEzFOspCl86rDzaeGez53qE2lU=
 		</data>
+		<key>Headers/PLVStickerCanvas.h</key>
+		<data>
+		JG2ZsBHSQSndHTNN92erGfEKBCs=
+		</data>
+		<key>Headers/PLVStickerEffectLable.h</key>
+		<data>
+		a+B4YefssCAoBx4iJeA7WvGGtjs=
+		</data>
+		<key>Headers/PLVStickerEffectText.h</key>
+		<data>
+		PIfOHXEfhYejbJHSoJH3HbWtCrA=
+		</data>
+		<key>Headers/PLVStickerGestureRecognizer.h</key>
+		<data>
+		wuh7DObovqfYGMw1a+/Zwyere7Q=
+		</data>
+		<key>Headers/PLVStickerImageView.h</key>
+		<data>
+		jkTpSWSDUj2zqhDjfIwtNWWmxtQ=
+		</data>
+		<key>Headers/PLVStickerManager.h</key>
+		<data>
+		FRutOVsubxqo2QN3k9tFcF7bKbw=
+		</data>
+		<key>Headers/PLVStickerTextEditorView.h</key>
+		<data>
+		3CzKnvZnvhm2gBwokvKQ8idw6/k=
+		</data>
+		<key>Headers/PLVStickerTextModel.h</key>
+		<data>
+		6VJ+FCPDYj22UKamHwvUYvNMVJg=
+		</data>
+		<key>Headers/PLVStickerTextTemplateView.h</key>
+		<data>
+		3O6Ry4PBXc445u5if5x2JkKahJE=
+		</data>
+		<key>Headers/PLVStickerTextView.h</key>
+		<data>
+		prJ9QaX4X7/WO0IoIiI2TKpgVNo=
+		</data>
+		<key>Headers/PLVStickerTypeSelectionView.h</key>
+		<data>
+		2ogG15IuGDchoki1kgaNeBc6byw=
+		</data>
 		<key>Headers/PLVStreamerInteractGenericView.h</key>
 		<data>
 		5uSRCm3h+xB+5yhSPNDfm2EyMTI=
@@ -818,7 +1306,31 @@
 		</data>
 		<key>Headers/PLVStreamerPresenter.h</key>
 		<data>
-		d1EdaOdJpneKyakJQ9eOTN/FDRU=
+		HpPhaJ3CpnHKe3Q/f6TAelyTAtM=
+		</data>
+		<key>Headers/PLVVirtualBackgroudBaseSheet.h</key>
+		<data>
+		VlEsTrwYgiU7zVBu9yzf7FvDgUA=
+		</data>
+		<key>Headers/PLVVirtualBackgroudCell.h</key>
+		<data>
+		ytusitDMIbR9t64qxc8IMxq6umk=
+		</data>
+		<key>Headers/PLVVirtualBackgroudCollectionView.h</key>
+		<data>
+		KilZ1V2usm5YD9R6pzSNMs1Pc4Y=
+		</data>
+		<key>Headers/PLVVirtualBackgroudModel.h</key>
+		<data>
+		5p022gRLduAsGjKlp6eFdfs4hNs=
+		</data>
+		<key>Headers/PLVVirtualBackgroudSheet.h</key>
+		<data>
+		dUfnuhxzbZylsd5lbj791SEv/4Y=
+		</data>
+		<key>Headers/PLVVirtualBackgroundUtil.h</key>
+		<data>
+		9/4DYsqiRO3h7XzfUgU3km93GhI=
 		</data>
 		<key>Headers/PLVWatermarkModel.h</key>
 		<data>
@@ -834,11 +1346,11 @@
 		</data>
 		<key>Headers/polyv-umbrella.h</key>
 		<data>
-		Nnzwzt8zQZ6y3U4bdDZRHrIPY9U=
+		alv8RtP+XBdDEzSCJiok7JdnPXI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		eUSept9elbrry11U58PBocHoNg4=
+		38uzWKjnDGVSlNHzCkNK9SS1ZpA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -961,11 +1473,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9cu4TeGhkAtuCfXZGVn/BL1NKfo=
+			gEIvFSiA1irXlmUvDdGJo6+Zczg=
 			</data>
 			<key>hash2</key>
 			<data>
-			vlqHdoJ+2o8fV6AZ96xCumhW8BPkbn5piWUXF7rtzDs=
+			UWqj3K+/k7WNfL/rtGIo9a8/y1hIw12aHhRfx/SXA4U=
 			</data>
 		</dict>
 		<key>Headers/PLVBroadcastExtensionLauncher.h</key>
@@ -1071,11 +1583,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Xgz3w3pZoKPFqgaSeiz3WD+QnzI=
+			8NDaudXf3+udAUJeoe1n4ZClruY=
 			</data>
 			<key>hash2</key>
 			<data>
-			QLl3gi6d9pFONlkujw0KMD+X0Ih8rhHzAksctpQ34yY=
+			kSNAkhRKEVZ47UnHYngSA87jdGxeHkFHJfKXi4YpQs8=
 			</data>
 		</dict>
 		<key>Headers/PLVCloseRoomModel.h</key>
@@ -1109,6 +1621,17 @@
 			<key>hash2</key>
 			<data>
 			wzxGLsX/gDuK70vulBfC7hGEtNqaUg5Wdn76ZiNxSec=
+			</data>
+		</dict>
+		<key>Headers/PLVCommodityPushSmallCardView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CA01YXWflyv4T0tfqffFXxpwZNM=
+			</data>
+			<key>hash2</key>
+			<data>
+			7s1fniaRiBES5o2mjSVIMZ8x7qxWX+l6F2NipuMQaGg=
 			</data>
 		</dict>
 		<key>Headers/PLVCommodityPushView.h</key>
@@ -1335,11 +1858,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			v6WuBf7CqmeLtra6mZ3LSXt+zhc=
+			EJOwLo0AJQqXd2BPrMjKrU1lj8g=
 			</data>
 			<key>hash2</key>
 			<data>
-			BUcj7SW6vLu+hWbMOSb8NQjReQssT1rt9rs+oOTEu7I=
+			1oe/37HyFmBo/nSONnUVoly4KHrpnURrDPOFqJP79G0=
 			</data>
 		</dict>
 		<key>Headers/PLVInteractLottery.h</key>
@@ -1386,26 +1909,37 @@
 			rAj/E6HhidQCmxc3pd4RJAsF032ywhGsqcVGhWvxBNA=
 			</data>
 		</dict>
+		<key>Headers/PLVLCAISummaryViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hsu5VXXTQA8ajToN5nATFAqkn2Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			gOhHVJOhwxJTxsZbzQ3SuWPw+XzXWoJTDBWEUzXd3XA=
+			</data>
+		</dict>
 		<key>Headers/PLVLCBasePlayerSkinView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HLXxX2tYM0vdfkJuiwOh+X7FxhE=
+			1pJwuMtp3bn0hs69FT9179MfQzc=
 			</data>
 			<key>hash2</key>
 			<data>
-			jumdUqDW8cFInd8k92dFSQXnqxOK4qMKRgRIHoIkG1M=
+			DnEQrNvnfBYvHnTDRc/fNRvHrTJduGI7o2QiPoFTvHU=
 			</data>
 		</dict>
 		<key>Headers/PLVLCBottomSheet.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			p36ciDLoJhSEVRKYlG03fXupOl8=
+			oC++U96r9hyHxegJxPuDAcZjISI=
 			</data>
 			<key>hash2</key>
 			<data>
-			zkFCLTDzyRKU+yUEZXqZ8zSu7hp7YAjjzKN1eZBzvBM=
+			xBUS2EX/Bf0sDT4Z6QoSsBZikfUhN0hTLHfMooaySIA=
 			</data>
 		</dict>
 		<key>Headers/PLVLCBrushColorButton.h</key>
@@ -1511,11 +2045,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SvCv9vvLCqaQd1V7TKaD7xBrP+8=
+			SCHMs/QpiBQbZeL3H7x3v9Tct20=
 			</data>
 			<key>hash2</key>
 			<data>
-			bOa1P4LzBQMJ9uobOsuozmpq+AFDMsOW9ERFJWzQHHo=
+			cstzRtpGmUaFcLIaS1dGa8hcQiFUV96XxZ6VyjAEowg=
 			</data>
 		</dict>
 		<key>Headers/PLVLCChatroomPlaybackViewModel.h</key>
@@ -1533,22 +2067,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hQpzsfEnvtrzAq/LhzFURGZibhs=
+			+ziXyK9h6d1bPBA0zMk/VhYH/uI=
 			</data>
 			<key>hash2</key>
 			<data>
-			pEMBKlozE8UNL+ndEwftHX6IKEdZXYetyJGFdCAkcA8=
+			bExjM0J4RsXtgo1AX1fGqYMkQXeWPzjUuoUFUEHzQxQ=
 			</data>
 		</dict>
 		<key>Headers/PLVLCCloudClassViewController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			uJw0N0k/zmsYWBFT7gvjv0uIzP8=
+			FjSKdEGz+Q40HZchBAhO3NXMwMY=
 			</data>
 			<key>hash2</key>
 			<data>
-			vRsLTLbPhaSL4Z2YkXQxekWStXu3MHOmcKYDyVMGR6U=
+			DJfV+fuI6gH8BkQY0jTwC7AsO/hC/AKU3V0SDVYvn9s=
+			</data>
+		</dict>
+		<key>Headers/PLVLCCustomIntroductionMessageCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YiFVuuqhWC19iDPAhPaySo4wTsg=
+			</data>
+			<key>hash2</key>
+			<data>
+			1PQzBbNpSe/VlxI7IrHzSZjJUTNy9IJnR+aOPtLhJxY=
 			</data>
 		</dict>
 		<key>Headers/PLVLCDescBottomView.h</key>
@@ -1797,11 +2342,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+ihUeVN42w6Dc3MDByn7jt421x4=
+			s8lW7u8FpwiD0AycQ9glydCtmXE=
 			</data>
 			<key>hash2</key>
 			<data>
-			hetdi3azMBEUqIRYzoYhbCeUh5ny1HvnnOAGaBwdI0Y=
+			yXQHtlkva8aALYb0Vh9ig2aKDBxAGbBFCKWNLJXB+0E=
 			</data>
 		</dict>
 		<key>Headers/PLVLCKeyboardTextView.h</key>
@@ -1819,11 +2364,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+LjNADTY6oWIv9FoQnqEKj3veAo=
+			4RFPI98n+HDNRxMp8e8YMWstYao=
 			</data>
 			<key>hash2</key>
 			<data>
-			4r1G10TmMVZKcUnOGi1KldG1wB5ck0DRthvVjnevjE0=
+			fc9ZLsrguOGPSyj3sIMHo4bUv0YZE8+1LHzsE7jiI+Q=
 			</data>
 		</dict>
 		<key>Headers/PLVLCLandscapeBaseCell.h</key>
@@ -1835,6 +2380,17 @@
 			<key>hash2</key>
 			<data>
 			5wjV9vpoGntPl3S7TRlUTCneCcgN6si/41bDy8itdEI=
+			</data>
+		</dict>
+		<key>Headers/PLVLCLandscapeCustomIntroductionMessageCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			C28Qh1VEFf4z86zpPVON6X/Gyds=
+			</data>
+			<key>hash2</key>
+			<data>
+			uTl3COTso/YyZP+0VK2eG7z1titDWhcKVgoU5GImUm4=
 			</data>
 		</dict>
 		<key>Headers/PLVLCLandscapeFileCell.h</key>
@@ -1962,11 +2518,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xo154L10CtthFFS7NJB12VV8d1w=
+			ZAiG7tb3mB12nYGmc5g0d6uVn/A=
 			</data>
 			<key>hash2</key>
 			<data>
-			tzsSxdISMSVkGwhZmogo+GftJkSUuAYXZec+CzBurh0=
+			dYvdty6Flg+LxmXQiVugYBwMnwAVbIyCvMhsuWN/jFg=
 			</data>
 		</dict>
 		<key>Headers/PLVLCLinkMicCanvasView.h</key>
@@ -2061,11 +2617,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			g8vMGArILFQeLTrizPobqu4v46Q=
+			/3vQxjZUrWOu6+LaSC16MQ4/nbA=
 			</data>
 			<key>hash2</key>
 			<data>
-			cLSUqd3koPP4BHKVwVR/5qvWsePhRYWFry+eI574htE=
+			Ph/c+ZDLO+OPSPtUDnvJS8AlSHGWRkhA0AvikMLuH+U=
 			</data>
 		</dict>
 		<key>Headers/PLVLCLiveRoomLandscapeInputView.h</key>
@@ -2083,11 +2639,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ansdfeosWabKJyVPJF5xBn96PPQ=
+			Qf4U1SI1cEK/XydJ1gsSbE3hMy0=
 			</data>
 			<key>hash2</key>
 			<data>
-			RQpOyH2+ldxPamAUGlAm2VjVi8eRlInvGkgOxIOh6ZA=
+			2t+bsFplQICSNi5IZCjGbFJihPcSt2sfGqIB+cG98wY=
 			</data>
 		</dict>
 		<key>Headers/PLVLCLongContentMessageCell.h</key>
@@ -2127,11 +2683,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Fg6BZjT6ETpelRLQwgGb2Yg1rEU=
+			6nCDNj18i1fBVJ9M7+jDzHx+57A=
 			</data>
 			<key>hash2</key>
 			<data>
-			XFYIPxXM9qUUbtrin43zk3lh/Liamthfx69ZVetpU28=
+			9hmMrZEP4qM1ldMojPRRjujrsd5kXoNz0/TImVuYbbQ=
 			</data>
 		</dict>
 		<key>Headers/PLVLCMediaBrightnessView.h</key>
@@ -2193,33 +2749,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TvMf3A1OnufcEn24fPgBElpjid4=
+			DOa1ZZsFOy+GxJoU4qB0uu8J0cE=
 			</data>
 			<key>hash2</key>
 			<data>
-			YLElLOrNW99Wo9hlwmHUmLhhvysjc/RIHcKJUq/FVOU=
+			T0kQfiZzaztZhcSXCQfEXj3NyLVQibuiy1BTA35Zce0=
 			</data>
 		</dict>
 		<key>Headers/PLVLCMediaMoreModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OWdw4EXlzqP/NokZV4VZzwepy1I=
+			09hey2XS9tZ46Scad9G/FUbT1jA=
 			</data>
 			<key>hash2</key>
 			<data>
-			+1MGbCVlvbPKQFT5y+Sh+L4dJzheY5Okh3rQgf9zn+s=
+			DNR062KVAT/++46gMqc6+Q0JcJkI8QU/Ef9VdG3Bhp0=
 			</data>
 		</dict>
 		<key>Headers/PLVLCMediaMoreView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KKrUI1jDKNa7ElsjGwzFtAmX+GI=
+			NiFh9nrmbsKGluoL0lgxoFOJZtA=
 			</data>
 			<key>hash2</key>
 			<data>
-			y1NAnPURvvJMxuZrCAg2devzO3aaYiJHzsMdOIYNVuE=
+			o8j1XJqhpzh+equpqxuR8dSmci5sDd/6xVA1ARDH3vs=
+			</data>
+		</dict>
+		<key>Headers/PLVLCMediaPipSet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			o9gvtHpI41SVr1oqMZ750+98DK8=
+			</data>
+			<key>hash2</key>
+			<data>
+			eJk2J9nbC9JjZiSFOTRTIsO6Eqpto79MNFDjX4aDbaQ=
 			</data>
 		</dict>
 		<key>Headers/PLVLCMediaPlayerCanvasView.h</key>
@@ -2277,6 +2844,28 @@
 			4tLMD1DbDaGrkx9IKTYaLxviQiif9WOeWoXXP1yk6xc=
 			</data>
 		</dict>
+		<key>Headers/PLVLCMultiMeetingViewCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VWYOncAxiAOxyH+Nm4In+GB4MmE=
+			</data>
+			<key>hash2</key>
+			<data>
+			uBF7wq9d9J3WjCCiOhrGxnSDgoCarQFZ4Q4jjhYUVeQ=
+			</data>
+		</dict>
+		<key>Headers/PLVLCMultiMeetingViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			z0VPkFNrmMhAj04QTMzz7LNOzFU=
+			</data>
+			<key>hash2</key>
+			<data>
+			DZiBshQS7Ik41oTIw/rKCk69LH9/gcIVUacA48G7trc=
+			</data>
+		</dict>
 		<key>Headers/PLVLCNewMessageView.h</key>
 		<dict>
 			<key>hash</key>
@@ -2308,6 +2897,50 @@
 			<key>hash2</key>
 			<data>
 			4juMZgMjNZbo1k2Q+5Qj//HhQr9FxuXnyH3lV/+YqiE=
+			</data>
+		</dict>
+		<key>Headers/PLVLCOnlineListRuleSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hwq6rkB2QhfwegHzvfVZEh7bCPk=
+			</data>
+			<key>hash2</key>
+			<data>
+			dLrix3NmoWGquVatDje81PR6tcQOovujEX3PO8r2nxM=
+			</data>
+		</dict>
+		<key>Headers/PLVLCOnlineListSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KZMpGwi/4k0E6EQtbVFu7o0XPXI=
+			</data>
+			<key>hash2</key>
+			<data>
+			85vWfG3nyBrP4BnLEkt7CZe9woyLHFkCDVv8TptLEeE=
+			</data>
+		</dict>
+		<key>Headers/PLVLCOnlineListViewCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jAYY9s3d9HMCrkXCwoF2vh0wu2c=
+			</data>
+			<key>hash2</key>
+			<data>
+			HhstEkzxTOdO5Jv4C2TgJ5TU3D/TwtaKMY7Qq0ZLYy8=
+			</data>
+		</dict>
+		<key>Headers/PLVLCOnlineListViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pl/mKcCYgT9fjJZcib/d6FNYla0=
+			</data>
+			<key>hash2</key>
+			<data>
+			uFTX5HmkdcwYtNe2co5szWloAZqnm8xXe7N+K9CuD/s=
 			</data>
 		</dict>
 		<key>Headers/PLVLCPageController.h</key>
@@ -2380,11 +3013,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HYkmRuzFsl8GKQ/PHlXq9ODuARw=
+			D8jE7vQpwFOIb65ONV7vkoYnBXM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ie9ZuXlgam+FDYkszjV088NCXGYxjQ6AU0+RU/BBNnU=
+			mZw7Vd2JBM/UoYHmk1N05coB0keGE8XPRdJ/O122pIA=
 			</data>
 		</dict>
 		<key>Headers/PLVLCQuitSpeakMessageCell.h</key>
@@ -2530,6 +3163,28 @@
 			S118U6GGsox8xeOnBrn/bOMeRi7cRpq2b8Ktbyc2UAg=
 			</data>
 		</dict>
+		<key>Headers/PLVLCSubtitleSettingCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			x+TUmTx3H8HdPq2NcUADgn9hL6U=
+			</data>
+			<key>hash2</key>
+			<data>
+			mir6KnVRo6PFUKt3tDAs9FMd2K+vcsmjaqTbWSchsNk=
+			</data>
+		</dict>
+		<key>Headers/PLVLCSubtitleSettingsView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wQ7/l32jpeaXOu6qso7wD1rHd5I=
+			</data>
+			<key>hash2</key>
+			<data>
+			NvHJwHs9I1vdk0J07iFHB/rnQC4ZRl94wrAR3fMsfZg=
+			</data>
+		</dict>
 		<key>Headers/PLVLCTabbarItemCell.h</key>
 		<dict>
 			<key>hash</key>
@@ -2567,11 +3222,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S+xYTotIKOYmGOgGiFHg0B5CIKE=
+			UJYLUXlPTShOemVACmHuPjpqzos=
 			</data>
 			<key>hash2</key>
 			<data>
-			0n2AhMCO/HImg/FQyQ/7trrPLt09bR9lJuaYxHbL7dE=
+			4QylDhjhbgnzes9+NjJ2wVU/LL8VJLe7JX8X/n+FOUQ=
 			</data>
 		</dict>
 		<key>Headers/PLVLCWelcomeView.h</key>
@@ -2585,6 +3240,17 @@
 			HCW4HWTRTBCUqlygqXS2rMbDLwOPR0eWuGZ1Zna0K7I=
 			</data>
 		</dict>
+		<key>Headers/PLVLCWelfareLotteryWidgetView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XyM/da7v6KlWbjR8llj0Y1LWjAE=
+			</data>
+			<key>hash2</key>
+			<data>
+			seTqYpMYMc1AC4qjqexIErK8m1CiY69TwmxRx/tS7s0=
+			</data>
+		</dict>
 		<key>Headers/PLVLinkMicOnlineUser+LC.h</key>
 		<dict>
 			<key>hash</key>
@@ -2596,15 +3262,26 @@
 			Y2QvmkmebmuFE8ZKJvoiyvqbhNgZqYI6ZoKquy14NPU=
 			</data>
 		</dict>
+		<key>Headers/PLVLinkMicOnlineUser+SA.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VB8vfdUfXWZcCzoQb5RS6wn8cec=
+			</data>
+			<key>hash2</key>
+			<data>
+			BpVmyfhyMMA1kWZ0qr7x5Bo9FbbsZ2uXv1TZG6MF8cw=
+			</data>
+		</dict>
 		<key>Headers/PLVLinkMicOnlineUser.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PvYQF0oE5zMBI98ODfVx/e6AE8M=
+			5Qj2V2gFmTbMwv+tdORlA2uJ49I=
 			</data>
 			<key>hash2</key>
 			<data>
-			e9+9j8TowtNtO//XzjGHNsTVAi37QzaO4TmJ1S1U70g=
+			/KsczUongytdWLDpCbIsrts9R6OcNGT6roQPa0dSDZY=
 			</data>
 		</dict>
 		<key>Headers/PLVLinkMicPresenter.h</key>
@@ -2638,6 +3315,17 @@
 			<key>hash2</key>
 			<data>
 			S5m9EmdahmJKQpVwcgj6VYSm6G7VN7HPxK7Nr6OEEHE=
+			</data>
+		</dict>
+		<key>Headers/PLVLiveEmptyView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZO3y5EyXlx4BEJljztvbu/jozEU=
+			</data>
+			<key>hash2</key>
+			<data>
+			eY9LK7Uqm6S1ZW5RkuN/NDmeTdotpJPHQe7JjtTS80g=
 			</data>
 		</dict>
 		<key>Headers/PLVLiveMarqueeAnimationManager.h</key>
@@ -2706,6 +3394,72 @@
 			zEBDsjEn98qB6IPDwqllLna5tf5WaXA+m01BhYTb4q0=
 			</data>
 		</dict>
+		<key>Headers/PLVLiveScenesSubtitleItem.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KXnp3W5GEGamUNODZyIFPOQnLxc=
+			</data>
+			<key>hash2</key>
+			<data>
+			Lctz0pRERF+Iqm2y7dvActISyvm0EncUrZ8xtL1QG1Q=
+			</data>
+		</dict>
+		<key>Headers/PLVLiveScenesSubtitleManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zu7CVKwDw9fU8FcsJ4KQD/xuEo0=
+			</data>
+			<key>hash2</key>
+			<data>
+			w7o1/pYY5GXF4zj7tNcWIvlV76Djra3vM4GKUazsdus=
+			</data>
+		</dict>
+		<key>Headers/PLVLiveScenesSubtitleParser.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			k8oZNqICysdI2XnySC3kAsMbF4s=
+			</data>
+			<key>hash2</key>
+			<data>
+			6yUqSPHiFogkK5JoxrEEzbwfq1VwpLiNyrco5idRLm8=
+			</data>
+		</dict>
+		<key>Headers/PLVLiveScenesSubtitleView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Z65ilJXTsI8kgUO704e5He5+aSw=
+			</data>
+			<key>hash2</key>
+			<data>
+			tienBNGnhY5RAONNroJwYfpbF3lyzRw8CBrhBl1Ww2M=
+			</data>
+		</dict>
+		<key>Headers/PLVLiveScenesSubtitleViewModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PWgr/hkb+avChliuyE1rtGV0lq0=
+			</data>
+			<key>hash2</key>
+			<data>
+			mwumiL0T/T/SayJFPsOmDrsSd9Tise52ubrAwMaiEPM=
+			</data>
+		</dict>
+		<key>Headers/PLVLiveSearchBar.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UTKbrQVKCAs44G0bon/ZQjvB5Fg=
+			</data>
+			<key>hash2</key>
+			<data>
+			nrz42V3eM4dV3IPoGvq32hYmv/Iqh9PYs/XgnJ8JcIQ=
+			</data>
+		</dict>
 		<key>Headers/PLVLiveToast.h</key>
 		<dict>
 			<key>hash</key>
@@ -2721,22 +3475,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KrWa5UgdaxPfIq4LS9RCgpoxLAY=
+			M6zr6k5SDtnrfWj5bammm4/lrFs=
 			</data>
 			<key>hash2</key>
 			<data>
-			Cny92y8QGmMzXW5d8U9Q9hP6mfa3Hk8MLj1iDLvuReA=
+			/P0/GQ6JTcA7OBGq9GZto6JUnAU2BKb5oqfUlZQ1dao=
 			</data>
 		</dict>
 		<key>Headers/PLVMultiLanguageManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zvqQ4EkMMXjYvZOIjWwxE+0b96o=
+			eAhuhXusfAYT+2x8oL+YG/MuHX4=
 			</data>
 			<key>hash2</key>
 			<data>
-			LbglRzThl4UNIxKvlRa4JcKSZlqMsC1u9+ycfeveTUU=
+			G/DOQzTwyranzyo1eCgKQp9c/QVFzrZHK/kZc6wMBto=
+			</data>
+		</dict>
+		<key>Headers/PLVMultiMeetingManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fkkADZllSYw2cYSo/nvcuM+d1Sk=
+			</data>
+			<key>hash2</key>
+			<data>
+			UDL4GMmqALDWs9JA7BTDCAnEZ8dlywB0sLgBSz+XTPg=
 			</data>
 		</dict>
 		<key>Headers/PLVMultiRoleLinkMicPresenter.h</key>
@@ -2831,11 +3596,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EK9U5d41LxKICtrN8Wkn7oFK8Ok=
+			+l5tBrvazR0Ko/zOZ6dCo3NJWQE=
 			</data>
 			<key>hash2</key>
 			<data>
-			Xi/AijWb8Ed0shcIk4wRY98AFOm1kXSLW3n6Tpimq34=
+			A6j9uWaK+1oJKazYIVVok2TG9M9IoL1LDi/saxwlGwk=
 			</data>
 		</dict>
 		<key>Headers/PLVPlayerLogoView.h</key>
@@ -2853,11 +3618,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3S7o0rpuW0oftZBkLyk4TF+QVVQ=
+			ML1jGHpP4JJ2KitAIm3VhDECEyQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			LCy9ls19Oo9JMi17VPwzsFAV0aRX+GgUBFyOSTS/ap0=
+			clOzlRtZoJ8cYMAJb1Tm7qRt9D5JtXnBy//RoHuqBlA=
 			</data>
 		</dict>
 		<key>Headers/PLVPopoverView.h</key>
@@ -2974,11 +3739,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			emKn2n0zUVLXMuhgJZSG11pd77U=
+			Padw29gccXGukFW2F2VeFv6d+F0=
 			</data>
 			<key>hash2</key>
 			<data>
-			UgJ4CAfSFLV4RjmhSiSg9AbX0V2/c3uCPmso8PlTugg=
+			kpqSTwEL9tnXJHnOAk5q5Yzv8NrAWbcTKA7l2FbTAqQ=
 			</data>
 		</dict>
 		<key>Headers/PLVRoomDataManager.h</key>
@@ -3012,6 +3777,974 @@
 			<key>hash2</key>
 			<data>
 			i+HdC2q4MMViCuXjfvhkvxQFyXVbSRudcWDgiqQcldU=
+			</data>
+		</dict>
+		<key>Headers/PLVSABadNetworkSwitchButton.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xgLWSG1o3URw9zcCZMvr+1l8YgI=
+			</data>
+			<key>hash2</key>
+			<data>
+			v+2Jej6mGtDsn83XbuDuSEoDo3PlC8LLSvAvoDH9HzU=
+			</data>
+		</dict>
+		<key>Headers/PLVSABadNetworkSwitchSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+6GVHP73YRlmGJH4eYFXjJmAflA=
+			</data>
+			<key>hash2</key>
+			<data>
+			uYFMt+KlMIGeyiNCx4YDDqJAP01dBi5N+A0E1wrA7EI=
+			</data>
+		</dict>
+		<key>Headers/PLVSABadNetworkTipsView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Oy1cX1BgYBQE+i6U+Qddoy5M2eI=
+			</data>
+			<key>hash2</key>
+			<data>
+			1t6SuWSqQlcc+ZWYjaKRqe1ldXB+UsrEGqXXYMo5zqw=
+			</data>
+		</dict>
+		<key>Headers/PLVSABaseMessageCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jxnPX9cedz3JoLZmHh6Cpd2R8U4=
+			</data>
+			<key>hash2</key>
+			<data>
+			udbiIrihavofploGlCERC2Yd3AdCKSbqiArFDFXs8TQ=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyBaseViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			20trEgbFFkoqWbWh88OiVtRltGA=
+			</data>
+			<key>hash2</key>
+			<data>
+			ryyidVI7qf407j+vXhqY7jFnMDvNW5EDSU+0DfRMjP8=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyCellModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wSwJD4w2g03bs6cwRRUxE7bnM/M=
+			</data>
+			<key>hash2</key>
+			<data>
+			YoDwN7D9UAjTM6Yd1oQ/XlOxFqs1+udXpI5xik5K+2o=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyCollectionViewCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ydU95puhHpEiGuV9GYQ9x8KjjMc=
+			</data>
+			<key>hash2</key>
+			<data>
+			QijHoiDlH33glWW6GGZtYmWAkzrY/+uNy9TF+moKkhc=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyContentView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3xox1SC6LCPdY4Zs7oQ4pokeCac=
+			</data>
+			<key>hash2</key>
+			<data>
+			M/wCqmdjhdiFN4marpZZClD/NygYCOcwizVYQVzF3GA=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyFaceViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			p/PKlEZz7LBuhBV2A3e2E7pVXN4=
+			</data>
+			<key>hash2</key>
+			<data>
+			qCN08dW4seIxO2Dp3blgYGe8xhxUMGSp4u2QmA+LOCQ=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyFilterCollectionViewCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rn4bUWnByb3bxTBqkEKMxypyz28=
+			</data>
+			<key>hash2</key>
+			<data>
+			xv8lCyhwaiuyW/E5Cvqvq2BaXiL5No8aZRdKuXDq7S8=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyFilterTitleView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RnKOoABjK/BuOegZiBpXP8fYdHU=
+			</data>
+			<key>hash2</key>
+			<data>
+			NCqQwXrUuq6HwcZAYq7DAFwwlZ9J5ac1aMeYR+7NiiE=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyFilterViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yLnRAqbRPPQ+uvQXl8+m2OIlQu8=
+			</data>
+			<key>hash2</key>
+			<data>
+			xNJYaFptQG6KxFVGfv1CJm1pqFYFfmRjKymP+p3jNQk=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyMaskView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+d+SmgiR9y8UfU2cED+2wZDzSWE=
+			</data>
+			<key>hash2</key>
+			<data>
+			fwi9tdozcD/ELdSN9VVvOtSgnT8BJAS9Lon412O7dCM=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyPageContentView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/bNxGRMyPKC15ZrgVC+zOh4+IFE=
+			</data>
+			<key>hash2</key>
+			<data>
+			ci2czrOYmXhBGQGLAxlhX/Etl6BceRChrUuS+e+nKYc=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautySheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uQs97ts67SSgGoNDoO0Nme54d3c=
+			</data>
+			<key>hash2</key>
+			<data>
+			7evtoFwfnG9oeALIKiCoxOGgidnA0+cCH3J5euQIf0c=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautySliderView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LcXM1+psOiO/EU70W7zzA8VZeK0=
+			</data>
+			<key>hash2</key>
+			<data>
+			v2XqORgVW1kaxaOyGSL8VH8SD1hBEbCFYBYzJFwznbM=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautySwitch.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nckMs2dch/SiqpRcEZocKT5TFfk=
+			</data>
+			<key>hash2</key>
+			<data>
+			0Nc9LE4yiBQRfmtcUGMuSDByxDN8nA7+Ajc9zxZvIM0=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyTitleButton.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/6qLsyM1iX5joKYHur2wtAfkDAQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			F2DGe4vt/eaPeTOo8H6dLQfbyiF1wEhYuUyVFFOs5NQ=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyTitleView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PySS5b9+SfYPyEoG7Bq4C/23qAU=
+			</data>
+			<key>hash2</key>
+			<data>
+			5GVi+f5Y+1zUeUF8auAeTpqVT0RKEf2igo3HWEfzjbQ=
+			</data>
+		</dict>
+		<key>Headers/PLVSABeautyWhitenViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bxWapeHxUeGnwCYA40rw1AR7jP8=
+			</data>
+			<key>hash2</key>
+			<data>
+			/oL6Ce1QhNaILggKjihU8nfXEAEq6YqFx/9kX4+O2Xc=
+			</data>
+		</dict>
+		<key>Headers/PLVSABitRateSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			w8kBc7uWpKoJhDbaTFOeDyKVtxo=
+			</data>
+			<key>hash2</key>
+			<data>
+			NhYF9UxLr5Atf77dEJ5cQkfuRyzIMUbiE724f+RzLDw=
+			</data>
+		</dict>
+		<key>Headers/PLVSABitRateTableViewCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vcEA18VD26/j4zWb/R5O1cJkenY=
+			</data>
+			<key>hash2</key>
+			<data>
+			fQT9szSxXeGnqeqbdgcAs4KPs3HPD9z9MJms93tyXNA=
+			</data>
+		</dict>
+		<key>Headers/PLVSABottomSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zSH/O+zrGRhJVYGSGj50PPNePck=
+			</data>
+			<key>hash2</key>
+			<data>
+			rSCtSomwlhm4OwXhyrse3LN2nTOugTfsQHn4Qh7grwo=
+			</data>
+		</dict>
+		<key>Headers/PLVSACameraAndMicphoneStateView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lUhZg7Q6lfLu8RnJVVdG9zx/8gs=
+			</data>
+			<key>hash2</key>
+			<data>
+			jKxuDgF30ycT4U+3ICbdTX2/u8tjxPddLUx8K4xwdNo=
+			</data>
+		</dict>
+		<key>Headers/PLVSAChannelInfoSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FdL23j4z1yVL30XU0OSLEBvh8P8=
+			</data>
+			<key>hash2</key>
+			<data>
+			Rzsvar5NhXCxRRmaLOWEM7q5mZQ+qZaiyAb/V2c76hA=
+			</data>
+		</dict>
+		<key>Headers/PLVSAChatroomAreaView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GivhGn7JVOavZUAX0JsPnEoEuf0=
+			</data>
+			<key>hash2</key>
+			<data>
+			4IARAGKzBo+4yfdnK+54/vJFLcWpTwg8qYpTCy9wfjA=
+			</data>
+		</dict>
+		<key>Headers/PLVSAChatroomGiftView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Fu8TP6qqd0gAxgf1yo22FbZ8fGo=
+			</data>
+			<key>hash2</key>
+			<data>
+			X/yVEya3GoSheGIKQlEruqTj0smU1VjfSsDr8MJpUpw=
+			</data>
+		</dict>
+		<key>Headers/PLVSAChatroomListView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5xdOvYtUF02vOfIyjC7in5sLcuo=
+			</data>
+			<key>hash2</key>
+			<data>
+			yb5DLq6qFc0Ik5m5yjKopDhjsHaCD6aynlNdBJIg5eg=
+			</data>
+		</dict>
+		<key>Headers/PLVSAChatroomViewModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lJyPRwfQ1Tm2Sr7bHMABDdwEHAE=
+			</data>
+			<key>hash2</key>
+			<data>
+			1gzY1yopAc4QW+uNbeg6wE57SdQaLhlxbyWTjziknmo=
+			</data>
+		</dict>
+		<key>Headers/PLVSAChatroomWelcomView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9HQY4nZXoB5Sfoznlsmeblk93W4=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZHzqEcuQFeSUA/RndHQsliIM8tiBv+7b77aQDqanfVA=
+			</data>
+		</dict>
+		<key>Headers/PLVSACountDownView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HdMsDdWQfczatqvsI7xeXFCMsvI=
+			</data>
+			<key>hash2</key>
+			<data>
+			0KxKHicEk+5+4qQRlF4aPbKQwYeLckKSuh5ApNKDi2A=
+			</data>
+		</dict>
+		<key>Headers/PLVSADesktopChatSettingGuideViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ydKUPNEgAs2VzTTDhUVUBnWzaTE=
+			</data>
+			<key>hash2</key>
+			<data>
+			ti4Su1FzPskG+c7I3zdKL426OvomqybSloQKy0ZtzhU=
+			</data>
+		</dict>
+		<key>Headers/PLVSADesktopChatSettingSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qrZQE0Tw7u2jYxU4Nt5SqGOAmBw=
+			</data>
+			<key>hash2</key>
+			<data>
+			CIGzjWgwpLTvKyVoY4kEovVPliLmp/RZYo4GWT4H0jo=
+			</data>
+		</dict>
+		<key>Headers/PLVSAEmojiPopupView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7FK5Z8AwgtB3aObZ0eFCSRsrdmU=
+			</data>
+			<key>hash2</key>
+			<data>
+			Wq+hDm5Vbb0SVp4uAYgi3s8AdWzX7RLwceQDcFeqAP0=
+			</data>
+		</dict>
+		<key>Headers/PLVSAEmojiSelectView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			amDWaWTZRp38BiOnzMQV1xgfdWw=
+			</data>
+			<key>hash2</key>
+			<data>
+			dLum+MOLAAUT415OT15VaX3i05kUSCi2KiIa9a+1XNg=
+			</data>
+		</dict>
+		<key>Headers/PLVSAExternalDeviceSwitchSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nb+FMGuGVqZZy0UjZfSj4TaV8q4=
+			</data>
+			<key>hash2</key>
+			<data>
+			pfTm5vaT5bGfOh3sc5cSD0F/92FSeXEE7fzp5N0hx6Y=
+			</data>
+		</dict>
+		<key>Headers/PLVSAFinishStreamerSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wpn3bDT+m8oUes73n2EirFAh3SU=
+			</data>
+			<key>hash2</key>
+			<data>
+			hiuUvvKhXpaZ+uMrcU/HmhYh2sEF9NZX/MCIlUU3w7k=
+			</data>
+		</dict>
+		<key>Headers/PLVSAImageEmotionMessageCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JCR0MF0RJWVY7olwfZwfzwR5izY=
+			</data>
+			<key>hash2</key>
+			<data>
+			sXRp0nTLzdF4AiaoDk22v6WaTzejXncRGzSRBT0o8nE=
+			</data>
+		</dict>
+		<key>Headers/PLVSAImageMessageCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QpSK73GhmDOE2RivI4Q1toe0nNg=
+			</data>
+			<key>hash2</key>
+			<data>
+			murKS/M0q1wyYCwwgBRZGdxSZcCNOGHySKnFhsysgkw=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicAreaView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RmpYi0rZuvBU/8ZGAxI+sUKeo/8=
+			</data>
+			<key>hash2</key>
+			<data>
+			tPrqbA6/z4Zh+qeUP73ZmkmoJ5m0ZF3fO4v2q3rgXYY=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicCanvasView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			t3zLB/YXBlBbr7P0t6wBj0QF/pk=
+			</data>
+			<key>hash2</key>
+			<data>
+			LGFB4UkeRLxHfD6sFR/7Nrj0KCU/dnGYPn1NwpbqhjI=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicGuideView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RmBOhkzyGjDloKxAw8X4sWFN7vs=
+			</data>
+			<key>hash2</key>
+			<data>
+			yZuyUMFPZh6EbrhzFSHv/thUn6qepNOtKJaMuUgkELg=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicLayoutSwitchGuideView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qV2c8Q2RQQCfExaQFiXkQpQYsZQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			kaCU42jt6s/p4mtSGOM6TwBrCfqtyy+E/eVU7Ewnr6Q=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicMenuPopup.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TdLFA35uwPqtWJJ/yU+Q2xdFxMs=
+			</data>
+			<key>hash2</key>
+			<data>
+			DIJtL+Uj4kxaH4yFOf6AYsi2dlvCar77fo37cBHtyFw=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicPreviewView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NxbiTm5RLJ8hYLDkHMQBrW/zlL8=
+			</data>
+			<key>hash2</key>
+			<data>
+			XuRiMFKckHfhmWgpEeogb7anrtfQyTGSSQcLhIUdMdQ=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicSettingSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZEjx3Zg3w7M88Ds7itYRVl2Jc2A=
+			</data>
+			<key>hash2</key>
+			<data>
+			pMAmDPcV+xPhfXd9p2AcF9+DtX6IC31giazg/ZJ7D10=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicSpeakerPlaceholderView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hZnJ2RdzYnugb/8caRKEztAUJyU=
+			</data>
+			<key>hash2</key>
+			<data>
+			svBKa1zm6ISJBSyOYATO8JkzEETD86g+Yr5s8DHDAVs=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicTipView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mYuBhAjtM6YEaDoMRai6CwDAshE=
+			</data>
+			<key>hash2</key>
+			<data>
+			ViuAyADezMxWFCvScBEF1TNKwt/enVZ8PcXWmDxmfzM=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicUserInfoSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			74/OJOznhEFinof66GaIlqo4lCY=
+			</data>
+			<key>hash2</key>
+			<data>
+			qzAfqaRqax3paVWzTbxdVoYtGFjBQ5YNTxvMtpJo0B8=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicWindowCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AErAB/3FgbxsIXnkr7H+0NA8HiU=
+			</data>
+			<key>hash2</key>
+			<data>
+			bTaI6f1NgUAv46+IneiT2sUkVlBSPsX/W1qrf0CXcNQ=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicWindowsSpeakerView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WGTUUIsh77n2DdPO7lL9U25L1zA=
+			</data>
+			<key>hash2</key>
+			<data>
+			ys+jKrQk/TUix/2oPsE0o6DH8SZi/AQuJN6lTqGxCDA=
+			</data>
+		</dict>
+		<key>Headers/PLVSALinkMicWindowsView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1a0f2Fx2XR7sbVwIpRn37CTEDns=
+			</data>
+			<key>hash2</key>
+			<data>
+			LgdugwIcvai4iJHyomXS5vJrSvvyZzXW37Fh6zRp3nw=
+			</data>
+		</dict>
+		<key>Headers/PLVSALongContentMessageCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NGwLy4O6uDC3i2Unvcw/93RXofM=
+			</data>
+			<key>hash2</key>
+			<data>
+			il/awPgMzf/PFKFL+30UhLGflJM5olYEDu7Fed6zG8s=
+			</data>
+		</dict>
+		<key>Headers/PLVSALongContentMessageSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Dzwxy1hHm7GFwH/pTElg6UOPIlk=
+			</data>
+			<key>hash2</key>
+			<data>
+			6Ur2o1XtlQ/pGoPH4u2TbW2DKDoShM1InYzKPRo3Jxw=
+			</data>
+		</dict>
+		<key>Headers/PLVSAManageCommoditySheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kDuhHLanNAjKx6ZrVuwDnUrFnOw=
+			</data>
+			<key>hash2</key>
+			<data>
+			C2pTJbPlXpGHbcMcxISBkiBIqJnMx+625MJyKSMBus0=
+			</data>
+		</dict>
+		<key>Headers/PLVSAMemberCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rTXKA3E/+7vX0U8kgRitjtqwe9g=
+			</data>
+			<key>hash2</key>
+			<data>
+			mU5Jl1xV1lcJMv4QFEqqPQqv0sj8lYLTxMXWZDKxNgk=
+			</data>
+		</dict>
+		<key>Headers/PLVSAMemberPopup.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HYuPTyZeTW+FmqMHSFez3N+baig=
+			</data>
+			<key>hash2</key>
+			<data>
+			9gdXRMBB3bUvjdc81LcBT8MELry+v7jo4tV2DdWmm80=
+			</data>
+		</dict>
+		<key>Headers/PLVSAMemberSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QPM4tJsRAZpxiJufgKRlUEoP4po=
+			</data>
+			<key>hash2</key>
+			<data>
+			ahIyGy/Ep63jS36Ra2EAgyD4YSP/bE3I6V5RyoPxVHQ=
+			</data>
+		</dict>
+		<key>Headers/PLVSAMixLayoutSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			26AFerN01RWWJV2SZlaED1KrvQ0=
+			</data>
+			<key>hash2</key>
+			<data>
+			QUieQWsW0OYxWd0Y31FSERpPR37uBOAGl+dQF3zkwuc=
+			</data>
+		</dict>
+		<key>Headers/PLVSAMoreInfoSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cEs9iGzollVYPnJnImK+R2yfU60=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ba1+iI53DVq7kUruXwcPQ8Rlg0eH6vC7V2iFb81gn3c=
+			</data>
+		</dict>
+		<key>Headers/PLVSANetMenuPopup.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TnVNAcVLTqYCtaaHO4UkE/FMdic=
+			</data>
+			<key>hash2</key>
+			<data>
+			nEpNQ9svdfEhdpfUgk5cwREAXnokqgtXHVV2PiGFhL8=
+			</data>
+		</dict>
+		<key>Headers/PLVSANetworkStatePopup.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Yh+BS+tKkhOCyXCZUec0lmaPDn0=
+			</data>
+			<key>hash2</key>
+			<data>
+			pfjfiZBMU3mrWq+lSW87Do65HttK2ZIYCqS6hCsLWvw=
+			</data>
+		</dict>
+		<key>Headers/PLVSANewMessgaeTipView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NWZXgTFinzy9QSrtLID3flbFd38=
+			</data>
+			<key>hash2</key>
+			<data>
+			XZhyoJq6q+bgVKCEYWNo/PmVajajckVelcS+d4YiVec=
+			</data>
+		</dict>
+		<key>Headers/PLVSANoiseCancellationModeSwitchSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8xMGDkaFQwvNH40/UxkX1CmYMVw=
+			</data>
+			<key>hash2</key>
+			<data>
+			p49OQeEI2Kk4hNZw4oRT6W/qmHP0rccKQPtOHT4CzxA=
+			</data>
+		</dict>
+		<key>Headers/PLVSAProhibitWordTipView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tYVd3LlbVfjB0e6H0HFaAbQF004=
+			</data>
+			<key>hash2</key>
+			<data>
+			l3QbmdkqzyN2D+OeDtDuZRlzvYaTjC80zqKxG4AOl08=
+			</data>
+		</dict>
+		<key>Headers/PLVSAQuoteMessageCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			F3o4YU9R98/yreIedqsmdyYltnw=
+			</data>
+			<key>hash2</key>
+			<data>
+			8BGLHaFrdY9SPavlbr8N6t+kedjWHxAqlFOipBwacjQ=
+			</data>
+		</dict>
+		<key>Headers/PLVSARepliedMsgView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qdKHxKAsmvpSpFENTmYzV6NJglQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			2+rdosKBkAs6FckEzEA0cb13sPFIvg0ps8yJxY0uFso=
+			</data>
+		</dict>
+		<key>Headers/PLVSARewardMessageCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zIHtZ8h7agV6Jmi+EiexkKoBjp0=
+			</data>
+			<key>hash2</key>
+			<data>
+			LHwHa8Qne9lCW3JK3QWf2xxaA8ziGh8HHqE0hfojbrA=
+			</data>
+		</dict>
+		<key>Headers/PLVSAScreenShareCustomPictureInPictureManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BFw4Jaw0qeaRf9y2Azsl7HN3f/U=
+			</data>
+			<key>hash2</key>
+			<data>
+			OBs38/5n/l3dEAmOsM+A8GbgdVj2e3a3ad2KuPiCi/8=
+			</data>
+		</dict>
+		<key>Headers/PLVSAScreenSharePipCustomView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rdqN7uPSGOgPYj2FCtFhBThaOoI=
+			</data>
+			<key>hash2</key>
+			<data>
+			xtQvOBjyJ9m/zeLN731wEb1nze4yr7cBM1+EySVMyjw=
+			</data>
+		</dict>
+		<key>Headers/PLVSASendMessageTextView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aEsviqlLsJ6Y4EgTY355g+vVyvo=
+			</data>
+			<key>hash2</key>
+			<data>
+			p/6p2hpFuTqbgiRSg8DDGMoqd2Abex2GcH2zamNYBrc=
+			</data>
+		</dict>
+		<key>Headers/PLVSASendMessageToolView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			T4SqXcvvSc/7Q2m99G+k5IlCx3c=
+			</data>
+			<key>hash2</key>
+			<data>
+			7fOC/jgV4REWweVrlNESgXZXw3FVSqra+bsy+1lMLMY=
+			</data>
+		</dict>
+		<key>Headers/PLVSASendMessageView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3JP30sdkvy1Jec0wfMEft5C76UI=
+			</data>
+			<key>hash2</key>
+			<data>
+			Dc0Wgf/U+5jKomCBUVZgxcXQn51JzPGkJGlFEkd5TCE=
+			</data>
+		</dict>
+		<key>Headers/PLVSAShadowMaskView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LMc9kwaMdtXAhbHyd5UaDFBTT6o=
+			</data>
+			<key>hash2</key>
+			<data>
+			KnsYcm7j6OueAcTRKRL62U697ZrCrBca6DV8VmGTFgo=
+			</data>
+		</dict>
+		<key>Headers/PLVSASlideRightTipsView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bPD1dBCbVyOZ5Zt+nYYU33O2374=
+			</data>
+			<key>hash2</key>
+			<data>
+			bxE4EZPIA3fiU7PJ0FkhVgRiXpba9Lag1OKkAbvEmQQ=
+			</data>
+		</dict>
+		<key>Headers/PLVSASliderView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PZycXdW2hbkYq3ok0eOkF/HAJRo=
+			</data>
+			<key>hash2</key>
+			<data>
+			FvbEFOVtm+kSviPBn2RgSXVdKrPys9KZJPVNfnz0R1Y=
+			</data>
+		</dict>
+		<key>Headers/PLVSASpeakMessageCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GWEDMP2ywoAp/zQTjBH016r27Fo=
+			</data>
+			<key>hash2</key>
+			<data>
+			R+wZeXns56kE+dGDIF+GoXPdvC6Q07srsCLtMSSb9cE=
+			</data>
+		</dict>
+		<key>Headers/PLVSAStatusBarButton.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ILzdp6kgrpxzHduHmWNvTMHUNhs=
+			</data>
+			<key>hash2</key>
+			<data>
+			u/5iZUpmpT/J4ml9f8pYkCpJqvUtNzjL8gdM/SiCskc=
+			</data>
+		</dict>
+		<key>Headers/PLVSAStatusbarAreaView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pIFp+X2lDSiFb6B9KENzq8n3B8k=
+			</data>
+			<key>hash2</key>
+			<data>
+			iC4FfJf5tIi1DHVVcUZN2HYCfF5zpZBTbwzyI79wdqA=
+			</data>
+		</dict>
+		<key>Headers/PLVSAStreamAlertController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			46yZSL6c2h1j8L+ZksCG/fwzfBc=
+			</data>
+			<key>hash2</key>
+			<data>
+			UcHjbSgkL+kWmhZ+1+QMnuMTGPP3gkQBd+8idGmIakI=
+			</data>
+		</dict>
+		<key>Headers/PLVSAStreamerFinishView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			43/9Qr/sALkyLbG8K9W4rveoFbk=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZZW8hPIr/RQ7HATEDsOmSmBLyX/5tZKJAcC3bFCo3DI=
+			</data>
+		</dict>
+		<key>Headers/PLVSAStreamerHomeView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			q7MdKhZ65x08cTjOin28teVbvzc=
+			</data>
+			<key>hash2</key>
+			<data>
+			BMiAZ/Ts2SwtJzFc9AbszRoVB8hwpQQY29VDNonfjUQ=
+			</data>
+		</dict>
+		<key>Headers/PLVSAStreamerSettingView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JH5zE/PhN2Fj6hRV7I+pUERijNk=
+			</data>
+			<key>hash2</key>
+			<data>
+			AD/gWk2IGOU8C25Ic0hdQ57UwjtU0kqipYMpLTgrke0=
+			</data>
+		</dict>
+		<key>Headers/PLVSAStreamerViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			owu53vKlfvrWYzyL9J/+eVf52q0=
+			</data>
+			<key>hash2</key>
+			<data>
+			M+GxYSQ/W1Am/8TPN21KADpKq4gLEsb6CPksA7yEHpE=
+			</data>
+		</dict>
+		<key>Headers/PLVSASwitchSuccessTipsView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GukNWeALN461w+QTclr0yxSdkYA=
+			</data>
+			<key>hash2</key>
+			<data>
+			3Ozu6fhcHX/XD+6ZLOtGug5tAFAosSFZloQSnHE6gmE=
+			</data>
+		</dict>
+		<key>Headers/PLVSAToolbarAreaView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RUkHECpasRjkQPRHKArF2K6PZio=
+			</data>
+			<key>hash2</key>
+			<data>
+			mv3ZCTIJrN2XSS0bvGoO0mR3omEREIy5+lFh6lnOZ5w=
+			</data>
+		</dict>
+		<key>Headers/PLVSAUtils.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rt7d9qBO4d1JfG1M/0TMgD92iHc=
+			</data>
+			<key>hash2</key>
+			<data>
+			Q3pPR4KZtazCTFK31oyAWFiTnPDfkAdgPadqQQRXNnA=
+			</data>
+		</dict>
+		<key>Headers/PLVSecureView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TZWd+8c/HCQq8c2wL67Vkb4ryz8=
+			</data>
+			<key>hash2</key>
+			<data>
+			cvGg3gV88xCgevO12ciwYnmznUrBH7DlTkeNcCB0B20=
 			</data>
 		</dict>
 		<key>Headers/PLVShareLivePosterModel.h</key>
@@ -3058,6 +4791,127 @@
 			dmINdwgiMPdDCqk668LhJ9Ss+dReFle5wsjrjuHTCNM=
 			</data>
 		</dict>
+		<key>Headers/PLVStickerCanvas.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JG2ZsBHSQSndHTNN92erGfEKBCs=
+			</data>
+			<key>hash2</key>
+			<data>
+			/KIX0A2OXEliM1dkA3VSRNttnhuxJvDF8zUCiDge6e8=
+			</data>
+		</dict>
+		<key>Headers/PLVStickerEffectLable.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			a+B4YefssCAoBx4iJeA7WvGGtjs=
+			</data>
+			<key>hash2</key>
+			<data>
+			U/FNbnZyCAVm7q66atK8oUKCiGPb0ODHLP22+mK7PjM=
+			</data>
+		</dict>
+		<key>Headers/PLVStickerEffectText.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PIfOHXEfhYejbJHSoJH3HbWtCrA=
+			</data>
+			<key>hash2</key>
+			<data>
+			BNMvu5+9ucc44ar6VfXKxq0kmQ/VkSPwJYH8YrQ9JJs=
+			</data>
+		</dict>
+		<key>Headers/PLVStickerGestureRecognizer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wuh7DObovqfYGMw1a+/Zwyere7Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			RJhSXE8zxm21st8LKP4mCAgM3mI5K7HldCn3KTVn+tA=
+			</data>
+		</dict>
+		<key>Headers/PLVStickerImageView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jkTpSWSDUj2zqhDjfIwtNWWmxtQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			pVr+27KFl/G6huJlVhTUPfDnQyDhC/eUQpIpxeVaQW4=
+			</data>
+		</dict>
+		<key>Headers/PLVStickerManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FRutOVsubxqo2QN3k9tFcF7bKbw=
+			</data>
+			<key>hash2</key>
+			<data>
+			GXhDvo+RrpEfM6QfsbxN78jj0O8G1C7Yv3/Oc0q87Io=
+			</data>
+		</dict>
+		<key>Headers/PLVStickerTextEditorView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3CzKnvZnvhm2gBwokvKQ8idw6/k=
+			</data>
+			<key>hash2</key>
+			<data>
+			0cxACnnIHEUemPZurtLDNRKJXgWpyb79I1S4x6bMHuM=
+			</data>
+		</dict>
+		<key>Headers/PLVStickerTextModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6VJ+FCPDYj22UKamHwvUYvNMVJg=
+			</data>
+			<key>hash2</key>
+			<data>
+			SyrKhO33nTDjZVBYK6C/zs56UC/4JmniWF3oUey6m/Q=
+			</data>
+		</dict>
+		<key>Headers/PLVStickerTextTemplateView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3O6Ry4PBXc445u5if5x2JkKahJE=
+			</data>
+			<key>hash2</key>
+			<data>
+			sqlMEcRiXJv/eMvnUKb95My9qBHFtc9OWHsEa+Uri04=
+			</data>
+		</dict>
+		<key>Headers/PLVStickerTextView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			prJ9QaX4X7/WO0IoIiI2TKpgVNo=
+			</data>
+			<key>hash2</key>
+			<data>
+			I8FLDco+ubhjRhH83JZDFx3D/xxZ5EOdc8dby1Bpu9A=
+			</data>
+		</dict>
+		<key>Headers/PLVStickerTypeSelectionView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2ogG15IuGDchoki1kgaNeBc6byw=
+			</data>
+			<key>hash2</key>
+			<data>
+			qW0Giv07t6tZclsfA6NRfIJdGgFG0Jxbd6s3TjDPFv0=
+			</data>
+		</dict>
 		<key>Headers/PLVStreamerInteractGenericView.h</key>
 		<dict>
 			<key>hash</key>
@@ -3084,11 +4938,77 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			d1EdaOdJpneKyakJQ9eOTN/FDRU=
+			HpPhaJ3CpnHKe3Q/f6TAelyTAtM=
 			</data>
 			<key>hash2</key>
 			<data>
-			WJoTcxM7CYNI/e84yZtUNv6eC17TnXUG0WDZLkTVEWM=
+			O3A4Z4uvbIoB4ai4WmSB9CBa/jh+WUilAR4BaUVnbho=
+			</data>
+		</dict>
+		<key>Headers/PLVVirtualBackgroudBaseSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VlEsTrwYgiU7zVBu9yzf7FvDgUA=
+			</data>
+			<key>hash2</key>
+			<data>
+			zetZ5tZ4vbN25KJlmnULJq88hJZqqMzet7VLaVTobhY=
+			</data>
+		</dict>
+		<key>Headers/PLVVirtualBackgroudCell.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ytusitDMIbR9t64qxc8IMxq6umk=
+			</data>
+			<key>hash2</key>
+			<data>
+			WbbcdNxKaPwc/NucqkbqLP+WniL3b/4RXmpDoExxZ5Q=
+			</data>
+		</dict>
+		<key>Headers/PLVVirtualBackgroudCollectionView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KilZ1V2usm5YD9R6pzSNMs1Pc4Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			/1KQsR3gV/3tkuCtg9G+5PsLjx6GqlV4r0W+7OSFxto=
+			</data>
+		</dict>
+		<key>Headers/PLVVirtualBackgroudModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5p022gRLduAsGjKlp6eFdfs4hNs=
+			</data>
+			<key>hash2</key>
+			<data>
+			KcS2jrDLOFPwPltKtwRmLmHHwgJn7f1Fbumdqh7hiYI=
+			</data>
+		</dict>
+		<key>Headers/PLVVirtualBackgroudSheet.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dUfnuhxzbZylsd5lbj791SEv/4Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			WCKPZxYeyH3l1nP3zcmfNTC/C5damIL8mLLXJoUZiOo=
+			</data>
+		</dict>
+		<key>Headers/PLVVirtualBackgroundUtil.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9/4DYsqiRO3h7XzfUgU3km93GhI=
+			</data>
+			<key>hash2</key>
+			<data>
+			tsbUsVuyaypdA0vI/mHRxkE4zozFKJm4JuZtV70QlUI=
 			</data>
 		</dict>
 		<key>Headers/PLVWatermarkModel.h</key>
@@ -3128,11 +5048,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Nnzwzt8zQZ6y3U4bdDZRHrIPY9U=
+			alv8RtP+XBdDEzSCJiok7JdnPXI=
 			</data>
 			<key>hash2</key>
 			<data>
-			sPGbh2O7w9reDz8FpkfjjQTs+ZMgHMXa+FnzX9AYFNU=
+			BWzU15s9YA8N8Sf3rCchmZUIVddespDEHHtt5BBBVT4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
