@@ -196,12 +196,6 @@ android {
         resources.excludes.add("META-INF/*.DSA")
         resources.excludes.add("META-INF/*.LIST")
     }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            withJavadocJar()
-        }
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.toVersion(libs.versions.jvmTarget.get())
         targetCompatibility = JavaVersion.toVersion(libs.versions.jvmTarget.get())

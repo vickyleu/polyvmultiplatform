@@ -44,12 +44,6 @@ android {
             java.srcDirs("src/main/java", "src/main/kotlin")
         }
     }
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-//            withJavadocJar()
-        }
-    }
     dependencies {
         //noinspection UseTomlInstead
         implementation("com.google.android.material:material:1.12.0")
@@ -74,11 +68,11 @@ android {
         //noinspection UseTomlInstead
         implementation("androidx.constraintlayout:constraintlayout:2.1.4")
         //noinspection UseTomlInstead
-        api("androidx.room:room-runtime:2.7.0-alpha08")
+        api("androidx.room:room-runtime:2.8.4")
         //noinspection UseTomlInstead
-        kapt("androidx.room:room-compiler:2.7.0-alpha08")
+        kapt("androidx.room:room-compiler:2.8.4")
         //noinspection UseTomlInstead
-        api("androidx.room:room-rxjava2:2.7.0-alpha08")
+        api("androidx.room:room-rxjava2:2.8.4")
         //svga动画特效库
         //noinspection UseTomlInstead
         api("com.github.yyued:SVGAPlayer-Android:2.6.1")

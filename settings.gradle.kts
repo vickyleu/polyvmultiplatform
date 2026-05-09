@@ -25,11 +25,22 @@ pluginManagement {
             }
 
 
+            maven(url = "https://maven.aliyun.com/repository/google") {
+                content {
+                    includeGroupByRegex(".*google.*")
+                    includeGroupByRegex(".*android.*")
+                    includeGroupByRegex("androidx.*")
+                    includeGroupByRegex("com.android.tools.*")
+                }
+            }
+
+
             google {
                 content {
                     excludeGroupByRegex("org.jogamp.*")
                     includeGroupByRegex(".*google.*")
                     includeGroupByRegex(".*android.*")
+                    excludeGroupByRegex("com.android.tools.*")
                     excludeGroupByRegex("com.vickyleu.*")
                     excludeGroupByRegex("com.github.*")
                 }
@@ -65,7 +76,7 @@ pluginManagement {
 }
 
 plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
 
@@ -75,8 +86,20 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
 
     repositories {
+        maven(url = "https://maven.aliyun.com/repository/google") {
+            content {
+                includeGroupByRegex(".*google.*")
+                includeGroupByRegex(".*android.*")
+                includeGroupByRegex("androidx.*")
+                includeGroupByRegex("com.android.tools.*")
+            }
+        }
         mavenCentral()
-        google()
+        google {
+            content {
+                excludeGroupByRegex("com.android.tools.*")
+            }
+        }
         maven(url = "https://jitpack.io")
         maven{
             setUrl("http://maven.aliyun.com/nexus/content/repositories/releases/")
@@ -127,43 +150,10 @@ dependencyResolutionManagement {
 
 
 
-        maven {
-            setUrl("https://dl.bintray.com/kotlin/kotlin-dev")
-        }
-        maven {
-            setUrl("https://dl.bintray.com/kotlin/kotlin-eap")
-        }
-
         maven("https://maven.pkg.jetbrains.space/kotlin/p/wasm/experimental") {
         }
 
         maven(url = "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
-        val properties = java.util.Properties().apply {
-            runCatching { rootProject.projectDir.resolve("local.properties") }
-                .getOrNull()
-                .takeIf { it?.exists() ?: false }
-                ?.reader()
-                ?.use(::load)
-        }
-        val environment: Map<String, String?> = System.getenv()
-        extra["githubToken"] = properties["github.token"] as? String
-            ?: environment["GITHUB_TOKEN"] ?: ""
-        val repositories = listOf("compose-sonner")
-        repositories.forEach {
-            maven {
-                url = uri("https://maven.pkg.github.com/vickyleu/$it")
-                credentials {
-                    username = "vickyleu"
-                    password = extra["githubToken"]?.toString()
-                }
-                content {
-                    excludeGroupByRegex("com.finogeeks.*")
-                    excludeGroupByRegex("org.jogamp.*")
-                    excludeGroupByRegex("org.jetbrains.compose.*")
-                    excludeGroupByRegex("(?!com|cn).github.(?!vickyleu).*")
-                }
-            }
-        }
     }
 }
 

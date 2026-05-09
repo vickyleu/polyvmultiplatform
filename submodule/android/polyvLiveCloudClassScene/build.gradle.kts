@@ -58,12 +58,6 @@ android {
         }
     }
 
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-//            withJavadocJar()
-        }
-    }
     dependencies {
         //noinspection UseTomlInstead
         implementation("androidx.appcompat:appcompat:1.7.0")
